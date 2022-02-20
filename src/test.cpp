@@ -1,5 +1,6 @@
 #include <iostream>
 #include <wiringPi.h>
+
 using namespace std;
 
 bool readPin(int gpio){

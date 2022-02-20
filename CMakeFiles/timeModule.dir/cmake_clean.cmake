@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/timeModule.dir/fun_security_sys.cpp.o"
+  "CMakeFiles/timeModule.dir/timeModule.cpp.o"
   "timeModule"
   "timeModule.pdb"
 )

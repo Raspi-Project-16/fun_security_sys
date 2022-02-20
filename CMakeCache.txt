@@ -145,7 +145,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Project
+CMAKE_PROJECT_NAME:STATIC=raspi_project_16
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -209,11 +209,23 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Value Computed by CMake
-Project_BINARY_DIR:STATIC=/home/pi/raspi_project_16
+//Path to a library.
+CPPTIMER_LIBRARIES:FILEPATH=/usr/local/lib/libcpptimer.a
+
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/usr/lib/arm-linux-gnueabihf/cmake/opencv4
+
+//Path to a library.
+RT_LIBRARIES:FILEPATH=/usr/lib/arm-linux-gnueabihf/librt.so
+
+//Path to a library.
+WIRINGPI_LIBRARIES:FILEPATH=/usr/local/lib/libwiringPi.so
 
 //Value Computed by CMake
-Project_SOURCE_DIR:STATIC=/home/pi/raspi_project_16
+raspi_project_16_BINARY_DIR:STATIC=/home/pi/raspi_project_16
+
+//Value Computed by CMake
+raspi_project_16_SOURCE_DIR:STATIC=/home/pi/raspi_project_16
 
 
 ########################
@@ -363,4 +375,6 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v4.5.1()]
 

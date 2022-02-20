@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <time.h>
 #include <thread>
+#include <opencv2/opencv.hpp>
 using namespace std;
 
 

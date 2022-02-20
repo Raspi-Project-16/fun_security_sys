@@ -76,27 +76,27 @@ include CMakeFiles/timeModule.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/timeModule.dir/flags.make
 
-CMakeFiles/timeModule.dir/fun_security_sys.cpp.o: CMakeFiles/timeModule.dir/flags.make
-CMakeFiles/timeModule.dir/fun_security_sys.cpp.o: fun_security_sys.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/timeModule.dir/fun_security_sys.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/timeModule.dir/fun_security_sys.cpp.o -c /home/pi/raspi_project_16/fun_security_sys.cpp
+CMakeFiles/timeModule.dir/timeModule.cpp.o: CMakeFiles/timeModule.dir/flags.make
+CMakeFiles/timeModule.dir/timeModule.cpp.o: timeModule.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/timeModule.dir/timeModule.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/timeModule.dir/timeModule.cpp.o -c /home/pi/raspi_project_16/timeModule.cpp
 
-CMakeFiles/timeModule.dir/fun_security_sys.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/timeModule.dir/fun_security_sys.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/raspi_project_16/fun_security_sys.cpp > CMakeFiles/timeModule.dir/fun_security_sys.cpp.i
+CMakeFiles/timeModule.dir/timeModule.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/timeModule.dir/timeModule.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/raspi_project_16/timeModule.cpp > CMakeFiles/timeModule.dir/timeModule.cpp.i
 
-CMakeFiles/timeModule.dir/fun_security_sys.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/timeModule.dir/fun_security_sys.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/raspi_project_16/fun_security_sys.cpp -o CMakeFiles/timeModule.dir/fun_security_sys.cpp.s
+CMakeFiles/timeModule.dir/timeModule.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/timeModule.dir/timeModule.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/raspi_project_16/timeModule.cpp -o CMakeFiles/timeModule.dir/timeModule.cpp.s
 
 # Object files for target timeModule
 timeModule_OBJECTS = \
-"CMakeFiles/timeModule.dir/fun_security_sys.cpp.o"
+"CMakeFiles/timeModule.dir/timeModule.cpp.o"
 
 # External object files for target timeModule
 timeModule_EXTERNAL_OBJECTS =
 
-timeModule: CMakeFiles/timeModule.dir/fun_security_sys.cpp.o
+timeModule: CMakeFiles/timeModule.dir/timeModule.cpp.o
 timeModule: CMakeFiles/timeModule.dir/build.make
 timeModule: CMakeFiles/timeModule.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable timeModule"

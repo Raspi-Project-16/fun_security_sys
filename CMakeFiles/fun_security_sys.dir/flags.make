@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/pi/raspi_project_16/include -isystem /usr/include/opencv4
 
 CXX_FLAGS = 
 

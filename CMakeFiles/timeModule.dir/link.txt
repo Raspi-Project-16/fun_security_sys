@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/timeModule.dir/fun_security_sys.cpp.o -o timeModule  -lcpptimer 
+/usr/bin/c++ -rdynamic CMakeFiles/timeModule.dir/timeModule.cpp.o -o timeModule 
