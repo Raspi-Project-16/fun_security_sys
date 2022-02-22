@@ -11,7 +11,7 @@ void lightModule::lightUp(){
 
 void lightModule::lightOff(){
     digitalWrite(this->gpio, LOW);
-    cout << "Light off" << endl;
+    //cout << "Light off" << endl;
 }
 
 lightModule::~lightModule(){

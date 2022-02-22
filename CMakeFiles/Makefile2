@@ -93,12 +93,12 @@ clean: CMakeFiles/fun_security_sys.dir/clean
 CMakeFiles/fun_security_sys.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=1,2,3,4,5 "Built target fun_security_sys"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target fun_security_sys"
 .PHONY : CMakeFiles/fun_security_sys.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fun_security_sys.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/raspi_project_16/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/raspi_project_16/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/fun_security_sys.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/raspi_project_16/CMakeFiles 0
 .PHONY : CMakeFiles/fun_security_sys.dir/rule

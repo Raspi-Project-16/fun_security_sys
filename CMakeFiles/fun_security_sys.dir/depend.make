@@ -103,9 +103,26 @@ CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.o: /usr/include/opencv4
 CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.o: /usr/include/opencv4/opencv2/video/background_segm.hpp
 CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.o: /usr/include/opencv4/opencv2/video/tracking.hpp
 CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.o: /usr/include/opencv4/opencv2/videoio.hpp
+CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.o: /usr/local/include/ws2811/clk.h
+CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.o: /usr/local/include/ws2811/dma.h
+CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.o: /usr/local/include/ws2811/gpio.h
+CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.o: /usr/local/include/ws2811/pwm.h
+CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.o: /usr/local/include/ws2811/rpihw.h
+CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.o: /usr/local/include/ws2811/ws2811.h
+CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.o: include/ledModule.h
 CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.o: include/lightModule.h
 CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.o: include/soundModule.h
 CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.o: include/timeModule.h
+
+CMakeFiles/fun_security_sys.dir/src/ledModule.cpp.o: src/ledModule.cpp
+CMakeFiles/fun_security_sys.dir/src/ledModule.cpp.o: /usr/local/include/ws2811/clk.h
+CMakeFiles/fun_security_sys.dir/src/ledModule.cpp.o: /usr/local/include/ws2811/dma.h
+CMakeFiles/fun_security_sys.dir/src/ledModule.cpp.o: /usr/local/include/ws2811/gpio.h
+CMakeFiles/fun_security_sys.dir/src/ledModule.cpp.o: /usr/local/include/ws2811/pwm.h
+CMakeFiles/fun_security_sys.dir/src/ledModule.cpp.o: /usr/local/include/ws2811/rpihw.h
+CMakeFiles/fun_security_sys.dir/src/ledModule.cpp.o: /usr/local/include/ws2811/ws2811.h
+CMakeFiles/fun_security_sys.dir/src/ledModule.cpp.o: include/ledModule.h
+CMakeFiles/fun_security_sys.dir/src/ledModule.cpp.o: include/timeModule.h
 
 CMakeFiles/fun_security_sys.dir/src/lightModule.cpp.o: src/lightModule.cpp
 CMakeFiles/fun_security_sys.dir/src/lightModule.cpp.o: include/lightModule.h

@@ -216,10 +216,16 @@ CPPTIMER_LIBRARIES:FILEPATH=/usr/local/lib/libcpptimer.a
 OpenCV_DIR:PATH=/usr/lib/arm-linux-gnueabihf/cmake/opencv4
 
 //Path to a library.
+PIGPIO_LIBRARIES:FILEPATH=/usr/local/lib/libpigpio.so
+
+//Path to a library.
 RT_LIBRARIES:FILEPATH=/usr/lib/arm-linux-gnueabihf/librt.so
 
 //Path to a library.
 WIRINGPI_LIBRARIES:FILEPATH=/usr/local/lib/libwiringPi.so
+
+//Path to a library.
+WS2811_LIBRARIES:FILEPATH=/usr/local/lib/libws2811.a
 
 //Value Computed by CMake
 raspi_project_16_BINARY_DIR:STATIC=/home/pi/raspi_project_16
