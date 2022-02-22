@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../rpi_ws281x"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
