@@ -104,8 +104,25 @@ CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.o
  /usr/include/opencv4/opencv2/video/background_segm.hpp
  /usr/include/opencv4/opencv2/video/tracking.hpp
  /usr/include/opencv4/opencv2/videoio.hpp
+ /usr/local/include/ws2811/clk.h
+ /usr/local/include/ws2811/dma.h
+ /usr/local/include/ws2811/gpio.h
+ /usr/local/include/ws2811/pwm.h
+ /usr/local/include/ws2811/rpihw.h
+ /usr/local/include/ws2811/ws2811.h
+ include/ledModule.h
  include/lightModule.h
  include/soundModule.h
+ include/timeModule.h
+CMakeFiles/fun_security_sys.dir/src/ledModule.cpp.o
+ /home/pi/raspi_project_16/src/ledModule.cpp
+ /usr/local/include/ws2811/clk.h
+ /usr/local/include/ws2811/dma.h
+ /usr/local/include/ws2811/gpio.h
+ /usr/local/include/ws2811/pwm.h
+ /usr/local/include/ws2811/rpihw.h
+ /usr/local/include/ws2811/ws2811.h
+ include/ledModule.h
  include/timeModule.h
 CMakeFiles/fun_security_sys.dir/src/lightModule.cpp.o
  /home/pi/raspi_project_16/src/lightModule.cpp

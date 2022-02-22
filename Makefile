@@ -169,6 +169,33 @@ src/fun_security_sys.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.s
 .PHONY : src/fun_security_sys.cpp.s
 
+src/ledModule.o: src/ledModule.cpp.o
+
+.PHONY : src/ledModule.o
+
+# target to build an object file
+src/ledModule.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/ledModule.cpp.o
+.PHONY : src/ledModule.cpp.o
+
+src/ledModule.i: src/ledModule.cpp.i
+
+.PHONY : src/ledModule.i
+
+# target to preprocess a source file
+src/ledModule.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/ledModule.cpp.i
+.PHONY : src/ledModule.cpp.i
+
+src/ledModule.s: src/ledModule.cpp.s
+
+.PHONY : src/ledModule.s
+
+# target to generate assembly for a file
+src/ledModule.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/ledModule.cpp.s
+.PHONY : src/ledModule.cpp.s
+
 src/lightModule.o: src/lightModule.cpp.o
 
 .PHONY : src/lightModule.o
@@ -262,6 +289,9 @@ help:
 	@echo "... src/fun_security_sys.o"
 	@echo "... src/fun_security_sys.i"
 	@echo "... src/fun_security_sys.s"
+	@echo "... src/ledModule.o"
+	@echo "... src/ledModule.i"
+	@echo "... src/ledModule.s"
 	@echo "... src/lightModule.o"
 	@echo "... src/lightModule.i"
 	@echo "... src/lightModule.s"

@@ -3,6 +3,7 @@
 #include "soundModule.h"
 #include "lightModule.h"
 #include "timeModule.h"
+#include "ledModule.h"
 #include <unistd.h>
 #include <time.h>
 #include <thread>
@@ -13,28 +14,32 @@ using namespace std;
 
 int main(int argc, char* argv[]){
 
-    int GPIO_29 = 29;
+    //int GPIO_29 = 29;
     int GPIO_28 = 28;
     wiringPiSetup();
     pinMode(GPIO_28, INPUT);
-    pinMode(GPIO_29, OUTPUT);
+    //pinMode(GPIO_29, OUTPUT);
     digitalWrite(GPIO_28, LOW);
-    digitalWrite(GPIO_29, LOW);
+    //digitalWrite(GPIO_29, LOW);
 
-    lightModule light(GPIO_29);
+    //lightModule light(GPIO_29);
     soundModule sound(GPIO_28);
     timeModule time;
+    ledModule led(18, 150, 400000);
 
     while(true){
         if(sound.detectSound()){
-            light.lightUp();
-            time.startms(250);
-            std::this_thread::sleep_for(std::chrono::seconds(2));
-            time.stop();
+            //light.lightUp();
+            //led.shutdown();
+            led.run();
+            // time.startms(250);
+            // std::this_thread::sleep_for(std::chrono::seconds(2));
+            // time.stop();
         }else{
-            light.lightOff();
+            //light.lightOff();
         }
     }
+    //led.shutdown();
 
     return 0;
 }
