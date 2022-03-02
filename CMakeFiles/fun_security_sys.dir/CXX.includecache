@@ -9,7 +9,7 @@
 /home/pi/raspi_project_16/src/fun_security_sys.cpp
 iostream
 -
-wiringPi.h
+pigpio.h
 -
 soundModule.h
 /home/pi/raspi_project_16/src/soundModule.h
@@ -27,13 +27,17 @@ thread
 -
 opencv2/opencv.hpp
 -
+opencv2/core.hpp
+-
+opencv2/imgcodecs.hpp
+-
+opencv2/highgui.hpp
+-
 
-/home/pi/raspi_project_16/src/ledModule.cpp
-ledModule.h
-/home/pi/raspi_project_16/src/ledModule.h
-timeModule.h
-/home/pi/raspi_project_16/src/timeModule.h
-thread
+/home/pi/raspi_project_16/src/lightModule.cpp
+lightModule.h
+/home/pi/raspi_project_16/src/lightModule.h
+pigpio.h
 -
 
 /usr/include/opencv4/opencv2/calib3d.hpp
@@ -1103,7 +1107,7 @@ unistd.h
 include/lightModule.h
 iostream
 -
-wiringPi.h
+pigpio.h
 -
 
 include/soundModule.h

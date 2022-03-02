@@ -1,16 +1,17 @@
 #include "lightModule.h"
+#include <pigpio.h>
 
 lightModule::lightModule(int gpio){
     this->gpio = gpio;
 }
 
 void lightModule::lightUp(){
-    digitalWrite(this->gpio, HIGH);
+    gpioWrite(this->gpio, 1);
     cout << "Light on" << endl;
 }
 
 void lightModule::lightOff(){
-    digitalWrite(this->gpio, LOW);
+    gpioWrite(this->gpio, 0);
     //cout << "Light off" << endl;
 }
 

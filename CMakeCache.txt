@@ -222,6 +222,9 @@ PIGPIO_LIBRARIES:FILEPATH=/usr/local/lib/libpigpio.so
 RT_LIBRARIES:FILEPATH=/usr/lib/arm-linux-gnueabihf/librt.so
 
 //Path to a library.
+SOCKETX_LIBRARIES:FILEPATH=/usr/local/lib/libsocketx.a
+
+//Path to a library.
 WIRINGPI_LIBRARIES:FILEPATH=/usr/local/lib/libwiringPi.so
 
 //Path to a library.

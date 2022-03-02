@@ -1,16 +1,18 @@
 #include "soundModule.h"
+#include <pigpio.h>
 
 soundModule::soundModule(int gpio){
     this->gpio = gpio;
 }
 
 bool soundModule::detectSound(){
-    if(digitalRead(this->gpio) == LOW){
-        return true;
+    
+    if(gpioRead(this->gpio) == 0){
         cout << "Sound detected!" << endl;
+        return true;
     }else{
-        return false;
         cout << "Sound not detected!" << endl;
+        return false;
     }
 }
 
