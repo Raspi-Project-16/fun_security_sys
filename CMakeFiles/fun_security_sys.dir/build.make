@@ -196,6 +196,7 @@ fun_security_sys: /usr/local/lib/libpigpio.so
 fun_security_sys: /usr/local/lib/libcpptimer.a
 fun_security_sys: /usr/local/lib/libws2811.a
 fun_security_sys: /usr/lib/arm-linux-gnueabihf/librt.so
+fun_security_sys: /usr/local/lib/libsocketx.a
 fun_security_sys: /usr/lib/arm-linux-gnueabihf/libopencv_highgui.so.4.5.1
 fun_security_sys: /usr/lib/arm-linux-gnueabihf/libopencv_datasets.so.4.5.1
 fun_security_sys: /usr/lib/arm-linux-gnueabihf/libopencv_plot.so.4.5.1

@@ -85,14 +85,13 @@ void ledModule::run(){
         matrix_raise();
         matrix_bottom();
         matrix_render();
-        cout << "1" << endl;
 
         if ((ret = ws2811_render(&ledstring)) != WS2811_SUCCESS)
         {
             fprintf(stderr, "ws2811_render failed: %s\n", ws2811_get_return_t_str(ret));
             break;
         }
-        usleep(1000000 / 15);
+        usleep(1000000 / 20);
 
     }
 }

@@ -1,5 +1,5 @@
 #include <iostream>
-#include <wiringPi.h>
+#include <pigpio.h>
 #include "soundModule.h"
 #include "lightModule.h"
 #include "timeModule.h"
@@ -8,21 +8,25 @@
 #include <time.h>
 #include <thread>
 #include <opencv2/opencv.hpp>
+#include <opencv2/core.hpp>                         // 定义了库的基本构建块
+#include <opencv2/imgcodecs.hpp>            
+#include <opencv2/highgui.hpp> 
 using namespace std;
+using namespace cv;
 
 
 
 int main(int argc, char* argv[]){
 
-    //int GPIO_29 = 29;
-    int GPIO_28 = 28;
-    wiringPiSetup();
-    pinMode(GPIO_28, INPUT);
-    //pinMode(GPIO_29, OUTPUT);
-    digitalWrite(GPIO_28, LOW);
-    //digitalWrite(GPIO_29, LOW);
+    if (gpioInitialise() < 0)
+   {
+      cout << stderr << "pigpio initialisation failed" << endl;
+      return 1;
+   }
 
-    //lightModule light(GPIO_29);
+    int GPIO_28 = 28;
+    gpioSetMode(GPIO_28, PI_INPUT);
+
     soundModule sound(GPIO_28);
     timeModule time;
     ledModule led(18, 150, 400000);

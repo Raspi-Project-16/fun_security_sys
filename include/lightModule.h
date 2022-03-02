@@ -1,5 +1,5 @@
 #include <iostream>
-#include <wiringPi.h>
+#include <pigpio.h>
 using namespace std;
 
 class lightModule{
