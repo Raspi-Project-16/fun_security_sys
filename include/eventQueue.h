@@ -9,10 +9,8 @@
 
 #include <list>
 //#include "MsgQueue.h"
-#include <stdio.h>
 
 using namespace std;
-
 
 /*----------------------------------------------------------------------
   |   NPT_GenericQueue
@@ -460,8 +458,6 @@ GenericQueue<T> *GenericQueue<T>::CreateInstance(int max_items)
 {
     return new PosixQueue<T>(max_items);
 }
-
-
 
 
 #endif // MSG_QUEUE_H

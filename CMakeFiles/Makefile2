@@ -72,7 +72,7 @@ CMAKE_BINARY_DIR = /home/pi/raspi_project_16
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/fun_security_sys.dir/all
+all: CMakeFiles/run.dir/all
 
 .PHONY : all
 
@@ -82,36 +82,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/fun_security_sys.dir/clean
+clean: CMakeFiles/run.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/fun_security_sys.dir
+# Target rules for target CMakeFiles/run.dir
 
 # All Build rule for target.
-CMakeFiles/fun_security_sys.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target fun_security_sys"
-.PHONY : CMakeFiles/fun_security_sys.dir/all
+CMakeFiles/run.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target run"
+.PHONY : CMakeFiles/run.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/fun_security_sys.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/raspi_project_16/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/fun_security_sys.dir/all
+CMakeFiles/run.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/raspi_project_16/CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/run.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/raspi_project_16/CMakeFiles 0
-.PHONY : CMakeFiles/fun_security_sys.dir/rule
+.PHONY : CMakeFiles/run.dir/rule
 
 # Convenience name for target.
-fun_security_sys: CMakeFiles/fun_security_sys.dir/rule
+run: CMakeFiles/run.dir/rule
 
-.PHONY : fun_security_sys
+.PHONY : run
 
 # clean rule for target.
-CMakeFiles/fun_security_sys.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/clean
-.PHONY : CMakeFiles/fun_security_sys.dir/clean
+CMakeFiles/run.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/clean
+.PHONY : CMakeFiles/run.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

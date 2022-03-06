@@ -1,18 +1,29 @@
-#include <stdio.h>
-
 #ifndef _GLO_DEF_H
 #define _GLO_DEF_H
+
+#include <stdio.h>
+#include <sstream>
+#include <iostream>
+#include <string>
+#include "ws2811.h"
+#include "gpio.h"
+#include <string>
+#include "clk.h"
+#include "pwm.h"
+#include "dma.h"
+#include <signal.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <sys/mman.h>
+#include <stdarg.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif /* __cplusplus */
 
-/* Global defition */
-#define TRUE    1
-#define FALSE   0
-
 #define INVALID_U32  0xFFFF
-
 /* Global type defintions */
 typedef unsigned char  u8;
 typedef unsigned short u16;
@@ -69,19 +80,34 @@ typedef signed long long i64;
 }
 #endif /* __cplusplus */
 
+#define ARRAY_SIZE(arr)       (sizeof(arr) / sizeof(arr[0]))
+// defaults for cmdline options
+#define TARGET_FREQ             WS2811_TARGET_FREQ
+#define GPIO_PIN                21
+#define DMA                     10
+//#define STRIP_TYPE            WS2811_STRIP_RGB		// WS2812/SK6812RGB integrated chip+leds
+#define STRIP_TYPE              WS2811_STRIP_GBR		// WS2812/SK6812RGB integrated chip+leds
+//#define STRIP_TYPE            SK6812_STRIP_RGBW		// SK6812RGBW (NOT SK6812RGB)
 
-enum EErrorCode
-{
-      ERRC_SUCCESS              = 200,
-	  ERRC_INVALID_MSG          = 400,
-	  ERRC_INVALID_DATA         = 404,
-	  ERRC_METHOD_NOT_ALLOWED   = 405,
-	  ERRO_PROCCESS_FAILED      = 406,
-	  ERRO_BIKE_IS_TOOK         = 407,
-	  ERRO_BIKE_IS_RUNNING      = 408,
-	  ERRO_BIKE_IS_DAMAGED      = 409
-};
+#define WIDTH                   150
+#define HEIGHT                  1
+#define LED_COUNT               (WIDTH * HEIGHT)
 
+
+template <class Type> 
+Type stringToNum(const std::string& str){ 
+    std::istringstream iss(str); 
+    Type num; 
+    iss >> num; 
+    return num;     
+}
+
+template<typename T> 
+std::string NumtoString(const T& t){
+    std::ostringstream oss;  
+    oss<<t;             
+    return oss.str();  
+}
 
 
 
