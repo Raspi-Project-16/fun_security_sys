@@ -1,1 +1,0 @@
-/usr/bin/c++ -rdynamic CMakeFiles/lightModule.dir/lightModule.cpp.o -o lightModule 

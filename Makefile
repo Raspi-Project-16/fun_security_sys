@@ -130,44 +130,125 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named fun_security_sys
+# Target rules for targets named run
 
 # Build rule for target.
-fun_security_sys: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fun_security_sys
-.PHONY : fun_security_sys
+run: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run
+.PHONY : run
 
 # fast build rule for target.
-fun_security_sys/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/build
-.PHONY : fun_security_sys/fast
+run/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
+.PHONY : run/fast
 
-src/fun_security_sys.o: src/fun_security_sys.cpp.o
+src/dispatchEventService.o: src/dispatchEventService.cpp.o
 
-.PHONY : src/fun_security_sys.o
+.PHONY : src/dispatchEventService.o
 
 # target to build an object file
-src/fun_security_sys.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.o
-.PHONY : src/fun_security_sys.cpp.o
+src/dispatchEventService.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/dispatchEventService.cpp.o
+.PHONY : src/dispatchEventService.cpp.o
 
-src/fun_security_sys.i: src/fun_security_sys.cpp.i
+src/dispatchEventService.i: src/dispatchEventService.cpp.i
 
-.PHONY : src/fun_security_sys.i
+.PHONY : src/dispatchEventService.i
 
 # target to preprocess a source file
-src/fun_security_sys.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.i
-.PHONY : src/fun_security_sys.cpp.i
+src/dispatchEventService.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/dispatchEventService.cpp.i
+.PHONY : src/dispatchEventService.cpp.i
 
-src/fun_security_sys.s: src/fun_security_sys.cpp.s
+src/dispatchEventService.s: src/dispatchEventService.cpp.s
 
-.PHONY : src/fun_security_sys.s
+.PHONY : src/dispatchEventService.s
 
 # target to generate assembly for a file
-src/fun_security_sys.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/fun_security_sys.cpp.s
-.PHONY : src/fun_security_sys.cpp.s
+src/dispatchEventService.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/dispatchEventService.cpp.s
+.PHONY : src/dispatchEventService.cpp.s
+
+src/event.o: src/event.cpp.o
+
+.PHONY : src/event.o
+
+# target to build an object file
+src/event.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/event.cpp.o
+.PHONY : src/event.cpp.o
+
+src/event.i: src/event.cpp.i
+
+.PHONY : src/event.i
+
+# target to preprocess a source file
+src/event.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/event.cpp.i
+.PHONY : src/event.cpp.i
+
+src/event.s: src/event.cpp.s
+
+.PHONY : src/event.s
+
+# target to generate assembly for a file
+src/event.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/event.cpp.s
+.PHONY : src/event.cpp.s
+
+src/events_def.o: src/events_def.cpp.o
+
+.PHONY : src/events_def.o
+
+# target to build an object file
+src/events_def.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/events_def.cpp.o
+.PHONY : src/events_def.cpp.o
+
+src/events_def.i: src/events_def.cpp.i
+
+.PHONY : src/events_def.i
+
+# target to preprocess a source file
+src/events_def.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/events_def.cpp.i
+.PHONY : src/events_def.cpp.i
+
+src/events_def.s: src/events_def.cpp.s
+
+.PHONY : src/events_def.s
+
+# target to generate assembly for a file
+src/events_def.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/events_def.cpp.s
+.PHONY : src/events_def.cpp.s
+
+src/ledEventHandler.o: src/ledEventHandler.cpp.o
+
+.PHONY : src/ledEventHandler.o
+
+# target to build an object file
+src/ledEventHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/ledEventHandler.cpp.o
+.PHONY : src/ledEventHandler.cpp.o
+
+src/ledEventHandler.i: src/ledEventHandler.cpp.i
+
+.PHONY : src/ledEventHandler.i
+
+# target to preprocess a source file
+src/ledEventHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/ledEventHandler.cpp.i
+.PHONY : src/ledEventHandler.cpp.i
+
+src/ledEventHandler.s: src/ledEventHandler.cpp.s
+
+.PHONY : src/ledEventHandler.s
+
+# target to generate assembly for a file
+src/ledEventHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/ledEventHandler.cpp.s
+.PHONY : src/ledEventHandler.cpp.s
 
 src/ledModule.o: src/ledModule.cpp.o
 
@@ -175,7 +256,7 @@ src/ledModule.o: src/ledModule.cpp.o
 
 # target to build an object file
 src/ledModule.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/ledModule.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/ledModule.cpp.o
 .PHONY : src/ledModule.cpp.o
 
 src/ledModule.i: src/ledModule.cpp.i
@@ -184,7 +265,7 @@ src/ledModule.i: src/ledModule.cpp.i
 
 # target to preprocess a source file
 src/ledModule.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/ledModule.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/ledModule.cpp.i
 .PHONY : src/ledModule.cpp.i
 
 src/ledModule.s: src/ledModule.cpp.s
@@ -193,7 +274,7 @@ src/ledModule.s: src/ledModule.cpp.s
 
 # target to generate assembly for a file
 src/ledModule.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/ledModule.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/ledModule.cpp.s
 .PHONY : src/ledModule.cpp.s
 
 src/lightModule.o: src/lightModule.cpp.o
@@ -202,7 +283,7 @@ src/lightModule.o: src/lightModule.cpp.o
 
 # target to build an object file
 src/lightModule.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/lightModule.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/lightModule.cpp.o
 .PHONY : src/lightModule.cpp.o
 
 src/lightModule.i: src/lightModule.cpp.i
@@ -211,7 +292,7 @@ src/lightModule.i: src/lightModule.cpp.i
 
 # target to preprocess a source file
 src/lightModule.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/lightModule.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/lightModule.cpp.i
 .PHONY : src/lightModule.cpp.i
 
 src/lightModule.s: src/lightModule.cpp.s
@@ -220,8 +301,62 @@ src/lightModule.s: src/lightModule.cpp.s
 
 # target to generate assembly for a file
 src/lightModule.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/lightModule.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/lightModule.cpp.s
 .PHONY : src/lightModule.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/soundEventHandler.o: src/soundEventHandler.cpp.o
+
+.PHONY : src/soundEventHandler.o
+
+# target to build an object file
+src/soundEventHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/soundEventHandler.cpp.o
+.PHONY : src/soundEventHandler.cpp.o
+
+src/soundEventHandler.i: src/soundEventHandler.cpp.i
+
+.PHONY : src/soundEventHandler.i
+
+# target to preprocess a source file
+src/soundEventHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/soundEventHandler.cpp.i
+.PHONY : src/soundEventHandler.cpp.i
+
+src/soundEventHandler.s: src/soundEventHandler.cpp.s
+
+.PHONY : src/soundEventHandler.s
+
+# target to generate assembly for a file
+src/soundEventHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/soundEventHandler.cpp.s
+.PHONY : src/soundEventHandler.cpp.s
 
 src/soundModule.o: src/soundModule.cpp.o
 
@@ -229,7 +364,7 @@ src/soundModule.o: src/soundModule.cpp.o
 
 # target to build an object file
 src/soundModule.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/soundModule.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/soundModule.cpp.o
 .PHONY : src/soundModule.cpp.o
 
 src/soundModule.i: src/soundModule.cpp.i
@@ -238,7 +373,7 @@ src/soundModule.i: src/soundModule.cpp.i
 
 # target to preprocess a source file
 src/soundModule.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/soundModule.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/soundModule.cpp.i
 .PHONY : src/soundModule.cpp.i
 
 src/soundModule.s: src/soundModule.cpp.s
@@ -247,7 +382,7 @@ src/soundModule.s: src/soundModule.cpp.s
 
 # target to generate assembly for a file
 src/soundModule.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/soundModule.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/soundModule.cpp.s
 .PHONY : src/soundModule.cpp.s
 
 src/timeModule.o: src/timeModule.cpp.o
@@ -256,7 +391,7 @@ src/timeModule.o: src/timeModule.cpp.o
 
 # target to build an object file
 src/timeModule.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/timeModule.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/timeModule.cpp.o
 .PHONY : src/timeModule.cpp.o
 
 src/timeModule.i: src/timeModule.cpp.i
@@ -265,7 +400,7 @@ src/timeModule.i: src/timeModule.cpp.i
 
 # target to preprocess a source file
 src/timeModule.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/timeModule.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/timeModule.cpp.i
 .PHONY : src/timeModule.cpp.i
 
 src/timeModule.s: src/timeModule.cpp.s
@@ -274,8 +409,35 @@ src/timeModule.s: src/timeModule.cpp.s
 
 # target to generate assembly for a file
 src/timeModule.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fun_security_sys.dir/build.make CMakeFiles/fun_security_sys.dir/src/timeModule.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/timeModule.cpp.s
 .PHONY : src/timeModule.cpp.s
+
+src/ws2811EventHandler.o: src/ws2811EventHandler.cpp.o
+
+.PHONY : src/ws2811EventHandler.o
+
+# target to build an object file
+src/ws2811EventHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/ws2811EventHandler.cpp.o
+.PHONY : src/ws2811EventHandler.cpp.o
+
+src/ws2811EventHandler.i: src/ws2811EventHandler.cpp.i
+
+.PHONY : src/ws2811EventHandler.i
+
+# target to preprocess a source file
+src/ws2811EventHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/ws2811EventHandler.cpp.i
+.PHONY : src/ws2811EventHandler.cpp.i
+
+src/ws2811EventHandler.s: src/ws2811EventHandler.cpp.s
+
+.PHONY : src/ws2811EventHandler.s
+
+# target to generate assembly for a file
+src/ws2811EventHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/ws2811EventHandler.cpp.s
+.PHONY : src/ws2811EventHandler.cpp.s
 
 # Help Target
 help:
@@ -285,22 +447,40 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... fun_security_sys"
-	@echo "... src/fun_security_sys.o"
-	@echo "... src/fun_security_sys.i"
-	@echo "... src/fun_security_sys.s"
+	@echo "... run"
+	@echo "... src/dispatchEventService.o"
+	@echo "... src/dispatchEventService.i"
+	@echo "... src/dispatchEventService.s"
+	@echo "... src/event.o"
+	@echo "... src/event.i"
+	@echo "... src/event.s"
+	@echo "... src/events_def.o"
+	@echo "... src/events_def.i"
+	@echo "... src/events_def.s"
+	@echo "... src/ledEventHandler.o"
+	@echo "... src/ledEventHandler.i"
+	@echo "... src/ledEventHandler.s"
 	@echo "... src/ledModule.o"
 	@echo "... src/ledModule.i"
 	@echo "... src/ledModule.s"
 	@echo "... src/lightModule.o"
 	@echo "... src/lightModule.i"
 	@echo "... src/lightModule.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/soundEventHandler.o"
+	@echo "... src/soundEventHandler.i"
+	@echo "... src/soundEventHandler.s"
 	@echo "... src/soundModule.o"
 	@echo "... src/soundModule.i"
 	@echo "... src/soundModule.s"
 	@echo "... src/timeModule.o"
 	@echo "... src/timeModule.i"
 	@echo "... src/timeModule.s"
+	@echo "... src/ws2811EventHandler.o"
+	@echo "... src/ws2811EventHandler.i"
+	@echo "... src/ws2811EventHandler.s"
 .PHONY : help
 
 

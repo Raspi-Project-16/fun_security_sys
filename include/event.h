@@ -1,19 +1,24 @@
-#include "glo_def.h"
+#ifndef COMMON_EVENT_H
+#define COMMON_EVENT_H
+
 #include <string>
+#include <iostream>
+#include "glo_def.h"
 using namespace std;
 
-class Event
+
+class CEvent
 {
 public:
-    virtual u16 getEid() const {return eid_;};
-    virtual void setEid(u16 eid) {eid_ = eid;};
-    virtual u32 getSN() const {return sn_;};
-    virtual void setSN(u32 sn){ sn_ = sn;};
-    virtual std::ostream& dump(std::ostream& out) const { return out;};
-    virtual bool decode() {return true;};
-    virtual char* encode() {return NULL;};
-    Event();
-    virtual ~Event();
+    u16 getEid() const {return eid_;};
+    void setEid(u16 eid) {eid_ = eid;};
+    u32 getSN() const {return sn_;};
+    void setSN(u32 sn){ sn_ = sn;};
+    // virtual std::ostream& dump(std::ostream& out) const { return out;};
+    // virtual bool decode() {return true;};
+    // virtual char* encode() {return NULL;};
+    CEvent();
+    ~CEvent();
 
 private:
     u16 eid_;
@@ -22,3 +27,5 @@ private:
 protected:
     string content_;
 };
+
+#endif

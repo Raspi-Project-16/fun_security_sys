@@ -1,1 +1,0 @@
-/usr/bin/c++ -std=c++11 -rdynamic CMakeFiles/raspi_project.dir/test.cpp.o -o raspi_project 

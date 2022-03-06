@@ -1,12 +1,10 @@
 #include "dispatchEventService.h"
-#include <iostream>
-#include <sstream>
-#include <algorithm>
-using namespace std;
+
+
 
 #define MAX_ITEM_IN_EVENT_QUEUE 65536
 
-DispatchEventService::DispatchEventService() : msg_queue_( PosixQueue<Event>(MAX_ITEM_IN_EVENT_QUEUE) )
+DispatchEventService::DispatchEventService() : msg_queue_( PosixQueue<CEvent>(MAX_ITEM_IN_EVENT_QUEUE) )
 {
 }
 
@@ -14,6 +12,7 @@ DispatchEventService::~DispatchEventService()
 {
 }
 
+DispatchEventService DispatchEventService::instance_;
 
 bool DispatchEventService::init(){
     
@@ -35,7 +34,7 @@ bool DispatchEventService::uninit(){
     return true;
 }
 
-bool DispatchEventService::subscribe(u16 eid, EventHandler* handler)
+bool DispatchEventService::subscribe(int eid, EventHandler* handler)
 {
     if(NULL == handler) return false;
 
@@ -56,7 +55,7 @@ bool DispatchEventService::subscribe(u16 eid, EventHandler* handler)
     return true;
 }
 
-bool DispatchEventService::unsubscribe(u16 eid, EventHandler* handler)
+bool DispatchEventService::unsubscribe(int eid, EventHandler* handler)
 {
     if(NULL == handler) return false;
 
@@ -72,7 +71,7 @@ bool DispatchEventService::unsubscribe(u16 eid, EventHandler* handler)
     return true;
 }
 
-bool DispatchEventService::publish(Event* ev)
+bool DispatchEventService::publish(CEvent* ev)
 {
     if (NULL == ev)
     {
@@ -82,15 +81,15 @@ bool DispatchEventService::publish(Event* ev)
     return msg_queue_.enqueue(ev, 0);
 }
 
-bool DispatchEventService::process(const Event* ev)
+bool DispatchEventService::process(const CEvent* ev)
 {
     if (NULL == ev)
 	  {
         return false;
 	  }
 
-    u16 eid = ev->getEid();
-
+    int eid = ev->getEid();
+    
     if (eid == EEVENTID_UNKOWN)
     {
         cout << "DispatchMsgService : unknow evend id" << eid << endl;
@@ -103,7 +102,7 @@ bool DispatchEventService::process(const Event* ev)
         cout << "DispatchMsgService : no event handler subscribed"<< eid << endl;
         return false;
     }
-
+    
     for (T_EventHandlers::iterator iter = handlers->second.begin();
         iter != handlers->second.end();
         iter++)
@@ -111,34 +110,33 @@ bool DispatchEventService::process(const Event* ev)
         EventHandler* handler = *iter;
         handler->handle(ev);
     }
-
-	  return true;
+	return true;
 }
 
 void* DispatchEventService::svc(void* argv)
 {
-    cout << "dmg is running \n!" << endl;
+    cout << "dmg is running !" << endl;
     DispatchEventService* dmsvr = (DispatchEventService*)argv;
     if(argv == NULL){
         cout << "parameter of thread is invalid. \n" << endl;
         return NULL;
     }
-
     while(!dmsvr->svr_exit_)
     {
-        Event* ev = NULL;
+        CEvent* ev = NULL;
+
         /* wait only 1 ms to dequeue */
         if (-1 == dmsvr->msg_queue_.dequeue(ev, 1))
         {
             continue;
         }
-        std::stringstream ss;
-        ev->dump(ss);
-        cout << "dequeue an event" << "(" << ss.str().c_str() << ")" << endl;
+        //std::stringstream ss;
+        //ev->dump(ss);
+        //cout << "dequeue an event" << "(" << ss.str().c_str() << ")" << endl;
         dmsvr->process(ev);
 		delete ev;
     }
-
+    
 	dmsvr->subscribers_.clear();
     cout << "dms quit. \n" << endl;
     return NULL;

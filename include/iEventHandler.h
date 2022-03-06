@@ -1,13 +1,13 @@
-#ifndef NS_IEVENT_HANDLER_H_
-#define NS_IEVENT_HANDLER_H_
-
+#ifndef COMMON_IEVENT_HANDLER_H_
+#define COMMON_IEVENT_HANDLER_H_
 #include "event.h"
-#include "events_def.h"
+#include <iostream>
+
 
 class EventHandler
 {
 public:
-    virtual bool handle(const Event* ev) = 0;
+    virtual bool handle(const CEvent* ev) = 0;
     virtual ~EventHandler() {};
     EventHandler(){};
 };
