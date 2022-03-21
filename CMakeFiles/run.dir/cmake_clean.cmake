@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/run.dir/src/cameraEventHandler.cpp.o"
   "CMakeFiles/run.dir/src/dispatchEventService.cpp.o"
   "CMakeFiles/run.dir/src/event.cpp.o"
   "CMakeFiles/run.dir/src/events_def.cpp.o"

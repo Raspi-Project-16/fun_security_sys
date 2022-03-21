@@ -142,6 +142,33 @@ run/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
 .PHONY : run/fast
 
+src/cameraEventHandler.o: src/cameraEventHandler.cpp.o
+
+.PHONY : src/cameraEventHandler.o
+
+# target to build an object file
+src/cameraEventHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/cameraEventHandler.cpp.o
+.PHONY : src/cameraEventHandler.cpp.o
+
+src/cameraEventHandler.i: src/cameraEventHandler.cpp.i
+
+.PHONY : src/cameraEventHandler.i
+
+# target to preprocess a source file
+src/cameraEventHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/cameraEventHandler.cpp.i
+.PHONY : src/cameraEventHandler.cpp.i
+
+src/cameraEventHandler.s: src/cameraEventHandler.cpp.s
+
+.PHONY : src/cameraEventHandler.s
+
+# target to generate assembly for a file
+src/cameraEventHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/cameraEventHandler.cpp.s
+.PHONY : src/cameraEventHandler.cpp.s
+
 src/dispatchEventService.o: src/dispatchEventService.cpp.o
 
 .PHONY : src/dispatchEventService.o
@@ -448,6 +475,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... run"
+	@echo "... src/cameraEventHandler.o"
+	@echo "... src/cameraEventHandler.i"
+	@echo "... src/cameraEventHandler.s"
 	@echo "... src/dispatchEventService.o"
 	@echo "... src/dispatchEventService.i"
 	@echo "... src/dispatchEventService.s"

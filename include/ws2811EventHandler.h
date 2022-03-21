@@ -21,6 +21,7 @@ public:
     void shutdown();
     
 private:
+u32 count;
 ws2811_t ledstring =
 {
     .freq = TARGET_FREQ,

@@ -25,6 +25,7 @@ enum EventID
     EEVENTID_LED_REQ                       = 0x01,
     EEVENTID_SOUND_REQ                     = 0x02,
 	EEVENTID_WS2811_REQ                    = 0x03,
+	EEVENTID_CAMERA_REQ                    = 0x04,
 
 	EEVENTID_UNKOWN                        = 0xFF
 };

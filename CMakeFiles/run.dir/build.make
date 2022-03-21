@@ -219,6 +219,19 @@ CMakeFiles/run.dir/src/ws2811EventHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/ws2811EventHandler.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/raspi_project_16/src/ws2811EventHandler.cpp -o CMakeFiles/run.dir/src/ws2811EventHandler.cpp.s
 
+CMakeFiles/run.dir/src/cameraEventHandler.cpp.o: CMakeFiles/run.dir/flags.make
+CMakeFiles/run.dir/src/cameraEventHandler.cpp.o: src/cameraEventHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/run.dir/src/cameraEventHandler.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/cameraEventHandler.cpp.o -c /home/pi/raspi_project_16/src/cameraEventHandler.cpp
+
+CMakeFiles/run.dir/src/cameraEventHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/cameraEventHandler.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/raspi_project_16/src/cameraEventHandler.cpp > CMakeFiles/run.dir/src/cameraEventHandler.cpp.i
+
+CMakeFiles/run.dir/src/cameraEventHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/cameraEventHandler.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/raspi_project_16/src/cameraEventHandler.cpp -o CMakeFiles/run.dir/src/cameraEventHandler.cpp.s
+
 # Object files for target run
 run_OBJECTS = \
 "CMakeFiles/run.dir/src/main.cpp.o" \
@@ -231,7 +244,8 @@ run_OBJECTS = \
 "CMakeFiles/run.dir/src/events_def.cpp.o" \
 "CMakeFiles/run.dir/src/ledEventHandler.cpp.o" \
 "CMakeFiles/run.dir/src/soundEventHandler.cpp.o" \
-"CMakeFiles/run.dir/src/ws2811EventHandler.cpp.o"
+"CMakeFiles/run.dir/src/ws2811EventHandler.cpp.o" \
+"CMakeFiles/run.dir/src/cameraEventHandler.cpp.o"
 
 # External object files for target run
 run_EXTERNAL_OBJECTS =
@@ -247,40 +261,41 @@ run: CMakeFiles/run.dir/src/events_def.cpp.o
 run: CMakeFiles/run.dir/src/ledEventHandler.cpp.o
 run: CMakeFiles/run.dir/src/soundEventHandler.cpp.o
 run: CMakeFiles/run.dir/src/ws2811EventHandler.cpp.o
+run: CMakeFiles/run.dir/src/cameraEventHandler.cpp.o
 run: CMakeFiles/run.dir/build.make
-run: /usr/lib/arm-linux-gnueabihf/libopencv_stitching.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_alphamat.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_aruco.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_bgsegm.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_bioinspired.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_ccalib.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_dnn_objdetect.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_dnn_superres.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_dpm.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_face.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_freetype.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_fuzzy.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_hdf.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_hfs.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_img_hash.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_intensity_transform.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_line_descriptor.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_mcc.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_quality.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_rapid.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_reg.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_rgbd.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_saliency.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_shape.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_stereo.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_structured_light.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_superres.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_surface_matching.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_tracking.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_videostab.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_viz.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_xobjdetect.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_xphoto.so.4.5.1
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_gapi.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_stitching.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_aruco.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_barcode.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_bgsegm.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_bioinspired.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_ccalib.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_dnn_objdetect.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_dnn_superres.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_dpm.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_face.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_freetype.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_fuzzy.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_hfs.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_img_hash.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_intensity_transform.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_line_descriptor.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_mcc.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_quality.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_rapid.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_reg.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_rgbd.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_saliency.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_stereo.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_structured_light.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_superres.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_surface_matching.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_tracking.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_videostab.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_wechat_qrcode.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_xfeatures2d.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_xobjdetect.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_xphoto.so.4.5.5
 run: /usr/local/lib/libwiringPi.so
 run: /usr/local/lib/libpigpio.so
 run: /usr/local/lib/libcpptimer.a
@@ -291,28 +306,31 @@ run: /usr/lib/arm-linux-gnueabihf/libpthread.so
 run: /usr/lib/arm-linux-gnueabihf/libboost_filesystem.a
 run: /usr/lib/arm-linux-gnueabihf/libboost_system.a
 run: /usr/lib/arm-linux-gnueabihf/libboost_thread.a
-run: /usr/lib/arm-linux-gnueabihf/libopencv_highgui.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_datasets.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_plot.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_text.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_ml.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_phase_unwrapping.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_optflow.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_ximgproc.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_video.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_dnn.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_videoio.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_imgcodecs.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_objdetect.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_calib3d.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_features2d.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_flann.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_photo.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_imgproc.so.4.5.1
-run: /usr/lib/arm-linux-gnueabihf/libopencv_core.so.4.5.1
+run: /usr/local/lib/libraspicam.so
+run: /usr/local/lib/libraspicam_cv.so
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_shape.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_highgui.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_datasets.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_plot.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_text.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_ml.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_phase_unwrapping.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_optflow.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_ximgproc.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_video.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_videoio.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_imgcodecs.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_objdetect.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_calib3d.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_dnn.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_features2d.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_flann.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_photo.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_imgproc.so.4.5.5
+run: /usr/local/lib/arm-linux-gnueabihf/libopencv_core.so.4.5.5
 run: /usr/lib/arm-linux-gnueabihf/libboost_atomic.a
 run: CMakeFiles/run.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable run"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/run.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
