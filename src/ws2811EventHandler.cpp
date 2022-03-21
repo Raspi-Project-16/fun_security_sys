@@ -4,6 +4,7 @@
 
 Ws2811EventHandler::Ws2811EventHandler(){
     matrix = (ws2811_led_t *)malloc(sizeof(ws2811_led_t) * WIDTH * HEIGHT);
+    this-> count = 0;
 }
 
 Ws2811EventHandler::~Ws2811EventHandler(){
@@ -23,8 +24,10 @@ void Ws2811EventHandler::stop(){
 
 bool Ws2811EventHandler::handle(const CEvent* ev){
     if(EEVENTID_WS2811_REQ == ev->getEid()){
+        if(count == 2e32-1)count=0;
+        count++;
         Ws2811Event* req = (Ws2811Event*) ev;
-        
+        if(count% 1000 == 0){
         ws2811_return_t ret;
         if ((ret = ws2811_init(&ledstring)) != WS2811_SUCCESS)
         {
@@ -38,7 +41,8 @@ bool Ws2811EventHandler::handle(const CEvent* ev){
             fprintf(stderr, "ws2811_render failed: %s\n", ws2811_get_return_t_str(ret));
             return false;
         }
-        usleep(1000000 / 20);
+        }
+        //usleep(1000000 / 30);
         Ws2811Event* ws2811Ev = new Ws2811Event();
         des->publish(ws2811Ev);   
     }else{

@@ -15,13 +15,17 @@ find_library(CPPTIMER_LIBRARIES NAMES cpptimer)
 find_library(WS2811_LIBRARIES NAMES ws2811)
 find_library(RT_LIBRARIES NAMES rt)
 find_library(GLOG_LIBRARIES NAMES glog)
+find_library(RASPICAM_LIBRARIES NAMES raspicam)
+find_library(RASPICAM_CV_LIBRARIES NAMES raspicam_cv)
 find_library(PTHREAD_LIBRARIES NAMES pthread)
 find_package(Boost REQUIRED COMPONENTS filesystem system thread)
 
 include_directories(${OpenCV_INCLUDE_DIRS})
 include_directories(${PROJECT_SOURCE_DIR}/include)
+include_directories(/usr/local/include/raspicam)
 include_directories(/usr/local/include/ws2811)
 include_directories(/usr/local/include/glog)
+include_directories(/usr/local/include/opencv4)
 
 link_directories(${PROJECT_SOURCE_DIR}/lib)
 
@@ -37,6 +41,7 @@ add_executable(run
     src/ledEventHandler.cpp
     src/soundEventHandler.cpp
     src/ws2811EventHandler.cpp
+    src/cameraEventHandler.cpp
     )
 
 target_link_libraries(run ${OpenCV_LIBRARIES})
@@ -48,3 +53,5 @@ target_link_libraries(run ${RT_LIBRARIES})
 target_link_libraries(run ${GLOG_LIBRARIES})
 target_link_libraries(run ${PTHREAD_LIBRARIES})
 target_link_libraries(run ${Boost_LIBRARIES})
+target_link_libraries(run ${RASPICAM_LIBRARIES})
+target_link_libraries(run ${RASPICAM_CV_LIBRARIES})

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = -DBOOST_ALL_NO_LIB
 
-CXX_INCLUDES = -I/home/pi/raspi_project_16/include -I/usr/local/include/ws2811 -I/usr/local/include/glog -isystem /usr/include/opencv4
+CXX_INCLUDES = -I/home/pi/raspi_project_16/include -I/usr/local/include/raspicam -I/usr/local/include/ws2811 -I/usr/local/include/glog -isystem /usr/local/include/opencv4
 
 CXX_FLAGS = 
 
