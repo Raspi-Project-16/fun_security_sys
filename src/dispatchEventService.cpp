@@ -89,17 +89,16 @@ bool DispatchEventService::process(const CEvent* ev)
 	  }
 
     int eid = ev->getEid();
-    
     if (eid == EEVENTID_UNKOWN)
     {
-        cout << "DispatchMsgService : unknow evend id" << eid << endl;
+        cout << "DispatchMsgService : unknow event id" << eid << endl;
         return false;
     }
 
     T_EventHandlersMap::iterator handlers = subscribers_.find(eid);
     if (handlers == subscribers_.end())
     {
-        cout << "DispatchMsgService : no event handler subscribed"<< eid << endl;
+        cout << "DispatchMsgService : no event handler subscribed "<< eid << endl;
         return false;
     }
     
@@ -134,7 +133,7 @@ void* DispatchEventService::svc(void* argv)
         //ev->dump(ss);
         //cout << "dequeue an event" << "(" << ss.str().c_str() << ")" << endl;
         dmsvr->process(ev);
-		delete ev;
+		//delete ev;
     }
     
 	dmsvr->subscribers_.clear();

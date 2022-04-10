@@ -4,6 +4,7 @@
 
 Ws2811EventHandler::Ws2811EventHandler(){
     matrix = (ws2811_led_t *)malloc(sizeof(ws2811_led_t) * WIDTH * HEIGHT);
+    previousMode = RAINBOW_COLOR;
     this-> count = 0;
 }
 
@@ -13,7 +14,7 @@ Ws2811EventHandler::~Ws2811EventHandler(){
 
 void Ws2811EventHandler::start(){
     des->subscribe(EEVENTID_WS2811_REQ, this);
-    Ws2811Event* ws2811Ev = new Ws2811Event();
+    ws2811Ev->setMsg(RAINBOW_COLOR);
     des->publish(ws2811Ev);
 }
 
@@ -24,32 +25,76 @@ void Ws2811EventHandler::stop(){
 
 bool Ws2811EventHandler::handle(const CEvent* ev){
     if(EEVENTID_WS2811_REQ == ev->getEid()){
-        if(count == 2e32-1)count=0;
-        count++;
         Ws2811Event* req = (Ws2811Event*) ev;
-        if(count% 1000 == 0){
-        ws2811_return_t ret;
-        if ((ret = ws2811_init(&ledstring)) != WS2811_SUCCESS)
-        {
-            cout << stderr << "ws2811_init failed:" << ws2811_get_return_t_str(ret) << endl;
+        cout << "get:" << req->getMsg() << endl;
+        
+        if(req->getMsg() != previousMode){
+            
+            if(previousMode == RAINBOW_COLOR){
+                begin = clock();
+                previousMode = req->getMsg();
+            }
+            
+            if(previousMode == ACCESSING_COLOR){
+                end = clock();
+                cout << begin/CLOCKS_PER_SEC << "  " << end/CLOCKS_PER_SEC << "  " << (end - begin)/CLOCKS_PER_SEC<< endl;
+                if((end-begin)/CLOCKS_PER_SEC > 10){
+                    previousMode = req->getMsg();
+                    begin = end = 0;
+                    if(req->getMsg() == WARNING_COLOR){
+                    begin = clock();
+                    }
+                }
+            }
+            
+            if(previousMode == WARNING_COLOR){
+                end = clock();
+                cout << begin/CLOCKS_PER_SEC << "  " << end/CLOCKS_PER_SEC << "  " << (end - begin)/CLOCKS_PER_SEC<< endl;
+                if((end-begin)/CLOCKS_PER_SEC > 10){
+                    previousMode = req->getMsg();
+                    begin = end = 0;
+                    if(req->getMsg() == ACCESSING_COLOR){
+                    begin = clock();
+                    }
+                }
+            }
+            
+        }else{ 
+                end = clock();
+                cout << begin/CLOCKS_PER_SEC << "  " << end/CLOCKS_PER_SEC << "  " << (end - begin)/CLOCKS_PER_SEC<< endl;
+                if((end-begin)/CLOCKS_PER_SEC > 10){
+                    ws2811Ev->setMsg(RAINBOW_COLOR);
+                    previousMode = RAINBOW_COLOR;
+                    begin = end = 0;
+                }
         }
-        matrix_raise();
-        matrix_bottom();
-        matrix_render();
-        if ((ret = ws2811_render(&ledstring)) != WS2811_SUCCESS)
-        {
-            fprintf(stderr, "ws2811_render failed: %s\n", ws2811_get_return_t_str(ret));
-            return false;
-        }
-        }
-        //usleep(1000000 / 30);
-        Ws2811Event* ws2811Ev = new Ws2811Event();
-        des->publish(ws2811Ev);   
+        cout << "execute:" << previousMode << endl;
+        execute(previousMode);
+        //Ws2811Event* ws2811Ev = new Ws2811Event(previousMode);
+        des->publish(req);   
     }else{
         
     }
 
     return true;
+}
+
+void Ws2811EventHandler::execute(string msg){
+    ws2811_return_t ret;
+    if ((ret = ws2811_init(&ledstring)) != WS2811_SUCCESS)
+    {
+        cout << stderr << "ws2811_init failed:" << ws2811_get_return_t_str(ret) << endl;
+        exit(1);
+    }
+    matrix_clear();
+    matrix_bottom(msg);
+    matrix_render();
+    if ((ret = ws2811_render(&ledstring)) != WS2811_SUCCESS)
+    {
+        fprintf(stderr, "ws2811_render failed: %s\n", ws2811_get_return_t_str(ret));
+        exit(1);
+    }
+    
 }
 
 void Ws2811EventHandler::matrix_render(){
@@ -65,54 +110,40 @@ void Ws2811EventHandler::matrix_render(){
     }
 }
 
-void Ws2811EventHandler::matrix_raise(){
-    int x, y;
-
-    for (y = 0; y < (HEIGHT - 1); y++)
-    {
-        for (x = 0; x < WIDTH; x++)
-        {
-            // This is for the 8x8 Pimoroni Unicorn-HAT where the LEDS in subsequent
-            // rows are arranged in opposite directions
-            matrix[y * WIDTH + x] = matrix[(y + 1)*WIDTH + WIDTH - x - 1];
-        }
-    }
-    
-}
-
 void Ws2811EventHandler::matrix_clear(){
-    int x, y;
+    int x;
 
-    for (y = 0; y < (HEIGHT ); y++)
+
+    for (x = 0; x < WIDTH; x++)
     {
-        for (x = 0; x < WIDTH; x++)
-        {
-            matrix[y * WIDTH + x] = 0;
-        }
+        matrix[x] = 0;
     }
 
 }
 
-void Ws2811EventHandler::matrix_bottom()
+void Ws2811EventHandler::matrix_bottom(string mode)
 {
     int i;
 
     for (i = 0; i < (int)(ARRAY_SIZE(dotspos)); i++)
     {
-        {
+        
         dotspos[i]++;
         if (dotspos[i] > (WIDTH - 1))
         {
             dotspos[i] = 0;
         }
-
-        if (ledstring.channel[0].strip_type == SK6812_STRIP_RGBW) {
-            matrix[dotspos[i] + (HEIGHT - 1) * WIDTH] = dotcolors_rgbw[i];
-        } else {
+        
+        if(mode == WARNING_COLOR){
+            matrix[dotspos[i] + (HEIGHT - 1) * WIDTH] = dotcolors_red[i];
+        }else if(mode == ACCESSING_COLOR){
+            matrix[dotspos[i] + (HEIGHT - 1) * WIDTH] = dotcolors_green[i];
+        }else if(mode == RAINBOW_COLOR){
             matrix[dotspos[i] + (HEIGHT - 1) * WIDTH] = dotcolors[i];
         }
+        
     }
-    }
+    
 }
 
 

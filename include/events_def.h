@@ -19,6 +19,7 @@
 #include <ctime>
 #include <fstream>
 #include <map>
+#include <time.h>
 using namespace std;
 using namespace cv;
 using namespace cv::face;
@@ -81,14 +82,20 @@ class Ws2811Event : public CEvent
 {
 
 public:
-    u32 getGPIO() const {return gpio_;};
+    static Ws2811Event* getInstance(){ 
+        return &ins;
+    };
     string getMsg() const {return this->content_;};
-    Ws2811Event();
+    void setMsg(string msg);
+    Ws2811Event(string msg);
     ~Ws2811Event();
 
 private:
-    u32 gpio_;
+    static Ws2811Event ins;
 };
+
+#define ws2811Ev Ws2811Event::getInstance()
+
 
 /**
  * @brief CameraEvent
@@ -100,22 +107,11 @@ class CameraEvent : public CEvent
 
 public:
     string getMsg() const {return this->content_;};
-    CameraEvent();
     ~CameraEvent();
-    void init();
-    bool recognizeFaces();
-
+    CameraEvent();
+    
 private:
-    Mat frame;
-    Mat windowFrame;
-    raspicam::RaspiCam_Cv Camera;
-    map<int, string> labels;
-    CascadeClassifier classifier;
-    Ptr<LBPHFaceRecognizer> recognizer;
-    int numframes = 0;
-    time_t timer_begin,timer_end;
-    vector<Rect> faces;
-    double secondsElapsed;
+    
 };
 
 

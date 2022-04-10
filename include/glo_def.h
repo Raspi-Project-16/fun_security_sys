@@ -85,14 +85,15 @@ typedef signed long long i64;
 #define TARGET_FREQ             WS2811_TARGET_FREQ
 #define GPIO_PIN                21
 #define DMA                     10
-//#define STRIP_TYPE            WS2811_STRIP_RGB		// WS2812/SK6812RGB integrated chip+leds
 #define STRIP_TYPE              WS2811_STRIP_GBR		// WS2812/SK6812RGB integrated chip+leds
 //#define STRIP_TYPE            SK6812_STRIP_RGBW		// SK6812RGBW (NOT SK6812RGB)
 
 #define WIDTH                   150
 #define HEIGHT                  1
 #define LED_COUNT               (WIDTH * HEIGHT)
-
+#define WARNING_COLOR           "red"
+#define ACCESSING_COLOR         "green"
+#define RAINBOW_COLOR           "rainbow"
 
 template <class Type> 
 Type stringToNum(const std::string& str){ 

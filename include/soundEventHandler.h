@@ -13,6 +13,9 @@ public:
     void start(u32 gpio, u32 msg);
     void stop();
     bool handle(const CEvent* ev);
+private:
+    SoundEvent* soundEv;
+    int count = 0;
 };
 
 
