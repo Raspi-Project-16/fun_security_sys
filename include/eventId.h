@@ -8,7 +8,7 @@ extern "C"
 
 enum EErrorCode
 {
-    ERRC_SUCCESS              = 200,
+	ERRC_SUCCESS              = 200,
 	ERRC_INVALID_MSG          = 400,
 	ERRC_INVALID_DATA         = 404,
 	ERRC_METHOD_NOT_ALLOWED   = 405,
@@ -21,14 +21,15 @@ enum EErrorCode
 /* 事件ID */
 enum EventID
 {
-    EEVENTID_COMMON_RSP                    = 0x00,
-    EEVENTID_LED_REQ                       = 0x01,
-    EEVENTID_SOUND_REQ                     = 0x02,
+	EEVENTID_COMMON_RSP                    = 0x00,
+	EEVENTID_LED_REQ                       = 0x01,
+	EEVENTID_SOUND_REQ                     = 0x02,
 	EEVENTID_WS2811_REQ                    = 0x03,
 	EEVENTID_CAMERA_REQ                    = 0x04,
 
 	EEVENTID_UNKOWN                        = 0xFF
 };
+
 
 
 #ifdef __cplusplus

@@ -3,7 +3,8 @@
         "iostream": "cpp",
         "iosfwd": "cpp",
         "sstream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "stop_token": "cpp"
     }
     
 }

@@ -62,11 +62,22 @@ bool SoundEvent::detectSound(){
 
 
 
-Ws2811Event::Ws2811Event()
+Ws2811Event::Ws2811Event(string msg)
 {
     this->setEid(EEVENTID_WS2811_REQ);
+    this->content_ = msg;
 
 }
+Ws2811Event::~Ws2811Event()
+{
+
+}
+void Ws2811Event::setMsg(string msg){
+    this->content_ = msg;
+}
+
+Ws2811Event Ws2811Event::ins = Ws2811Event(RAINBOW_COLOR);
+
 
 
 
@@ -79,55 +90,7 @@ CameraEvent::CameraEvent()
      this->setEid(EEVENTID_CAMERA_REQ);
 }
 
-void CameraEvent::init()
-{
-    
-    Camera.set(CAP_PROP_FRAME_WIDTH, 320);
-    Camera.set(CAP_PROP_FRAME_HEIGHT, 240);
-    ifstream infile("./recognizer/labels.txt");
-    int a;
-    string b;
-    while (infile >> a >> b){
-    labels[a] = b;
-  }
-    if (!Camera.open()) {cerr<<"Error opening the camera"<<endl;}
-    classifier.load("./cascades/lbpcascade_frontalface.xml");
-    recognizer->read("./recognizer/embeddings.xml");
-    namedWindow("edges", 1);
-    time ( &timer_begin );
-}
-
-bool CameraEvent::recognizeFaces()
-{
-    Camera.grab();
-    Camera.retrieve(frame);
-    cvtColor(frame, windowFrame, CV_BGR2GRAY);
-    classifier.detectMultiScale(frame, faces, 1.2, 5);
-    for(size_t i = 0; i < faces.size(); i++){
-      rectangle(frame, faces[i], Scalar(0, 255, 0));
-      Mat face = windowFrame(faces[i]);
-      double confidence = 0.0;
-      int predicted = recognizer->predict(face);
-      recognizer->predict(face, predicted, confidence);
-      if(labels.find(predicted) == labels.end() || confidence < 25){
-        putText(frame, "Unknown", Point(faces[i].x ,faces[i].y - 5), FONT_HERSHEY_DUPLEX, 1, Scalar(0,255,0), 1);
-        return false;
-      }else{
-        putText(frame, labels[predicted], Point(faces[i].x ,faces[i].y - 5), FONT_HERSHEY_DUPLEX, 1, Scalar(0,255,0), 1);
-        return true;
-      }
-      cout << "ID: " << predicted << " | Confidence: " << confidence << endl;
-    }
-    imshow("edges", frame);
-    numframes++;
-    return true;
-}
-
-
 CameraEvent::~CameraEvent()
 {
-  Camera.release();
-  time ( &timer_end );
-  secondsElapsed = difftime ( timer_end,timer_begin );
-  cout << "FPS:" << numframes / secondsElapsed << endl;
+
 }
