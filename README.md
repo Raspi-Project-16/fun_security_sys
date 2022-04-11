@@ -1,4 +1,4 @@
-# fun_security_sys
+# Fun_Security_System
 ![OS: Linux](https://img.shields.io/badge/OS-Linux-e06c75?style=flat&logo=linux)
 ![Version: v1.0](https://img.shields.io/badge/Version-1.0-blue.svg)
 ![Stars](https://img.shields.io/github/stars/Robotics-TDP-Team2/Nao-Soccer-Simulator.svg?style=flat&label=Star&maxAge=86400)
@@ -10,7 +10,7 @@
 
 #### Contents
 * [Synopsis](#synopsis)
-* [Phases and Roadmap](#phases-and-roadmap)
+* [Wiring](#phases-and-roadmap)
 * [Installation](#Installation)
 * [Milestones](#milestones)
 * [Contribution Guidelines](#contribution-guidelines)
@@ -18,7 +18,7 @@
 * [Directory Tree](#directory-tree)
 
 
-## [Installation](#Nao-Soccer-Simulator)
+## [Installation](#Raspi-Project-16)
 
 ### 1. Download
 
@@ -50,7 +50,7 @@ $ sudo ./run
 ```
 
 
-## [Credits](#Nao-Soccer-Simulator)
+## [Credits](#Raspi-Project-16)
 
 `fun_security_sys` is maintained by the RTEP-Project-Team16. Team members include:
 
@@ -59,7 +59,7 @@ $ sudo ./run
 * Genyuan Su
 * Yuhan Lin
 
-## [Directory Tree](#Nao-Soccer-Simulator)
+## [Directory Tree](#Raspi-Project-16)
 
     |–– CMakeFiles
     |–– include
