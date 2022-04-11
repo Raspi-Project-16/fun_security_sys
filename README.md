@@ -8,7 +8,7 @@
 ![C++](https://img.shields.io/badge/C++-purple.svg)
 ![Cmake](https://img.shields.io/badge/Cmake-orange.svg)
 
-#### Contents
+# Contents
 * [Synopsis](#synopsis)
 * [Wiring](#phases-and-roadmap)
 * [Installation](#Installation)
