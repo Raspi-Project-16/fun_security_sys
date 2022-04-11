@@ -1,5 +1,5 @@
 # fun_security_sys
-
+![OS: Linux](https://img.shields.io/badge/OS-Linux-e06c75?style=flat&logo=linux)
 ![Version: v1.0](https://img.shields.io/badge/Version-1.0-blue.svg)
 ![Stars](https://img.shields.io/github/stars/Robotics-TDP-Team2/Nao-Soccer-Simulator.svg?style=flat&label=Star&maxAge=86400)
 [![Github open issues](https://img.shields.io/github/issues-raw/Raspi-Project-16/fun_security_sys-opencv-ws2812.svg)](https://github.com/Raspi-Project-16/fun_security_sys-opencv-ws2812/issues)
@@ -11,13 +11,44 @@
 #### Contents
 * [Synopsis](#synopsis)
 * [Phases and Roadmap](#phases-and-roadmap)
-* [Usage Examples](#usage-examples)
+* [Installation](#Installation)
 * [Milestones](#milestones)
 * [Contribution Guidelines](#contribution-guidelines)
 * [Credits](#credits)
 * [Directory Tree](#directory-tree)
 
-...
+
+## [Installation](#Nao-Soccer-Simulator)
+
+### 1. Download
+
+```py
+$ git clone https://github.com/Raspi-Project-16/fun_security_sys-opencv-ws2812.git
+```
+### 2. Compile
+
+```py
+$ cd raspi_project_16
+```
+```py
+$ cmake .
+```
+```py
+$ make
+```
+### 3. Run
+
+#### 3.1 Save your photos into the dataset folder
+
+```py
+$ sudo ./train
+```
+#### 3.2 Run the program
+
+```py
+$ sudo ./run
+```
+
 
 ## [Credits](#Nao-Soccer-Simulator)
 
