@@ -1,10 +1,12 @@
 # fun_security_sys
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![Version: v1.0](https://img.shields.io/badge/Version-1.0-blue.svg)
 ![Stars](https://img.shields.io/github/stars/Robotics-TDP-Team2/Nao-Soccer-Simulator.svg?style=flat&label=Star&maxAge=86400)
-[![Github open issues](https://img.shields.io/github/issues-raw/Robotics-TDP-Team2/Nao-Soccer-Simulator.svg)](https://github.com/Robotics-TDP-Team2/Nao-Soccer-Simulator/issues) 
-![](https://img.shields.io/github/repo-size/Robotics-TDP-Team2/Nao-Soccer-Simulator.svg?label=Repo%20size&style=flat-square)&nbsp;
-![Contributors](https://img.shields.io/github/contributors/Robotics-TDP-Team2/Nao-Soccer-Simulator.svg?style=flat&label=Contributors&maxAge=86400)
+[![Github open issues](https://img.shields.io/github/issues-raw/Raspi-Project-16/fun_security_sys-opencv-ws2812.svg)](https://github.com/Raspi-Project-16/fun_security_sys-opencv-ws2812/issues)
+![](https://img.shields.io/github/repo-size/Raspi-Project-16/fun_security_sys-opencv-ws2812.svg)
+![Contributors](https://img.shields.io/github/contributors/Raspi-Project-16/fun_security_sys-opencv-ws2812.svg?style=flat&label=Contributors&maxAge=86400)
+![C++](https://img.shields.io/badge/C++-purple.svg)
+![Cmake](https://img.shields.io/badge/Cmake-orange.svg)
 
 #### Contents
 * [Synopsis](#synopsis)
