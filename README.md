@@ -40,6 +40,8 @@ $ make
 
 #### 3.1 Save your photos into the dataset folder
 
+#### 3.2 Train the dataset
+
 ```py
 $ sudo ./train
 ```
