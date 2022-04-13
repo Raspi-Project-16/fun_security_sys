@@ -102,9 +102,9 @@ $ sudo ./run
     | |–– lbpcascade_frontalface.xml
     |—— dataset
     | |–– Lucas
-    | |–– David
-    | |–– Cam
-    | |–– Vlada
+    | |–– Bruce
+    | |–– Benedict
+    | |–– Jackie
     |—— recognizer
     | |–– embedding.xml
     | |–– labels.txt
