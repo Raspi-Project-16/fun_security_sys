@@ -31,10 +31,6 @@ link_directories(${PROJECT_SOURCE_DIR}/lib)
 
 add_executable(run 
     src/main.cpp 
-    src/lightModule.cpp 
-    src/soundModule.cpp 
-    src/timeModule.cpp 
-    src/ledModule.cpp
     src/dispatchEventService.cpp
     src/event.cpp
     src/events_def.cpp
@@ -43,6 +39,10 @@ add_executable(run
     src/ws2811EventHandler.cpp
     src/cameraEventHandler.cpp
     )
+
+add_executable(train 
+    src/faceRecogitionTraining.cpp 
+)
 
 target_link_libraries(run ${OpenCV_LIBRARIES})
 target_link_libraries(run ${WIRINGPI_LIBRARIES})
@@ -55,3 +55,8 @@ target_link_libraries(run ${PTHREAD_LIBRARIES})
 target_link_libraries(run ${Boost_LIBRARIES})
 target_link_libraries(run ${RASPICAM_LIBRARIES})
 target_link_libraries(run ${RASPICAM_CV_LIBRARIES})
+
+target_link_libraries(train ${OpenCV_LIBRARIES})
+target_link_libraries(train ${RASPICAM_LIBRARIES})
+target_link_libraries(train ${RASPICAM_CV_LIBRARIES})
+target_link_libraries(train ${Boost_LIBRARIES})

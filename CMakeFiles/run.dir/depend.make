@@ -417,19 +417,6 @@ CMakeFiles/run.dir/src/ledEventHandler.cpp.o: include/glo_def.h
 CMakeFiles/run.dir/src/ledEventHandler.cpp.o: include/iEventHandler.h
 CMakeFiles/run.dir/src/ledEventHandler.cpp.o: include/ledEventHandler.h
 
-CMakeFiles/run.dir/src/ledModule.cpp.o: src/ledModule.cpp
-CMakeFiles/run.dir/src/ledModule.cpp.o: /usr/local/include/ws2811/clk.h
-CMakeFiles/run.dir/src/ledModule.cpp.o: /usr/local/include/ws2811/dma.h
-CMakeFiles/run.dir/src/ledModule.cpp.o: /usr/local/include/ws2811/gpio.h
-CMakeFiles/run.dir/src/ledModule.cpp.o: /usr/local/include/ws2811/pwm.h
-CMakeFiles/run.dir/src/ledModule.cpp.o: /usr/local/include/ws2811/rpihw.h
-CMakeFiles/run.dir/src/ledModule.cpp.o: /usr/local/include/ws2811/ws2811.h
-CMakeFiles/run.dir/src/ledModule.cpp.o: include/ledModule.h
-CMakeFiles/run.dir/src/ledModule.cpp.o: include/timeModule.h
-
-CMakeFiles/run.dir/src/lightModule.cpp.o: src/lightModule.cpp
-CMakeFiles/run.dir/src/lightModule.cpp.o: include/lightModule.h
-
 CMakeFiles/run.dir/src/main.cpp.o: src/main.cpp
 CMakeFiles/run.dir/src/main.cpp.o: /usr/local/include/opencv4/opencv2/calib3d.hpp
 CMakeFiles/run.dir/src/main.cpp.o: /usr/local/include/opencv4/opencv2/core.hpp
@@ -561,11 +548,7 @@ CMakeFiles/run.dir/src/main.cpp.o: include/events_def.h
 CMakeFiles/run.dir/src/main.cpp.o: include/glo_def.h
 CMakeFiles/run.dir/src/main.cpp.o: include/iEventHandler.h
 CMakeFiles/run.dir/src/main.cpp.o: include/ledEventHandler.h
-CMakeFiles/run.dir/src/main.cpp.o: include/ledModule.h
-CMakeFiles/run.dir/src/main.cpp.o: include/lightModule.h
 CMakeFiles/run.dir/src/main.cpp.o: include/soundEventHandler.h
-CMakeFiles/run.dir/src/main.cpp.o: include/soundModule.h
-CMakeFiles/run.dir/src/main.cpp.o: include/timeModule.h
 CMakeFiles/run.dir/src/main.cpp.o: include/ws2811EventHandler.h
 
 CMakeFiles/run.dir/src/soundEventHandler.cpp.o: src/soundEventHandler.cpp
@@ -698,12 +681,6 @@ CMakeFiles/run.dir/src/soundEventHandler.cpp.o: include/events_def.h
 CMakeFiles/run.dir/src/soundEventHandler.cpp.o: include/glo_def.h
 CMakeFiles/run.dir/src/soundEventHandler.cpp.o: include/iEventHandler.h
 CMakeFiles/run.dir/src/soundEventHandler.cpp.o: include/soundEventHandler.h
-
-CMakeFiles/run.dir/src/soundModule.cpp.o: src/soundModule.cpp
-CMakeFiles/run.dir/src/soundModule.cpp.o: include/soundModule.h
-
-CMakeFiles/run.dir/src/timeModule.cpp.o: src/timeModule.cpp
-CMakeFiles/run.dir/src/timeModule.cpp.o: include/timeModule.h
 
 CMakeFiles/run.dir/src/ws2811EventHandler.cpp.o: src/ws2811EventHandler.cpp
 CMakeFiles/run.dir/src/ws2811EventHandler.cpp.o: /usr/local/include/opencv4/opencv2/calib3d.hpp

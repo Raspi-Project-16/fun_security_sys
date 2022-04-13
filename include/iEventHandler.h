@@ -4,12 +4,12 @@
 #include <iostream>
 
 
-class EventHandler
+class EventCallback
 {
 public:
-    virtual bool handle(const CEvent* ev) = 0;
-    virtual ~EventHandler() {};
-    EventHandler(){};
+    virtual bool callback(const CEvent* ev) = 0;
+    virtual ~EventCallback() {};
+    EventCallback(){};
 };
 
 #endif

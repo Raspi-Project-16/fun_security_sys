@@ -93,7 +93,10 @@ typedef signed long long i64;
 #define LED_COUNT               (WIDTH * HEIGHT)
 #define WARNING_COLOR           "red"
 #define ACCESSING_COLOR         "green"
-#define RAINBOW_COLOR           "rainbow"
+#define RAINBOW_COLOR           "rainbow "
+#define SOUND_PIN               28
+#define LED_PIN                 27
+#define PWM_PIN                 1
 
 template <class Type> 
 Type stringToNum(const std::string& str){ 

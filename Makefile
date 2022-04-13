@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named train
+
+# Build rule for target.
+train: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 train
+.PHONY : train
+
+# fast build rule for target.
+train/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/build
+.PHONY : train/fast
+
+#=============================================================================
 # Target rules for targets named run
 
 # Build rule for target.
@@ -250,6 +263,33 @@ src/events_def.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/events_def.cpp.s
 .PHONY : src/events_def.cpp.s
 
+src/faceRecogitionTraining.o: src/faceRecogitionTraining.cpp.o
+
+.PHONY : src/faceRecogitionTraining.o
+
+# target to build an object file
+src/faceRecogitionTraining.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/src/faceRecogitionTraining.cpp.o
+.PHONY : src/faceRecogitionTraining.cpp.o
+
+src/faceRecogitionTraining.i: src/faceRecogitionTraining.cpp.i
+
+.PHONY : src/faceRecogitionTraining.i
+
+# target to preprocess a source file
+src/faceRecogitionTraining.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/src/faceRecogitionTraining.cpp.i
+.PHONY : src/faceRecogitionTraining.cpp.i
+
+src/faceRecogitionTraining.s: src/faceRecogitionTraining.cpp.s
+
+.PHONY : src/faceRecogitionTraining.s
+
+# target to generate assembly for a file
+src/faceRecogitionTraining.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/src/faceRecogitionTraining.cpp.s
+.PHONY : src/faceRecogitionTraining.cpp.s
+
 src/ledEventHandler.o: src/ledEventHandler.cpp.o
 
 .PHONY : src/ledEventHandler.o
@@ -276,60 +316,6 @@ src/ledEventHandler.s: src/ledEventHandler.cpp.s
 src/ledEventHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/ledEventHandler.cpp.s
 .PHONY : src/ledEventHandler.cpp.s
-
-src/ledModule.o: src/ledModule.cpp.o
-
-.PHONY : src/ledModule.o
-
-# target to build an object file
-src/ledModule.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/ledModule.cpp.o
-.PHONY : src/ledModule.cpp.o
-
-src/ledModule.i: src/ledModule.cpp.i
-
-.PHONY : src/ledModule.i
-
-# target to preprocess a source file
-src/ledModule.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/ledModule.cpp.i
-.PHONY : src/ledModule.cpp.i
-
-src/ledModule.s: src/ledModule.cpp.s
-
-.PHONY : src/ledModule.s
-
-# target to generate assembly for a file
-src/ledModule.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/ledModule.cpp.s
-.PHONY : src/ledModule.cpp.s
-
-src/lightModule.o: src/lightModule.cpp.o
-
-.PHONY : src/lightModule.o
-
-# target to build an object file
-src/lightModule.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/lightModule.cpp.o
-.PHONY : src/lightModule.cpp.o
-
-src/lightModule.i: src/lightModule.cpp.i
-
-.PHONY : src/lightModule.i
-
-# target to preprocess a source file
-src/lightModule.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/lightModule.cpp.i
-.PHONY : src/lightModule.cpp.i
-
-src/lightModule.s: src/lightModule.cpp.s
-
-.PHONY : src/lightModule.s
-
-# target to generate assembly for a file
-src/lightModule.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/lightModule.cpp.s
-.PHONY : src/lightModule.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -385,60 +371,6 @@ src/soundEventHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/soundEventHandler.cpp.s
 .PHONY : src/soundEventHandler.cpp.s
 
-src/soundModule.o: src/soundModule.cpp.o
-
-.PHONY : src/soundModule.o
-
-# target to build an object file
-src/soundModule.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/soundModule.cpp.o
-.PHONY : src/soundModule.cpp.o
-
-src/soundModule.i: src/soundModule.cpp.i
-
-.PHONY : src/soundModule.i
-
-# target to preprocess a source file
-src/soundModule.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/soundModule.cpp.i
-.PHONY : src/soundModule.cpp.i
-
-src/soundModule.s: src/soundModule.cpp.s
-
-.PHONY : src/soundModule.s
-
-# target to generate assembly for a file
-src/soundModule.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/soundModule.cpp.s
-.PHONY : src/soundModule.cpp.s
-
-src/timeModule.o: src/timeModule.cpp.o
-
-.PHONY : src/timeModule.o
-
-# target to build an object file
-src/timeModule.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/timeModule.cpp.o
-.PHONY : src/timeModule.cpp.o
-
-src/timeModule.i: src/timeModule.cpp.i
-
-.PHONY : src/timeModule.i
-
-# target to preprocess a source file
-src/timeModule.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/timeModule.cpp.i
-.PHONY : src/timeModule.cpp.i
-
-src/timeModule.s: src/timeModule.cpp.s
-
-.PHONY : src/timeModule.s
-
-# target to generate assembly for a file
-src/timeModule.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/timeModule.cpp.s
-.PHONY : src/timeModule.cpp.s
-
 src/ws2811EventHandler.o: src/ws2811EventHandler.cpp.o
 
 .PHONY : src/ws2811EventHandler.o
@@ -475,6 +407,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... run"
+	@echo "... train"
 	@echo "... src/cameraEventHandler.o"
 	@echo "... src/cameraEventHandler.i"
 	@echo "... src/cameraEventHandler.s"
@@ -487,27 +420,18 @@ help:
 	@echo "... src/events_def.o"
 	@echo "... src/events_def.i"
 	@echo "... src/events_def.s"
+	@echo "... src/faceRecogitionTraining.o"
+	@echo "... src/faceRecogitionTraining.i"
+	@echo "... src/faceRecogitionTraining.s"
 	@echo "... src/ledEventHandler.o"
 	@echo "... src/ledEventHandler.i"
 	@echo "... src/ledEventHandler.s"
-	@echo "... src/ledModule.o"
-	@echo "... src/ledModule.i"
-	@echo "... src/ledModule.s"
-	@echo "... src/lightModule.o"
-	@echo "... src/lightModule.i"
-	@echo "... src/lightModule.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/soundEventHandler.o"
 	@echo "... src/soundEventHandler.i"
 	@echo "... src/soundEventHandler.s"
-	@echo "... src/soundModule.o"
-	@echo "... src/soundModule.i"
-	@echo "... src/soundModule.s"
-	@echo "... src/timeModule.o"
-	@echo "... src/timeModule.i"
-	@echo "... src/timeModule.s"
 	@echo "... src/ws2811EventHandler.o"
 	@echo "... src/ws2811EventHandler.i"
 	@echo "... src/ws2811EventHandler.s"

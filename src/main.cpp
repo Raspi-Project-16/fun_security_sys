@@ -1,9 +1,5 @@
 #include <iostream>
 #include <pigpio.h>
-#include "soundModule.h"
-#include "lightModule.h"
-#include "timeModule.h"
-#include "ledModule.h"
 #include <unistd.h>
 #include <time.h>
 #include <thread>
@@ -23,26 +19,24 @@ using namespace cv;
 int main(int argc, char* argv[]){
 
     des->init();
-    int GPIO_28 = 28;
-    int GPIO_27 = 27;
-    
     if(-1 == wiringPiSetup())
       {
           cerr<<"setup error\n";
           exit(-1);
       }
     
-    pinMode(GPIO_28, INPUT);
-    pinMode(GPIO_27, OUTPUT);
-
-    //LedEventHandler ledHandler;
-    //ledHandler.start();
-    Ws2811EventHandler ws2811Handler;
-    ws2811Handler.start();
-    SoundEventHandler soundHandler;
-    soundHandler.start(GPIO_28, GPIO_27);
-    CameraEventHandler camHandler;
-    camHandler.start();
+    //start the LED light
+    //LedEventCallback ledCallback;
+    //ledCallback.start();
+    //start the LED strip
+    Ws2811EventCallback ws2811Callback;
+    ws2811Callback.start();
+    //star the sound sensor
+    SoundEventCallback soundCallback;
+    soundCallback.start();
+    //start the camera
+    CameraEventCallback camCallback;
+    camCallback.start();
 
     for(;;){
       

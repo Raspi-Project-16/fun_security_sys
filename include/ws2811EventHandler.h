@@ -6,13 +6,13 @@
 #include "dispatchEventService.h"
 #include "events_def.h"
 
-class Ws2811EventHandler: public EventHandler{
+class Ws2811EventCallback: public EventCallback{
 public:
-    Ws2811EventHandler();
-    ~Ws2811EventHandler();
+    Ws2811EventCallback();
+    ~Ws2811EventCallback();
     void start();
     void stop();
-    bool handle(const CEvent* ev);
+    bool callback(const CEvent* ev);
     void execute(string msg);
     void matrix_render();
     void matrix_clear();

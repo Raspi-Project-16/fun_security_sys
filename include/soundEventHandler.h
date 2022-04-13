@@ -6,13 +6,13 @@
 #include "dispatchEventService.h"
 #include "events_def.h"
 
-class SoundEventHandler: public EventHandler{
+class SoundEventCallback: public EventCallback{
 public:
-    SoundEventHandler();
-    ~SoundEventHandler();
-    void start(u32 gpio, u32 msg);
+    SoundEventCallback();
+    ~SoundEventCallback();
+    void start();
     void stop();
-    bool handle(const CEvent* ev);
+    bool callback(const CEvent* ev);
 private:
     SoundEvent* soundEv;
     int count = 0;

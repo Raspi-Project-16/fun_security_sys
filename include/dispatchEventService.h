@@ -15,13 +15,13 @@ using namespace std;
 class DispatchEventService
 {
 public:
+    // return the only instance
     static DispatchEventService* getInstance() { return &instance_;};
 
     virtual bool init();
     virtual bool uninit();
-
-    virtual bool subscribe(int eid, EventHandler* handler);
-    virtual bool unsubscribe(int eid, EventHandler* handler);
+    virtual bool subscribe(int eid, EventCallback* handler);
+    virtual bool unsubscribe(int eid, EventCallback* handler);
     virtual bool publish(CEvent* ev);
 	
 protected:
@@ -33,8 +33,7 @@ protected:
 
     virtual bool process(const CEvent* ev);
     static void* svc(void * );
-    
-    typedef std::vector<EventHandler*> T_EventHandlers;
+    typedef std::vector<EventCallback*> T_EventHandlers;
     typedef std::map<int, T_EventHandlers > T_EventHandlersMap;
     T_EventHandlersMap subscribers_;
     PosixQueue<CEvent> msg_queue_;
@@ -42,7 +41,7 @@ protected:
 
 private:
     pthread_t thread_hdl_;
-
+    // static instance 
     static DispatchEventService instance_;
 
 };
