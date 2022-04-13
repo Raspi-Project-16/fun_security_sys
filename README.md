@@ -18,6 +18,10 @@
 * [Directory Tree](#directory-tree)
 
 
+## [Wiring](#Raspi-Project-16)
+
+<img width="848" alt="wiring" src="https://user-images.githubusercontent.com/85005419/163148439-90096409-47f6-45b5-aa82-43162cd506f8.png">
+
 ## [Installation](#Raspi-Project-16)
 
 ### 1. Download
