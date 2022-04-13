@@ -89,61 +89,9 @@ CMakeFiles/run.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/main.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/raspi_project_16/src/main.cpp -o CMakeFiles/run.dir/src/main.cpp.s
 
-CMakeFiles/run.dir/src/lightModule.cpp.o: CMakeFiles/run.dir/flags.make
-CMakeFiles/run.dir/src/lightModule.cpp.o: src/lightModule.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/run.dir/src/lightModule.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/lightModule.cpp.o -c /home/pi/raspi_project_16/src/lightModule.cpp
-
-CMakeFiles/run.dir/src/lightModule.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/lightModule.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/raspi_project_16/src/lightModule.cpp > CMakeFiles/run.dir/src/lightModule.cpp.i
-
-CMakeFiles/run.dir/src/lightModule.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/lightModule.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/raspi_project_16/src/lightModule.cpp -o CMakeFiles/run.dir/src/lightModule.cpp.s
-
-CMakeFiles/run.dir/src/soundModule.cpp.o: CMakeFiles/run.dir/flags.make
-CMakeFiles/run.dir/src/soundModule.cpp.o: src/soundModule.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/run.dir/src/soundModule.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/soundModule.cpp.o -c /home/pi/raspi_project_16/src/soundModule.cpp
-
-CMakeFiles/run.dir/src/soundModule.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/soundModule.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/raspi_project_16/src/soundModule.cpp > CMakeFiles/run.dir/src/soundModule.cpp.i
-
-CMakeFiles/run.dir/src/soundModule.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/soundModule.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/raspi_project_16/src/soundModule.cpp -o CMakeFiles/run.dir/src/soundModule.cpp.s
-
-CMakeFiles/run.dir/src/timeModule.cpp.o: CMakeFiles/run.dir/flags.make
-CMakeFiles/run.dir/src/timeModule.cpp.o: src/timeModule.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/run.dir/src/timeModule.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/timeModule.cpp.o -c /home/pi/raspi_project_16/src/timeModule.cpp
-
-CMakeFiles/run.dir/src/timeModule.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/timeModule.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/raspi_project_16/src/timeModule.cpp > CMakeFiles/run.dir/src/timeModule.cpp.i
-
-CMakeFiles/run.dir/src/timeModule.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/timeModule.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/raspi_project_16/src/timeModule.cpp -o CMakeFiles/run.dir/src/timeModule.cpp.s
-
-CMakeFiles/run.dir/src/ledModule.cpp.o: CMakeFiles/run.dir/flags.make
-CMakeFiles/run.dir/src/ledModule.cpp.o: src/ledModule.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/run.dir/src/ledModule.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/ledModule.cpp.o -c /home/pi/raspi_project_16/src/ledModule.cpp
-
-CMakeFiles/run.dir/src/ledModule.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/run.dir/src/ledModule.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/raspi_project_16/src/ledModule.cpp > CMakeFiles/run.dir/src/ledModule.cpp.i
-
-CMakeFiles/run.dir/src/ledModule.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/run.dir/src/ledModule.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/raspi_project_16/src/ledModule.cpp -o CMakeFiles/run.dir/src/ledModule.cpp.s
-
 CMakeFiles/run.dir/src/dispatchEventService.cpp.o: CMakeFiles/run.dir/flags.make
 CMakeFiles/run.dir/src/dispatchEventService.cpp.o: src/dispatchEventService.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/run.dir/src/dispatchEventService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/run.dir/src/dispatchEventService.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/dispatchEventService.cpp.o -c /home/pi/raspi_project_16/src/dispatchEventService.cpp
 
 CMakeFiles/run.dir/src/dispatchEventService.cpp.i: cmake_force
@@ -156,7 +104,7 @@ CMakeFiles/run.dir/src/dispatchEventService.cpp.s: cmake_force
 
 CMakeFiles/run.dir/src/event.cpp.o: CMakeFiles/run.dir/flags.make
 CMakeFiles/run.dir/src/event.cpp.o: src/event.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/run.dir/src/event.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/run.dir/src/event.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/event.cpp.o -c /home/pi/raspi_project_16/src/event.cpp
 
 CMakeFiles/run.dir/src/event.cpp.i: cmake_force
@@ -169,7 +117,7 @@ CMakeFiles/run.dir/src/event.cpp.s: cmake_force
 
 CMakeFiles/run.dir/src/events_def.cpp.o: CMakeFiles/run.dir/flags.make
 CMakeFiles/run.dir/src/events_def.cpp.o: src/events_def.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/run.dir/src/events_def.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/run.dir/src/events_def.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/events_def.cpp.o -c /home/pi/raspi_project_16/src/events_def.cpp
 
 CMakeFiles/run.dir/src/events_def.cpp.i: cmake_force
@@ -182,7 +130,7 @@ CMakeFiles/run.dir/src/events_def.cpp.s: cmake_force
 
 CMakeFiles/run.dir/src/ledEventHandler.cpp.o: CMakeFiles/run.dir/flags.make
 CMakeFiles/run.dir/src/ledEventHandler.cpp.o: src/ledEventHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/run.dir/src/ledEventHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/run.dir/src/ledEventHandler.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/ledEventHandler.cpp.o -c /home/pi/raspi_project_16/src/ledEventHandler.cpp
 
 CMakeFiles/run.dir/src/ledEventHandler.cpp.i: cmake_force
@@ -195,7 +143,7 @@ CMakeFiles/run.dir/src/ledEventHandler.cpp.s: cmake_force
 
 CMakeFiles/run.dir/src/soundEventHandler.cpp.o: CMakeFiles/run.dir/flags.make
 CMakeFiles/run.dir/src/soundEventHandler.cpp.o: src/soundEventHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/run.dir/src/soundEventHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/run.dir/src/soundEventHandler.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/soundEventHandler.cpp.o -c /home/pi/raspi_project_16/src/soundEventHandler.cpp
 
 CMakeFiles/run.dir/src/soundEventHandler.cpp.i: cmake_force
@@ -208,7 +156,7 @@ CMakeFiles/run.dir/src/soundEventHandler.cpp.s: cmake_force
 
 CMakeFiles/run.dir/src/ws2811EventHandler.cpp.o: CMakeFiles/run.dir/flags.make
 CMakeFiles/run.dir/src/ws2811EventHandler.cpp.o: src/ws2811EventHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/run.dir/src/ws2811EventHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/run.dir/src/ws2811EventHandler.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/ws2811EventHandler.cpp.o -c /home/pi/raspi_project_16/src/ws2811EventHandler.cpp
 
 CMakeFiles/run.dir/src/ws2811EventHandler.cpp.i: cmake_force
@@ -221,7 +169,7 @@ CMakeFiles/run.dir/src/ws2811EventHandler.cpp.s: cmake_force
 
 CMakeFiles/run.dir/src/cameraEventHandler.cpp.o: CMakeFiles/run.dir/flags.make
 CMakeFiles/run.dir/src/cameraEventHandler.cpp.o: src/cameraEventHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/run.dir/src/cameraEventHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/run.dir/src/cameraEventHandler.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/run.dir/src/cameraEventHandler.cpp.o -c /home/pi/raspi_project_16/src/cameraEventHandler.cpp
 
 CMakeFiles/run.dir/src/cameraEventHandler.cpp.i: cmake_force
@@ -235,10 +183,6 @@ CMakeFiles/run.dir/src/cameraEventHandler.cpp.s: cmake_force
 # Object files for target run
 run_OBJECTS = \
 "CMakeFiles/run.dir/src/main.cpp.o" \
-"CMakeFiles/run.dir/src/lightModule.cpp.o" \
-"CMakeFiles/run.dir/src/soundModule.cpp.o" \
-"CMakeFiles/run.dir/src/timeModule.cpp.o" \
-"CMakeFiles/run.dir/src/ledModule.cpp.o" \
 "CMakeFiles/run.dir/src/dispatchEventService.cpp.o" \
 "CMakeFiles/run.dir/src/event.cpp.o" \
 "CMakeFiles/run.dir/src/events_def.cpp.o" \
@@ -251,10 +195,6 @@ run_OBJECTS = \
 run_EXTERNAL_OBJECTS =
 
 run: CMakeFiles/run.dir/src/main.cpp.o
-run: CMakeFiles/run.dir/src/lightModule.cpp.o
-run: CMakeFiles/run.dir/src/soundModule.cpp.o
-run: CMakeFiles/run.dir/src/timeModule.cpp.o
-run: CMakeFiles/run.dir/src/ledModule.cpp.o
 run: CMakeFiles/run.dir/src/dispatchEventService.cpp.o
 run: CMakeFiles/run.dir/src/event.cpp.o
 run: CMakeFiles/run.dir/src/events_def.cpp.o
@@ -330,7 +270,7 @@ run: /usr/local/lib/arm-linux-gnueabihf/libopencv_imgproc.so.4.5.5
 run: /usr/local/lib/arm-linux-gnueabihf/libopencv_core.so.4.5.5
 run: /usr/lib/arm-linux-gnueabihf/libboost_atomic.a
 run: CMakeFiles/run.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable run"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/run.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -5,13 +5,13 @@
 #include "dispatchEventService.h"
 #include "events_def.h"
 
-class LedEventHandler: public EventHandler{
+class LedEventCallback: public EventCallback{
 public:
-    LedEventHandler();
-    ~LedEventHandler();
+    LedEventCallback();
+    ~LedEventCallback();
     void start();
     void stop();
-    bool handle(const CEvent* ev);
+    bool callback(const CEvent* ev);
 };
 
 #endif

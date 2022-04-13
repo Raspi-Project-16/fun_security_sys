@@ -417,19 +417,6 @@ CMakeFiles/run.dir/src/ledEventHandler.cpp.o
  include/glo_def.h
  include/iEventHandler.h
  include/ledEventHandler.h
-CMakeFiles/run.dir/src/ledModule.cpp.o
- /home/pi/raspi_project_16/src/ledModule.cpp
- /usr/local/include/ws2811/clk.h
- /usr/local/include/ws2811/dma.h
- /usr/local/include/ws2811/gpio.h
- /usr/local/include/ws2811/pwm.h
- /usr/local/include/ws2811/rpihw.h
- /usr/local/include/ws2811/ws2811.h
- include/ledModule.h
- include/timeModule.h
-CMakeFiles/run.dir/src/lightModule.cpp.o
- /home/pi/raspi_project_16/src/lightModule.cpp
- include/lightModule.h
 CMakeFiles/run.dir/src/main.cpp.o
  /home/pi/raspi_project_16/src/main.cpp
  /usr/local/include/opencv4/opencv2/calib3d.hpp
@@ -562,11 +549,7 @@ CMakeFiles/run.dir/src/main.cpp.o
  include/glo_def.h
  include/iEventHandler.h
  include/ledEventHandler.h
- include/ledModule.h
- include/lightModule.h
  include/soundEventHandler.h
- include/soundModule.h
- include/timeModule.h
  include/ws2811EventHandler.h
 CMakeFiles/run.dir/src/soundEventHandler.cpp.o
  /home/pi/raspi_project_16/src/soundEventHandler.cpp
@@ -699,12 +682,6 @@ CMakeFiles/run.dir/src/soundEventHandler.cpp.o
  include/glo_def.h
  include/iEventHandler.h
  include/soundEventHandler.h
-CMakeFiles/run.dir/src/soundModule.cpp.o
- /home/pi/raspi_project_16/src/soundModule.cpp
- include/soundModule.h
-CMakeFiles/run.dir/src/timeModule.cpp.o
- /home/pi/raspi_project_16/src/timeModule.cpp
- include/timeModule.h
 CMakeFiles/run.dir/src/ws2811EventHandler.cpp.o
  /home/pi/raspi_project_16/src/ws2811EventHandler.cpp
  /usr/local/include/opencv4/opencv2/calib3d.hpp

@@ -7,6 +7,7 @@
 #include "eventId.h"
 #include <pigpio.h>
 #include <wiringPi.h>
+#include <softPwm.h>
 #include <dispatchEventService.h>
 #include "opencv2/opencv.hpp"
 #include "opencv2/core.hpp"
@@ -31,16 +32,12 @@ class LedEvent : public CEvent{
 public:
     LedEvent(u32 gpio, string msg);
     ~LedEvent();
-    //virtual std::ostream& dump(std::ostream& out) const;
-
-    //virtual bool decode();
-    //virtual char* encode();
 
     void ledOn();
     void ledOff();
 
     u32 getGPIO() const {return gpio_;};
-    //void setGPIO();
+
     string getMsg() const {return this->content_;};
 
 private:
@@ -55,17 +52,11 @@ public:
     SoundEvent(u32 gpio, string msg);
     ~SoundEvent();
 
-    //virtual std::ostream& dump(std::ostream& out) const;
-
-    //virtual bool decode();
-    //virtual char* encode();
-
     bool detectSound();
 
     u32 getGPIO() const {return gpio_;};
     string getMsg() const {return this->content_;};
-    //const u32 getGPIO();
-    //void setGPIO();
+
 
 private:
 

@@ -1,3 +1,4 @@
 /home/pi/raspi_project_16/CMakeFiles/rebuild_cache.dir
 /home/pi/raspi_project_16/CMakeFiles/edit_cache.dir
+/home/pi/raspi_project_16/CMakeFiles/train.dir
 /home/pi/raspi_project_16/CMakeFiles/run.dir

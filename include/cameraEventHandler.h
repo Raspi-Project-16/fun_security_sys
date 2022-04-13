@@ -5,13 +5,13 @@
 #include "dispatchEventService.h"
 #include "events_def.h"
 
-class CameraEventHandler: public EventHandler{
+class CameraEventCallback: public EventCallback{
 public:
-    CameraEventHandler();
-    ~CameraEventHandler();
+    CameraEventCallback();
+    ~CameraEventCallback();
     void start();
     void stop();
-    bool handle(const CEvent* ev);
+    bool callback(const CEvent* ev);
     void freeInstance();
 private:
     Mat frame;

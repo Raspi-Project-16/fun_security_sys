@@ -9,12 +9,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/pi/raspi_project_16/src/event.cpp" "/home/pi/raspi_project_16/CMakeFiles/run.dir/src/event.cpp.o"
   "/home/pi/raspi_project_16/src/events_def.cpp" "/home/pi/raspi_project_16/CMakeFiles/run.dir/src/events_def.cpp.o"
   "/home/pi/raspi_project_16/src/ledEventHandler.cpp" "/home/pi/raspi_project_16/CMakeFiles/run.dir/src/ledEventHandler.cpp.o"
-  "/home/pi/raspi_project_16/src/ledModule.cpp" "/home/pi/raspi_project_16/CMakeFiles/run.dir/src/ledModule.cpp.o"
-  "/home/pi/raspi_project_16/src/lightModule.cpp" "/home/pi/raspi_project_16/CMakeFiles/run.dir/src/lightModule.cpp.o"
   "/home/pi/raspi_project_16/src/main.cpp" "/home/pi/raspi_project_16/CMakeFiles/run.dir/src/main.cpp.o"
   "/home/pi/raspi_project_16/src/soundEventHandler.cpp" "/home/pi/raspi_project_16/CMakeFiles/run.dir/src/soundEventHandler.cpp.o"
-  "/home/pi/raspi_project_16/src/soundModule.cpp" "/home/pi/raspi_project_16/CMakeFiles/run.dir/src/soundModule.cpp.o"
-  "/home/pi/raspi_project_16/src/timeModule.cpp" "/home/pi/raspi_project_16/CMakeFiles/run.dir/src/timeModule.cpp.o"
   "/home/pi/raspi_project_16/src/ws2811EventHandler.cpp" "/home/pi/raspi_project_16/CMakeFiles/run.dir/src/ws2811EventHandler.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

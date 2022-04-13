@@ -34,35 +34,35 @@ bool DispatchEventService::uninit(){
     return true;
 }
 
-bool DispatchEventService::subscribe(int eid, EventHandler* handler)
+bool DispatchEventService::subscribe(int eid, EventCallback* callback)
 {
-    if(NULL == handler) return false;
+    if(NULL == callback) return false;
 
     T_EventHandlersMap::iterator iter = subscribers_.find(eid);
     if (iter != subscribers_.end())
     {
-        T_EventHandlers::iterator hdl_iter = std::find(iter->second.begin(), iter->second.end(), handler);
+        T_EventHandlers::iterator hdl_iter = std::find(iter->second.begin(), iter->second.end(), callback);
         if ( hdl_iter == iter->second.end())
         {
-           iter->second.push_back(handler);
+           iter->second.push_back(callback);
         }
     }
     else
     {
-        subscribers_[eid].push_back(handler);
+        subscribers_[eid].push_back(callback);
     }
 
     return true;
 }
 
-bool DispatchEventService::unsubscribe(int eid, EventHandler* handler)
+bool DispatchEventService::unsubscribe(int eid, EventCallback* callback)
 {
-    if(NULL == handler) return false;
+    if(NULL == callback) return false;
 
     T_EventHandlersMap::iterator iter = subscribers_.find(eid);
     if (iter != subscribers_.end())
     {
-        T_EventHandlers::iterator hdl_iter = std::find(iter->second.begin(), iter->second.end(), handler);
+        T_EventHandlers::iterator hdl_iter = std::find(iter->second.begin(), iter->second.end(), callback);
         if ( hdl_iter != iter->second.end())
         {
            iter->second.erase(hdl_iter);
@@ -95,19 +95,19 @@ bool DispatchEventService::process(const CEvent* ev)
         return false;
     }
 
-    T_EventHandlersMap::iterator handlers = subscribers_.find(eid);
-    if (handlers == subscribers_.end())
+    T_EventHandlersMap::iterator callbacks = subscribers_.find(eid);
+    if (callbacks == subscribers_.end())
     {
-        cout << "DispatchMsgService : no event handler subscribed "<< eid << endl;
+        cout << "DispatchMsgService : no event callback subscribed "<< eid << endl;
         return false;
     }
     
-    for (T_EventHandlers::iterator iter = handlers->second.begin();
-        iter != handlers->second.end();
+    for (T_EventHandlers::iterator iter = callbacks->second.begin();
+        iter != callbacks->second.end();
         iter++)
     {
-        EventHandler* handler = *iter;
-        handler->handle(ev);
+        EventCallback* callback = *iter;
+        callback->callback(ev);
     }
 	return true;
 }
