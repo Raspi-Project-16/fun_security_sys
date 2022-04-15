@@ -8,17 +8,24 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/6241f4ff80194b638973949a48af328a)](https://www.codacy.com/gh/Raspi-Project-16/fun_security_sys-opencv-ws2812/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Raspi-Project-16/fun_security_sys-opencv-ws2812&amp;utm_campaign=Badge_Grade)
 
 # Contents
-* [YouTube](#Youtube)
-* [Wiring](#phases-and-roadmap)
-* [Installation](#Installation)
+* [Social Media](#social_media)
+* [Wiring](#wiring)
+* [Installation](#installation)
 * [Milestones](#milestones)
 * [Contribution Guidelines](#contribution-guidelines)
 * [Credits](#credits)
 * [Directory Tree](#directory-tree)
 
-## [Youtube](#Raspi-Project-16)
-
-https://youtu.be/hAqNX1u65mk
+## [Social Media](#Raspi-Project-16)
+<br><a href="https://youtu.be/hAqNX1u65mk" target="blank"><img align="left" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/youtube.svg" height="40" width="40"/>
+</a>
+<a href="">
+<img align="left" alt="Mitul | Twitter" width="40px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/twitter.svg" />
+</a>
+<a href="">
+<img align="left" alt="Mitul's LinkedIN" width= "40px"
+src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/linkedin.svg" />
+</a><br><br>
 
 ## [Wiring](#Raspi-Project-16)
 
