@@ -6,8 +6,6 @@
 ![](https://img.shields.io/github/repo-size/Raspi-Project-16/fun_security_sys-opencv-ws2812.svg)
 ![Contributors](https://img.shields.io/github/contributors/Raspi-Project-16/fun_security_sys-opencv-ws2812.svg?style=flat&label=Contributors&maxAge=86400)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/6241f4ff80194b638973949a48af328a)](https://www.codacy.com/gh/Raspi-Project-16/fun_security_sys-opencv-ws2812/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Raspi-Project-16/fun_security_sys-opencv-ws2812&amp;utm_campaign=Badge_Grade)
-![C++](https://img.shields.io/badge/C++-purple.svg)
-![Cmake](https://img.shields.io/badge/Cmake-orange.svg)
 
 # Contents
 * [YouTube](#Youtube)
