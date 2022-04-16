@@ -64,7 +64,7 @@ $ make
 ```py
 $ sudo ./train
 ```
-#### 3.3 Run the program
+#### 3.3 Run the system
 
 ```py
 $ sudo ./run
