@@ -25,9 +25,7 @@ int main(int argc, char* argv[]){
           exit(-1);
       }
     
-    //start the LED light
-    //LedEventCallback ledCallback;
-    //ledCallback.start();
+
     //start the LED strip
     Ws2811EventCallback ws2811Callback;
     ws2811Callback.start();
