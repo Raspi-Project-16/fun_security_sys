@@ -11,6 +11,9 @@
 #include "iEventHandler.h"
 using namespace std;
 
+/*----------------------------------------------------------------------
+  |       DispatchEventService
+  +---------------------------------------------------------------------*/
 
 class DispatchEventService
 {

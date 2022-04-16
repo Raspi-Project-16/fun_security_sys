@@ -14,6 +14,10 @@ cameraEventHandler.h
 dispatchEventService.h
 /home/pi/raspi_project_16/src/dispatchEventService.h
 
+/home/pi/raspi_project_16/src/event.cpp
+event.h
+/home/pi/raspi_project_16/src/event.h
+
 /home/pi/raspi_project_16/src/events_def.cpp
 events_def.h
 /home/pi/raspi_project_16/src/events_def.h

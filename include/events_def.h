@@ -26,48 +26,55 @@ using namespace cv;
 using namespace cv::face;
 
 
+/*----------------------------------------------------------------------
+  |       edEvent
+  +---------------------------------------------------------------------*/
+
 
 class LedEvent : public CEvent{
 
 public:
-    LedEvent(u32 gpio, string msg);
+    LedEvent(int gpio, string msg);
     ~LedEvent();
 
     void ledOn();
     void ledOff();
 
-    u32 getGPIO() const {return gpio_;};
+    int getGPIO() const {return gpio_;};
 
     string getMsg() const {return this->content_;};
 
 private:
 
-    u32 gpio_;
+    int gpio_;
 
 };
+
+/*----------------------------------------------------------------------
+  |       SoundEvent
+  +---------------------------------------------------------------------*/
 
 class SoundEvent : public CEvent{
 
 public:
-    SoundEvent(u32 gpio, string msg);
+    SoundEvent(int gpio, string msg);
     ~SoundEvent();
 
     bool detectSound();
 
-    u32 getGPIO() const {return gpio_;};
+    int getGPIO() const {return gpio_;};
     string getMsg() const {return this->content_;};
 
 
 private:
 
-    u32 gpio_;
+    int gpio_;
 
 };
 
-/**
- * @brief Ws2811Event
- * 
- */
+/*----------------------------------------------------------------------
+  |       Ws2811Event
+  +---------------------------------------------------------------------*/
 
 class Ws2811Event : public CEvent
 {
@@ -88,10 +95,9 @@ private:
 #define ws2811Ev Ws2811Event::getInstance()
 
 
-/**
- * @brief CameraEvent
- * 
- */
+/*----------------------------------------------------------------------
+  |       CameraEvent
+  +---------------------------------------------------------------------*/
 
 class CameraEvent : public CEvent
 {
