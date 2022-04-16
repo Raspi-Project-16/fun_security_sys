@@ -36,53 +36,6 @@ class GenericQueue
         GenericQueue() {}
 };
 
-/*----------------------------------------------------------------------
-  |   NPT_Queue
-  +---------------------------------------------------------------------*/
-template <class T>
-class MsgQueue
-{
-    public:
-        // methods
-        MsgQueue(unsigned int max_items = 0) :
-            m_delegate(GenericQueue<T>::CreateInstance(max_items)) {}
-        virtual ~MsgQueue<T>() { delete m_delegate; }
-
-        virtual int enqueue(T* item, int timeout = 0)
-        {
-            return m_delegate->enqueue(reinterpret_cast<T*>(item), timeout);
-        }
-
-        virtual int dequeue(T*& item, int timeout = 0)
-        {
-            return m_delegate->dequeue(reinterpret_cast<T*&>(item), timeout);
-        }
-
-        virtual int peek(T*& item, int timeout = 0)
-        {
-            return m_delegate->peek(reinterpret_cast<T*&>(item), timeout);
-        }
-
-        virtual int queueStatus()
-        {
-            return m_delegate->queueStatus();
-        }
-
-        virtual bool isFull()
-        {
-            return m_delegate->isFull();
-        }
-
-        virtual bool isEmpty()
-        {
-            return m_delegate->isEmpty();
-        }
-
-
-    protected:
-        // members
-        GenericQueue<T>* m_delegate;
-};
 
 template <class T>
 class PosixQueue : public GenericQueue<T>

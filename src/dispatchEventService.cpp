@@ -4,15 +4,26 @@
 
 #define MAX_ITEM_IN_EVENT_QUEUE 65536
 
+/*----------------------------------------------------------------------
+  |       DispatchEventService::DispatchEventService
+  +---------------------------------------------------------------------*/
+
 DispatchEventService::DispatchEventService() : msg_queue_( PosixQueue<CEvent>(MAX_ITEM_IN_EVENT_QUEUE) )
 {
 }
 
+/*----------------------------------------------------------------------
+  |       DispatchEventService::~DispatchEventService
+  +---------------------------------------------------------------------*/
 DispatchEventService::~DispatchEventService()
 {
 }
 
 DispatchEventService DispatchEventService::instance_;
+
+/*----------------------------------------------------------------------
+  |       DispatchEventService::init
+  +---------------------------------------------------------------------*/
 
 bool DispatchEventService::init(){
     
@@ -27,12 +38,20 @@ bool DispatchEventService::init(){
     return true;
 }
 
+/*----------------------------------------------------------------------
+  |       DispatchEventService::uninit
+  +---------------------------------------------------------------------*/
+
 bool DispatchEventService::uninit(){
     //delete message queue
     svr_exit_ = true;
     pthread_join(thread_hdl_, NULL);
     return true;
 }
+
+/*----------------------------------------------------------------------
+  |       DispatchEventService::subscribe
+  +---------------------------------------------------------------------*/
 
 bool DispatchEventService::subscribe(int eid, EventCallback* callback)
 {
@@ -55,6 +74,10 @@ bool DispatchEventService::subscribe(int eid, EventCallback* callback)
     return true;
 }
 
+/*----------------------------------------------------------------------
+  |       DispatchEventService::unsubscribe
+  +---------------------------------------------------------------------*/
+
 bool DispatchEventService::unsubscribe(int eid, EventCallback* callback)
 {
     if(NULL == callback) return false;
@@ -71,6 +94,10 @@ bool DispatchEventService::unsubscribe(int eid, EventCallback* callback)
     return true;
 }
 
+/*----------------------------------------------------------------------
+  |       DispatchEventService::publish
+  +---------------------------------------------------------------------*/
+
 bool DispatchEventService::publish(CEvent* ev)
 {
     if (NULL == ev)
@@ -81,6 +108,9 @@ bool DispatchEventService::publish(CEvent* ev)
     return msg_queue_.enqueue(ev, 0);
 }
 
+/*----------------------------------------------------------------------
+  |       DispatchEventService::process
+  +---------------------------------------------------------------------*/
 bool DispatchEventService::process(const CEvent* ev)
 {
     if (NULL == ev)
@@ -112,9 +142,12 @@ bool DispatchEventService::process(const CEvent* ev)
 	return true;
 }
 
+/*----------------------------------------------------------------------
+  |       DispatchEventService::svc
+  +---------------------------------------------------------------------*/
 void* DispatchEventService::svc(void* argv)
 {
-    cout << "dmg is running !" << endl;
+    cout << "The system is running !" << endl;
     DispatchEventService* dmsvr = (DispatchEventService*)argv;
     if(argv == NULL){
         cout << "parameter of thread is invalid. \n" << endl;

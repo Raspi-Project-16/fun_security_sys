@@ -6,6 +6,10 @@
 #include "dispatchEventService.h"
 #include "events_def.h"
 
+/*----------------------------------------------------------------------
+  |       SoundEventCallback
+  +---------------------------------------------------------------------*/
+
 class SoundEventCallback: public EventCallback{
 public:
     SoundEventCallback();

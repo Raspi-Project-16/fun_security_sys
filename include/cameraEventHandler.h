@@ -5,6 +5,10 @@
 #include "dispatchEventService.h"
 #include "events_def.h"
 
+/*----------------------------------------------------------------------
+  |       CameraEventCallback
+  +---------------------------------------------------------------------*/
+
 class CameraEventCallback: public EventCallback{
 public:
     CameraEventCallback();

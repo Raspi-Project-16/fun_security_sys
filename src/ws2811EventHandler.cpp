@@ -1,23 +1,31 @@
 #include "ws2811EventHandler.h"
 
 
+/*----------------------------------------------------------------------
+  |       Ws2811EventCallback::Ws2811EventCallback
+  +---------------------------------------------------------------------*/
 
 Ws2811EventCallback::Ws2811EventCallback(){
     // initialise the led matrix for the LED strip
     matrix = (ws2811_led_t *)malloc(sizeof(ws2811_led_t) * WIDTH * HEIGHT);
-    // initialise the mode for the LED strip
-    previousMode = RAINBOW_COLOR;
     // initialise the motor
     pinMode(PWM_PIN, OUTPUT);
     softPwmCreate(PWM_PIN, 0, 200);
     softPwmWrite(PWM_PIN, 5);
-    this-> count = 0;
 }
+
+/*----------------------------------------------------------------------
+  |       Ws2811EventCallback::~Ws2811EventCallback
+  +---------------------------------------------------------------------*/
 
 Ws2811EventCallback::~Ws2811EventCallback(){
     // initalise the strip
     ws2811_fini(&ledstring);
 }
+
+/*----------------------------------------------------------------------
+  |       Ws2811EventCallback::start
+  +---------------------------------------------------------------------*/
 
 void Ws2811EventCallback::start(){
     // register the callback
@@ -26,81 +34,35 @@ void Ws2811EventCallback::start(){
     des->publish(ws2811Ev);
 }
 
+/*----------------------------------------------------------------------
+  |       Ws2811EventCallback::stop
+  +---------------------------------------------------------------------*/
 
 void Ws2811EventCallback::stop(){
     // unregister the callback
     des->unsubscribe(EEVENTID_WS2811_REQ, this);
 }
 
+/*----------------------------------------------------------------------
+  |       Ws2811EventCallback::callback
+  +---------------------------------------------------------------------*/
+
 bool Ws2811EventCallback::callback(const CEvent* ev){
     if(EEVENTID_WS2811_REQ == ev->getEid()){
         Ws2811Event* req = (Ws2811Event*) ev;
-        cout << "get:" << req->getMsg() << endl;
-        // check the previous mode, if the current mode is not equal to the previous mode
-        if(req->getMsg() != previousMode){
-            // if the previous mode is rainbow mode
-            if(previousMode == RAINBOW_COLOR){
-                // start the clock
-                begin = clock();
-                // change the mode
-                previousMode = req->getMsg();
-                // if the current mode is accessing mode, turn on the motor
-                if(req->getMsg() == ACCESSING_COLOR){
-                    softPwmWrite(PWM_PIN, 25);
-                }
-            }
-            // if the previous mode is accessing mode
-            if(previousMode == ACCESSING_COLOR){
-                //stop the clock
-                end = clock();
-                cout << begin/CLOCKS_PER_SEC << "  " << end/CLOCKS_PER_SEC << "  " << (end - begin)/CLOCKS_PER_SEC<< endl;
-                // if the timing is larger than 10s
-                if((end-begin)/CLOCKS_PER_SEC > 10){
-                    // turn off the motor
-                    softPwmWrite(PWM_PIN, 5);
-                    // change the current mode
-                    previousMode = req->getMsg();
-                    begin = end = 0;
-                    // if the current mode is warning mode, start the timing again
-                    if(req->getMsg() == WARNING_COLOR){
-                    begin = clock();
-                    }
-                }
-            }
-            // if the previous mode is warning mode 
-            if(previousMode == WARNING_COLOR){
-                //stop the timing and check the time
-                end = clock();
-                cout << begin/CLOCKS_PER_SEC << "  " << end/CLOCKS_PER_SEC << "  " << (end - begin)/CLOCKS_PER_SEC<< endl;
-                //if the interval is larger than 10s
-                if((end-begin)/CLOCKS_PER_SEC > 10){
-                    //change the current mode
-                    previousMode = req->getMsg();
-                    begin = end = 0;
-                    //if the current mode is accessing mode, start the timing again
-                    if(req->getMsg() == ACCESSING_COLOR){
-                    begin = clock();
-                    }
-                }
-            }
-        //if the current mode is equal to the previous mode    
-        }else{ 
-                //stop the timing 
-                end = clock();
-                cout << begin/CLOCKS_PER_SEC << "  " << end/CLOCKS_PER_SEC << "  " << (end - begin)/CLOCKS_PER_SEC<< endl;
-                //if the interval is larger than 10s, set the mode back to the initial mode
-                if((end-begin)/CLOCKS_PER_SEC > 10){
-                    ws2811Ev->setMsg(RAINBOW_COLOR);
-                    //initial mode
-                    previousMode = RAINBOW_COLOR;
-                    //set the motor to the initial position
-                    softPwmWrite(PWM_PIN, 5);
-                    begin = end = 0;
-                }
+        //cout << "get:" << req->getMsg() << endl;
+        // check the mode, if the current mode is accessing mode
+        if(req->getMsg() == ACCESSING_COLOR){
+            // rotate the motor 
+            softPwmWrite(PWM_PIN, 15);
         }
-        cout << "execute:" << previousMode << endl;
-        execute(previousMode);
-        //Ws2811Event* ws2811Ev = new Ws2811Event(previousMode);
+        // check the mode, if the current mode is warning mode or the initial mode
+        if(req->getMsg() == WARNING_COLOR || req->getMsg() == RAINBOW_COLOR){
+            //reset the motor
+            softPwmWrite(PWM_PIN, 5);
+        }
+        // render the color matrix
+        execute(req->getMsg());
         des->publish(req);   
     }else{
         
@@ -108,6 +70,10 @@ bool Ws2811EventCallback::callback(const CEvent* ev){
 
     return true;
 }
+
+/*----------------------------------------------------------------------
+  |       Ws2811EventCallback::execute
+  +---------------------------------------------------------------------*/
 
 void Ws2811EventCallback::execute(string msg){
     ws2811_return_t ret;
@@ -131,6 +97,10 @@ void Ws2811EventCallback::execute(string msg){
     
 }
 
+/*----------------------------------------------------------------------
+  |       Ws2811EventCallback::matrix_render
+  +---------------------------------------------------------------------*/
+
 void Ws2811EventCallback::matrix_render(){
 
     int x,y;
@@ -144,6 +114,10 @@ void Ws2811EventCallback::matrix_render(){
     }
 }
 
+/*----------------------------------------------------------------------
+  |       Ws2811EventCallback::matrix_clear
+  +---------------------------------------------------------------------*/
+
 void Ws2811EventCallback::matrix_clear(){
     int x;
 
@@ -154,6 +128,10 @@ void Ws2811EventCallback::matrix_clear(){
     }
 
 }
+
+/*----------------------------------------------------------------------
+  |       Ws2811EventCallback::matrix_bottom
+  +---------------------------------------------------------------------*/
 
 void Ws2811EventCallback::matrix_bottom(string mode)
 {
@@ -180,6 +158,9 @@ void Ws2811EventCallback::matrix_bottom(string mode)
     
 }
 
+/*----------------------------------------------------------------------
+  |       Ws2811EventCallback::shutdown
+  +---------------------------------------------------------------------*/
 
 void Ws2811EventCallback::shutdown(){
     matrix_clear();

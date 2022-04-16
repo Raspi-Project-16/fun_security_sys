@@ -5,6 +5,10 @@
 #include "dispatchEventService.h"
 #include "events_def.h"
 
+/*----------------------------------------------------------------------
+  |       LedEventCallback
+  +---------------------------------------------------------------------*/
+
 class LedEventCallback: public EventCallback{
 public:
     LedEventCallback();

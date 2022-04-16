@@ -6,6 +6,11 @@
 #include "dispatchEventService.h"
 #include "events_def.h"
 
+
+/*----------------------------------------------------------------------
+  |       Ws2811EventCallback
+  +---------------------------------------------------------------------*/
+
 class Ws2811EventCallback: public EventCallback{
 public:
     Ws2811EventCallback();
@@ -21,9 +26,6 @@ public:
     void shutdown();
     
 private:
-clock_t begin,end;
-string previousMode;
-u32 count;
 ws2811_t ledstring =
 {
     .freq = TARGET_FREQ,

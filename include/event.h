@@ -6,23 +6,23 @@
 #include "glo_def.h"
 using namespace std;
 
+/*----------------------------------------------------------------------
+  |       CEvent
+  +---------------------------------------------------------------------*/
 
 class CEvent
 {
 public:
-    u16 getEid() const {return eid_;};
-    void setEid(u16 eid) {eid_ = eid;};
-    u32 getSN() const {return sn_;};
-    void setSN(u32 sn){ sn_ = sn;};
-    // virtual std::ostream& dump(std::ostream& out) const { return out;};
-    // virtual bool decode() {return true;};
-    // virtual char* encode() {return NULL;};
+    unsigned short getEid() const {return eid_;};
+    void setEid(unsigned short eid) {eid_ = eid;};
+    unsigned int getSN() const {return sn_;};
+    void setSN(unsigned int sn){ sn_ = sn;};
     CEvent();
     ~CEvent();
 
 private:
-    u16 eid_;
-    u32 sn_;
+    unsigned short eid_;
+    unsigned int sn_;
 
 protected:
     string content_;

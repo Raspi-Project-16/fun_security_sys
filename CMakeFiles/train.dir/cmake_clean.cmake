@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/train.dir/src/faceRecogitionTraining.cpp.o"
-  "train"
-  "train.pdb"
+  "bin/train"
+  "bin/train.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,11 +1,18 @@
 #include <cameraEventHandler.h>
 
 
+/*----------------------------------------------------------------------
+  |       CameraEventCallback::CameraEventCallback
+  +---------------------------------------------------------------------*/
+
 CameraEventCallback::CameraEventCallback()
 {
 
 }
 
+/*----------------------------------------------------------------------
+  |       CameraEventCallback::~CameraEventCallback
+  +---------------------------------------------------------------------*/
 CameraEventCallback::~CameraEventCallback()
 {
     Camera.release();
@@ -14,6 +21,9 @@ CameraEventCallback::~CameraEventCallback()
     cout << "FPS:" << numframes / secondsElapsed << endl;
 }
 
+/*----------------------------------------------------------------------
+  |       CameraEventCallback::start
+  +---------------------------------------------------------------------*/
 void CameraEventCallback::start(){
     //initialise the camera callback
     des->subscribe(EEVENTID_CAMERA_REQ, this);
@@ -41,12 +51,17 @@ void CameraEventCallback::start(){
     des->publish(cameraEv);
 }
 
-
+/*----------------------------------------------------------------------
+  |       CameraEventCallback::stop
+  +---------------------------------------------------------------------*/
 void CameraEventCallback::stop(){
     //unregister the callback
     des->unsubscribe(EEVENTID_CAMERA_REQ, this);
 }
 
+/*----------------------------------------------------------------------
+  |       CameraEventCallback::freeInstance
+  +---------------------------------------------------------------------*/
 void CameraEventCallback::freeInstance(){
     if(cameraEv != NULL){
         delete cameraEv;
@@ -54,6 +69,9 @@ void CameraEventCallback::freeInstance(){
     }
 }
 
+/*----------------------------------------------------------------------
+  |       CameraEventCallback::callback
+  +---------------------------------------------------------------------*/
 bool CameraEventCallback::callback(const CEvent* ev){
    if(EEVENTID_CAMERA_REQ == ev->getEid()){
     CameraEvent* req = (CameraEvent*) ev;
@@ -64,6 +82,7 @@ bool CameraEventCallback::callback(const CEvent* ev){
     cvtColor(frame, windowFrame, CV_BGR2GRAY);
     //face recogition
     classifier.detectMultiScale(frame, faces, 1.2, 5);
+    bool flag = false;
     for(size_t i = 0; i < faces.size(); i++){
         //set the detection frame of face recogition
         rectangle(frame, faces[i], Scalar(0, 255, 0));
@@ -77,10 +96,12 @@ bool CameraEventCallback::callback(const CEvent* ev){
             //display Unknown objects
             putText(frame, "Unknown", Point(faces[i].x ,faces[i].y - 5), FONT_HERSHEY_DUPLEX, 1, Scalar(0,0,255), 1);
             ws2811Ev->setMsg(WARNING_COLOR);
+            flag = true;
         }else{
             //otherwise display the name of the objects
             putText(frame, labels[predicted], Point(faces[i].x ,faces[i].y - 5), FONT_HERSHEY_DUPLEX, 1, Scalar(0,255,0), 1);
             ws2811Ev->setMsg(ACCESSING_COLOR);
+            flag = true;
         }
         //display the info
         cout << "ID: " << predicted << " | Confidence: " << confidence << endl;
@@ -90,6 +111,9 @@ bool CameraEventCallback::callback(const CEvent* ev){
     waitKey(30);
     //cameraEv = new CameraEvent();
     // cout << cameraEv << endl;
+    if(flag == false){
+        ws2811Ev->setMsg(RAINBOW_COLOR);
+    }
     des->publish(cameraEv);
     }
    return true;

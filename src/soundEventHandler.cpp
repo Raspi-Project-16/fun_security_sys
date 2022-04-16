@@ -1,14 +1,24 @@
 #include "soundEventHandler.h"
 
 
+/*----------------------------------------------------------------------
+  |       SoundEventCallback::SoundEventCallback
+  +---------------------------------------------------------------------*/
+
 SoundEventCallback::SoundEventCallback(){
     
 }
 
+/*----------------------------------------------------------------------
+  |       SoundEventCallback::~SoundEventCallback
+  +---------------------------------------------------------------------*/
 SoundEventCallback::~SoundEventCallback(){
     
 }
 
+/*----------------------------------------------------------------------
+  |       SoundEventCallback::start
+  +---------------------------------------------------------------------*/
 void SoundEventCallback::start(){
     // register the callback
     des->subscribe(EEVENTID_SOUND_REQ, this);
@@ -20,11 +30,18 @@ void SoundEventCallback::start(){
     des->publish(soundEv);
 }
 
+/*----------------------------------------------------------------------
+  |       SoundEventCallback::stop
+  +---------------------------------------------------------------------*/
 
 void SoundEventCallback::stop(){
     // unregister the callback
     des->unsubscribe(EEVENTID_SOUND_REQ, this);
 }
+
+/*----------------------------------------------------------------------
+  |       SoundEventCallback::callback
+  +---------------------------------------------------------------------*/
 
 bool SoundEventCallback::callback(const CEvent* ev){
     if(EEVENTID_SOUND_REQ == ev->getEid()){

@@ -1,26 +1,36 @@
 #include "events_def.h"
 
 
-/**
- * @brief Construct a new Led Event:: Led Event object
- * 
- * @param gpio 
- */
+/*----------------------------------------------------------------------
+  |       LedEvent::LedEvent
+  +---------------------------------------------------------------------*/
 
-LedEvent::LedEvent(u32 gpio, string msg){
+LedEvent::LedEvent(int gpio, string msg){
     this->gpio_ = gpio;
     this->setEid(EEVENTID_LED_REQ);
     this->content_ = msg;
 }
 
+/*----------------------------------------------------------------------
+  |       LedEvent::~LedEvent
+  +---------------------------------------------------------------------*/
+
 LedEvent::~LedEvent(){
 
 }
+
+/*----------------------------------------------------------------------
+  |       LedEvent::ledOn
+  +---------------------------------------------------------------------*/
 
 void LedEvent::ledOn(){
     digitalWrite(this->gpio_, HIGH);
     //gpioWrite(this->gpio_, 1);
 }
+
+/*----------------------------------------------------------------------
+  |       LedEvent::ledOff
+  +---------------------------------------------------------------------*/
 
 void LedEvent::ledOff(){
     digitalWrite(this->gpio_, LOW);
@@ -28,39 +38,43 @@ void LedEvent::ledOff(){
 }
 
 
-/**
- * @brief Construct a new Sound Event:: Sound Event object
- * 
- * @param gpio 
- */
+/*----------------------------------------------------------------------
+  |       SoundEvent::SoundEvent
+  +---------------------------------------------------------------------*/
 
-SoundEvent::SoundEvent(u32 gpio, string msg){
+SoundEvent::SoundEvent(int gpio, string msg){
     this->gpio_ = gpio;
     this->setEid(EEVENTID_SOUND_REQ);
     this->content_ = msg;
 }
 
+/*----------------------------------------------------------------------
+  |       SoundEvent::~SoundEvent
+  +---------------------------------------------------------------------*/
+
 SoundEvent::~SoundEvent(){
 
 }
 
+/*----------------------------------------------------------------------
+  |       SoundEvent::detectSound
+  +---------------------------------------------------------------------*/
+
 bool SoundEvent::detectSound(){
     if(digitalRead(this->gpio_) == LOW){
-        cout << "Sound detected!" << endl;
+        //cout << "Sound detected!" << endl;
         return true;
     }else{
-        cout << "Sound not detected!" << endl;
+        //cout << "Sound not detected!" << endl;
         return false;
     }
     //gpioWrite(this->gpio_, 1);
 }
 
-/**
- * @brief Construct a new Ws2811Event:: Ws 2811Event object
- * 
- */
 
-
+/*----------------------------------------------------------------------
+  |       Ws2811Event::Ws2811Event
+  +---------------------------------------------------------------------*/
 
 Ws2811Event::Ws2811Event(string msg)
 {
@@ -68,10 +82,16 @@ Ws2811Event::Ws2811Event(string msg)
     this->content_ = msg;
 
 }
+/*----------------------------------------------------------------------
+  |       Ws2811Event::~Ws2811Event
+  +---------------------------------------------------------------------*/
 Ws2811Event::~Ws2811Event()
 {
 
 }
+/*----------------------------------------------------------------------
+  |       Ws2811Event::setMsg
+  +---------------------------------------------------------------------*/
 void Ws2811Event::setMsg(string msg){
     this->content_ = msg;
 }
@@ -81,14 +101,17 @@ Ws2811Event Ws2811Event::ins = Ws2811Event(RAINBOW_COLOR);
 
 
 
-/**
- * @brief Construct a new CameraEvent:: Ws CameraEvent object
- * 
- */
+/*----------------------------------------------------------------------
+  |       CameraEvent::CameraEvent
+  +---------------------------------------------------------------------*/
 CameraEvent::CameraEvent()
 {
      this->setEid(EEVENTID_CAMERA_REQ);
 }
+
+/*----------------------------------------------------------------------
+  |       CameraEvent::~CameraEvent
+  +---------------------------------------------------------------------*/
 
 CameraEvent::~CameraEvent()
 {
