@@ -22,7 +22,7 @@
 <a href="">
 <img align="left" alt="Mitul | Twitter" width="40px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/twitter.svg" />
 </a>
-<a href="">
+<a href="https://www.tiktok.com/@ohmygoal_bliu/video/7087143174593858821?is_from_webapp=1&sender_device=pc&web_id=7087134852688889350">
 <img align="left" alt="Mitul | Twitter" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/TikTok_Icon_Black.svg" />
 </a>
 <a href="">
