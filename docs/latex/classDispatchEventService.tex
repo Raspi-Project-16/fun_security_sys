@@ -1,0 +1,69 @@
+\hypertarget{classDispatchEventService}{}\doxysection{Dispatch\+Event\+Service Class Reference}
+\label{classDispatchEventService}\index{DispatchEventService@{DispatchEventService}}
+
+
+Collaboration diagram for Dispatch\+Event\+Service\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDispatchEventService_a243f09031a061a4a2be2575b4dec2fcc}\label{classDispatchEventService_a243f09031a061a4a2be2575b4dec2fcc}} 
+virtual bool {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{classDispatchEventService_a59da6138d3817d40513899aa16edfa12}\label{classDispatchEventService_a59da6138d3817d40513899aa16edfa12}} 
+virtual bool {\bfseries uninit} ()
+\item 
+\mbox{\Hypertarget{classDispatchEventService_a7091afb13fc69562d7d2956fc89207c9}\label{classDispatchEventService_a7091afb13fc69562d7d2956fc89207c9}} 
+virtual bool {\bfseries subscribe} (int eid, \mbox{\hyperlink{classEventCallback}{Event\+Callback}} $\ast$handler)
+\item 
+\mbox{\Hypertarget{classDispatchEventService_a679ee48302888a38a00000c72beaccde}\label{classDispatchEventService_a679ee48302888a38a00000c72beaccde}} 
+virtual bool {\bfseries unsubscribe} (int eid, \mbox{\hyperlink{classEventCallback}{Event\+Callback}} $\ast$handler)
+\item 
+\mbox{\Hypertarget{classDispatchEventService_a5ebd0f7a39310ddd88b4619cbe51b1b9}\label{classDispatchEventService_a5ebd0f7a39310ddd88b4619cbe51b1b9}} 
+virtual bool {\bfseries publish} (\mbox{\hyperlink{classCEvent}{CEvent}} $\ast$ev)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDispatchEventService_ad86fd36d02553bdb1e20b2fa1dddc471}\label{classDispatchEventService_ad86fd36d02553bdb1e20b2fa1dddc471}} 
+static \mbox{\hyperlink{classDispatchEventService}{Dispatch\+Event\+Service}} $\ast$ {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDispatchEventService_ac66f1a972089751809defb7a74d0f8f1}\label{classDispatchEventService_ac66f1a972089751809defb7a74d0f8f1}} 
+typedef std\+::vector$<$ \mbox{\hyperlink{classEventCallback}{Event\+Callback}} $\ast$ $>$ {\bfseries T\+\_\+\+Event\+Handlers}
+\item 
+\mbox{\Hypertarget{classDispatchEventService_a17d911c14b9d47a87e18ab4389d40a62}\label{classDispatchEventService_a17d911c14b9d47a87e18ab4389d40a62}} 
+typedef std\+::map$<$ int, T\+\_\+\+Event\+Handlers $>$ {\bfseries T\+\_\+\+Event\+Handlers\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDispatchEventService_a84b98d6fe911ec97ffeca4d30c7bc4a8}\label{classDispatchEventService_a84b98d6fe911ec97ffeca4d30c7bc4a8}} 
+virtual bool {\bfseries process} (const \mbox{\hyperlink{classCEvent}{CEvent}} $\ast$ev)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDispatchEventService_adc00f4d56fdda6697c5f8b15725cb05b}\label{classDispatchEventService_adc00f4d56fdda6697c5f8b15725cb05b}} 
+static void $\ast$ {\bfseries svc} (void $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDispatchEventService_a9e4f4daeb18100f3b1953e44a95bb6a7}\label{classDispatchEventService_a9e4f4daeb18100f3b1953e44a95bb6a7}} 
+T\+\_\+\+Event\+Handlers\+Map {\bfseries subscribers\+\_\+}
+\item 
+\mbox{\Hypertarget{classDispatchEventService_a5d4eff28ed63e46c1e278a9bbbcb0c34}\label{classDispatchEventService_a5d4eff28ed63e46c1e278a9bbbcb0c34}} 
+\mbox{\hyperlink{classPosixQueue}{Posix\+Queue}}$<$ \mbox{\hyperlink{classCEvent}{CEvent}} $>$ {\bfseries msg\+\_\+queue\+\_\+}
+\item 
+\mbox{\Hypertarget{classDispatchEventService_aaa145ec3375a5cbe219e1b104632f88a}\label{classDispatchEventService_aaa145ec3375a5cbe219e1b104632f88a}} 
+bool {\bfseries svr\+\_\+exit\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/pi/raspi\+\_\+project\+\_\+16/include/dispatch\+Event\+Service.\+h\item 
+/home/pi/raspi\+\_\+project\+\_\+16/src/dispatch\+Event\+Service.\+cpp\end{DoxyCompactItemize}
