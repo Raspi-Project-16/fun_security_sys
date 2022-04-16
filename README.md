@@ -17,15 +17,21 @@
 * [Directory Tree](#directory-tree)
 
 ## [Social Media](#Raspi-Project-16)
-<br><a href="https://youtu.be/hAqNX1u65mk" target="blank"><img align="left" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/youtube.svg" height="40" width="40"/>
+<br><a href="https://youtu.be/hAqNX1u65mk" target="blank"><img align="left" src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" height="40" width="40"/>
 </a>
 <a href="">
 <img align="left" alt="Mitul | Twitter" width="40px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/twitter.svg" />
 </a>
 <a href="">
+<img align="left" alt="Mitul | Twitter" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/TikTok_Icon_Black.svg" />
+</a>
+<a href="">
 <img align="left" alt="Mitul's LinkedIN" width= "40px"
-src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/linkedin.svg" />
+src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" />
 </a><br><br>
+
+
+
 
 ## [Wiring](#Raspi-Project-16)
 
