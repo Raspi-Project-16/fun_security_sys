@@ -7,8 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/run.dir/src/main.cpp.o"
   "CMakeFiles/run.dir/src/soundEventHandler.cpp.o"
   "CMakeFiles/run.dir/src/ws2811EventHandler.cpp.o"
-  "run"
-  "run.pdb"
+  "bin/run"
+  "bin/run.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
