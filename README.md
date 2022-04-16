@@ -24,8 +24,7 @@
 <img align="left" alt="Mitul | Twitter" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/TikTok_Icon_Black.svg" />
 </a>
 <a href="https://www.instagram.com/reel/CcaM5JNl6Lc/?igshid=YmMyMTA2M2Y=">
-<img align="left" alt="Mitul's LinkedIN" width= "40px"
-src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" />
+<img align="left" alt="Mitul's LinkedIN" width= "40px" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" />
 </a>
 <a href="https://twitter.com/lucasliu2926/status/1515288695972282370?s=21&t=oh7aflXQyq7_vTI_Y5S0fw">
 <img align="left" alt="Mitul | Twitter" width="40px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/twitter.svg" />
