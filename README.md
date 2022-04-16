@@ -83,10 +83,10 @@ $ sudo ./run
 
 `fun_security_sys` is maintained by the RTEP-Project-Team16. Team members include:
 
-* Bin Liu
-* Shuaiqi Liu
-* Genyuan Su
-* Yuhan Lin
+* Bin Liu (https://github.com/Lucas-ohmygoal)
+* Shuaiqi Liu (https://github.com/LinkinEminem)
+* Genyuan Su (https://github.com/sugenyuan)
+* Yuhan Lin (https://github.com/YuhanLin12)
 
 ## [Directory Tree](#Raspi-Project-16)
 
