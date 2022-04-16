@@ -109,12 +109,11 @@ bool CameraEventCallback::callback(const CEvent* ev){
     imshow("edges", frame);
     numframes++;
     waitKey(30);
-    //cameraEv = new CameraEvent();
-    // cout << cameraEv << endl;
+    //if no faces are detected
     if(flag == false){
         ws2811Ev->setMsg(RAINBOW_COLOR);
     }
-    des->publish(cameraEv);
+    des->publish(req);
     }
    return true;
 }

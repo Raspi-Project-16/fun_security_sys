@@ -45,6 +45,7 @@ void SoundEventCallback::stop(){
 
 bool SoundEventCallback::callback(const CEvent* ev){
     if(EEVENTID_SOUND_REQ == ev->getEid()){
+        
         SoundEvent* req = (SoundEvent*) ev;
         //if the sound sensor has received an signal, start the timing
         if(req->detectSound() && this->count == 0){
@@ -62,10 +63,7 @@ bool SoundEventCallback::callback(const CEvent* ev){
             //des->publish(ledEv);
         }
         
-        
-        
-        //SoundEvent* soundEv = new SoundEvent(req->getGPIO(), req->getMsg());
-        des->publish(soundEv);
+        des->publish(req);
     }else{
         cout << "unsubscribed events!" << endl;
     }
