@@ -8,12 +8,12 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/6241f4ff80194b638973949a48af328a)](https://www.codacy.com/gh/Raspi-Project-16/fun_security_sys-opencv-ws2812/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Raspi-Project-16/fun_security_sys-opencv-ws2812&amp;utm_campaign=Badge_Grade)
 
 # Contents
-* [Social Media](#social_media)
+* [Social Media](#social-media)
 * [Handware](#handware)
 * [Wiring](#wiring)
 * [Installation](#installation)
-* [Project Wiki](#wiki)
-* [Contribution Guidelines](#contribution-guidelines)
+* [Project Wiki](#project-wiki)
+* [Flow Chart](#flow-chart)
 * [Credits](#credits)
 * [Directory Tree](#directory-tree)
 
