@@ -6,35 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/raspi_project_16/src/main.cpp
-iostream
--
-pigpio.h
--
-unistd.h
--
-time.h
--
-thread
--
-stdio.h
--
-opencv2/opencv.hpp
--
-opencv2/objdetect.hpp
-/home/pi/raspi_project_16/src/opencv2/objdetect.hpp
-opencv2/highgui.hpp
-/home/pi/raspi_project_16/src/opencv2/highgui.hpp
-opencv2/imgproc.hpp
-/home/pi/raspi_project_16/src/opencv2/imgproc.hpp
-soundEventHandler.h
-/home/pi/raspi_project_16/src/soundEventHandler.h
+/home/pi/raspi_project_16/src/ledEventHandler.cpp
 ledEventHandler.h
 /home/pi/raspi_project_16/src/ledEventHandler.h
-ws2811EventHandler.h
-/home/pi/raspi_project_16/src/ws2811EventHandler.h
-cameraEventHandler.h
-/home/pi/raspi_project_16/src/cameraEventHandler.h
 
 /usr/local/include/opencv4/opencv2/calib3d.hpp
 opencv2/core.hpp
@@ -1186,14 +1160,6 @@ rpihw.h
 pwm.h
 /usr/local/include/ws2811/pwm.h
 
-include/cameraEventHandler.h
-iEventHandler.h
-include/iEventHandler.h
-dispatchEventService.h
-include/dispatchEventService.h
-events_def.h
-include/events_def.h
-
 include/dispatchEventService.h
 map
 -
@@ -1321,22 +1287,6 @@ iostream
 -
 
 include/ledEventHandler.h
-iEventHandler.h
-include/iEventHandler.h
-dispatchEventService.h
-include/dispatchEventService.h
-events_def.h
-include/events_def.h
-
-include/soundEventHandler.h
-iEventHandler.h
-include/iEventHandler.h
-dispatchEventService.h
-include/dispatchEventService.h
-events_def.h
-include/events_def.h
-
-include/ws2811EventHandler.h
 iEventHandler.h
 include/iEventHandler.h
 dispatchEventService.h

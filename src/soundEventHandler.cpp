@@ -54,13 +54,12 @@ bool SoundEventCallback::callback(const CEvent* ev){
         // if the timing is not done, keep the light on
         if(this->count > 0){
             this->count--;
-            digitalWrite(stringToNum<int>(req->getMsg()), HIGH);
-            //LedEvent* ledEv = new LedEvent(stringToNum<int>(req->getMsg()), "ON");
-            //des->publish(ledEv);
+            ledEv->setMsg(LED_ON);
+            //digitalWrite(stringToNum<int>(req->getMsg()), HIGH);
+            
         }else{
-            digitalWrite(stringToNum<int>(req->getMsg()), LOW);
-            //LedEvent* ledEv = new LedEvent(stringToNum<int>(req->getMsg()), "OFF");
-            //des->publish(ledEv);
+            //digitalWrite(stringToNum<int>(req->getMsg()), LOW);
+            ledEv->setMsg(LED_OFF);
         }
         
         des->publish(req);

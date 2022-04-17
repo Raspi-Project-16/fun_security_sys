@@ -5,8 +5,7 @@
   |       LedEvent::LedEvent
   +---------------------------------------------------------------------*/
 
-LedEvent::LedEvent(int gpio, string msg){
-    this->gpio_ = gpio;
+LedEvent::LedEvent(string msg){
     this->setEid(EEVENTID_LED_REQ);
     this->content_ = msg;
 }
@@ -20,11 +19,25 @@ LedEvent::~LedEvent(){
 }
 
 /*----------------------------------------------------------------------
+  |       LedEvent::setMsg
+  +---------------------------------------------------------------------*/
+  
+void LedEvent::setMsg(string msg){
+    this->content_ = msg;
+}
+
+/*----------------------------------------------------------------------
+  |       LedEvent::ins
+  +---------------------------------------------------------------------*/
+
+LedEvent LedEvent::ins = LedEvent(LED_OFF);
+
+/*----------------------------------------------------------------------
   |       LedEvent::ledOn
   +---------------------------------------------------------------------*/
 
 void LedEvent::ledOn(){
-    digitalWrite(this->gpio_, HIGH);
+    digitalWrite(LED_PIN, HIGH);
     //gpioWrite(this->gpio_, 1);
 }
 
@@ -33,7 +46,7 @@ void LedEvent::ledOn(){
   +---------------------------------------------------------------------*/
 
 void LedEvent::ledOff(){
-    digitalWrite(this->gpio_, LOW);
+    digitalWrite(LED_PIN, LOW);
     //gpioWrite(this->gpio_, 1);
 }
 
@@ -92,9 +105,15 @@ Ws2811Event::~Ws2811Event()
 /*----------------------------------------------------------------------
   |       Ws2811Event::setMsg
   +---------------------------------------------------------------------*/
+  
 void Ws2811Event::setMsg(string msg){
     this->content_ = msg;
 }
+
+
+/*----------------------------------------------------------------------
+  |       Ws2811Event::ins
+  +---------------------------------------------------------------------*/
 
 Ws2811Event Ws2811Event::ins = Ws2811Event(RAINBOW_COLOR);
 
@@ -116,4 +135,54 @@ CameraEvent::CameraEvent()
 CameraEvent::~CameraEvent()
 {
 
+}
+
+
+/*----------------------------------------------------------------------
+  |       Sg90MotorEvent::Sg90MotorEvent
+  +---------------------------------------------------------------------*/
+
+Sg90MotorEvent::Sg90MotorEvent(string msg)
+{
+    this->setEid(EEVENTID_MOTOR_REQ);
+    this->content_ = msg;
+
+}
+/*----------------------------------------------------------------------
+  |       Sg90MotorEvent::~Sg90MotorEvent
+  +---------------------------------------------------------------------*/
+Sg90MotorEvent::~Sg90MotorEvent()
+{
+
+}
+/*----------------------------------------------------------------------
+  |       Sg90MotorEvent::setMsg
+  +---------------------------------------------------------------------*/
+  
+void Sg90MotorEvent::setMsg(string msg){
+    this->content_ = msg;
+}
+
+
+/*----------------------------------------------------------------------
+  |       Sg90MotorEvent::ins
+  +---------------------------------------------------------------------*/
+
+Sg90MotorEvent Sg90MotorEvent::ins = Sg90MotorEvent(MOTOR_OFF);
+
+
+/*----------------------------------------------------------------------
+  |       Sg90MotorEvent::motorOn
+  +---------------------------------------------------------------------*/
+
+void Sg90MotorEvent::motorOn(){
+    softPwmWrite(PWM_PIN, 15);
+}
+
+/*----------------------------------------------------------------------
+  |       Sg90MotorEvent::motorOff
+  +---------------------------------------------------------------------*/
+
+void Sg90MotorEvent::motorOff(){
+    softPwmWrite(PWM_PIN, 5);
 }

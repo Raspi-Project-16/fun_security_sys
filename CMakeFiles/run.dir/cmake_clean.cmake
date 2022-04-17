@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/run.dir/src/events_def.cpp.o"
   "CMakeFiles/run.dir/src/ledEventHandler.cpp.o"
   "CMakeFiles/run.dir/src/main.cpp.o"
+  "CMakeFiles/run.dir/src/sg90EventHandler.cpp.o"
   "CMakeFiles/run.dir/src/soundEventHandler.cpp.o"
   "CMakeFiles/run.dir/src/ws2811EventHandler.cpp.o"
   "bin/run"
