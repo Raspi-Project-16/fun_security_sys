@@ -54,7 +54,7 @@ $ git clone https://github.com/Raspi-Project-16/fun_security_sys-opencv-ws2812.g
 ### 2. Compile
 
 ```py
-$ cd raspi_project_16
+$ cd fun_security_sys
 ```
 ```py
 $ cmake .
@@ -69,10 +69,16 @@ $ make
 #### 3.2 Train the dataset
 
 ```py
+$ cd bin
+```
+```py
 $ sudo ./train
 ```
 #### 3.3 Run the system
 
+```py
+$ cd bin
+```
 ```py
 $ sudo ./run
 ```
