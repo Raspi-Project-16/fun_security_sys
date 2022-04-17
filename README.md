@@ -1,7 +1,7 @@
 # Fun_Security_System
 ![OS: Linux](https://img.shields.io/badge/OS-Linux-e06c75?style=flat&logo=linux)
 ![Version: v1.0](https://img.shields.io/badge/Version-1.0-blue.svg)
-![Stars](https://img.shields.io/github/stars/Robotics-TDP-Team2/Nao-Soccer-Simulator.svg?style=flat&label=Star&maxAge=86400)
+![Stars](https://img.shields.io/github/stars/Raspi-Project-16/fun_security_sys.svg?style=flat&label=Star&maxAge=86400)
 [![Github open issues](https://img.shields.io/github/issues-raw/Raspi-Project-16/fun_security_sys.svg)](https://github.com/Raspi-Project-16/fun_security_sys/issues)
 ![](https://img.shields.io/github/repo-size/Raspi-Project-16/fun_security_sys.svg)
 ![Contributors](https://img.shields.io/github/contributors/Raspi-Project-16/fun_security_sys.svg?style=flat&label=Contributors&maxAge=86400)
