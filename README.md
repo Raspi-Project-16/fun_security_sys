@@ -96,7 +96,7 @@ $ sudo ./run
     | |—— glo_def.h
     | |–– logger.h
     | |–– events_def.h
-    | |–– mysqlConnection.h
+    | |–– sg90EventHandler.h
     | |–– soundEventHandler.h
     | |–– ws2811EventHandler.h
     | |–– cameraEventHandler.h
@@ -109,7 +109,7 @@ $ sudo ./run
     | |–– event.cpp
     | |–– logger.cpp
     | |–– events_def.cpp
-    | |–– mysqlConnection.cpp
+    | |–– sg90EventHandler.cpp
     | |–– soundEventHandler.cpp
     | |–– ws2811EventHandler.cpp
     | |–– cameraEventHandler.cpp
