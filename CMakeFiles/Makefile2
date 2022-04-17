@@ -95,7 +95,7 @@ clean: CMakeFiles/run.dir/clean
 CMakeFiles/train.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=10,11 "Built target train"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=11,12 "Built target train"
 .PHONY : CMakeFiles/train.dir/all
 
 # Build rule for subdir invocation for target.
@@ -122,12 +122,12 @@ CMakeFiles/train.dir/clean:
 CMakeFiles/run.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target run"
 .PHONY : CMakeFiles/run.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/raspi_project_16/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/raspi_project_16/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/run.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/raspi_project_16/CMakeFiles 0
 .PHONY : CMakeFiles/run.dir/rule

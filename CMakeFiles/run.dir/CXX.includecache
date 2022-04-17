@@ -6,13 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/raspi_project_16/src/cameraEventHandler.cpp
-cameraEventHandler.h
--
-
-/home/pi/raspi_project_16/src/soundEventHandler.cpp
-soundEventHandler.h
-/home/pi/raspi_project_16/src/soundEventHandler.h
+/home/pi/raspi_project_16/src/ledEventHandler.cpp
+ledEventHandler.h
+/home/pi/raspi_project_16/src/ledEventHandler.h
 
 /usr/local/include/opencv4/opencv2/calib3d.hpp
 opencv2/core.hpp
@@ -1164,14 +1160,6 @@ rpihw.h
 pwm.h
 /usr/local/include/ws2811/pwm.h
 
-include/cameraEventHandler.h
-iEventHandler.h
-include/iEventHandler.h
-dispatchEventService.h
-include/dispatchEventService.h
-events_def.h
-include/events_def.h
-
 include/dispatchEventService.h
 map
 -
@@ -1298,7 +1286,7 @@ include/event.h
 iostream
 -
 
-include/soundEventHandler.h
+include/ledEventHandler.h
 iEventHandler.h
 include/iEventHandler.h
 dispatchEventService.h

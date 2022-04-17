@@ -27,28 +27,28 @@ using namespace cv::face;
 
 
 /*----------------------------------------------------------------------
-  |       edEvent
+  |       LedEvent
   +---------------------------------------------------------------------*/
 
 
 class LedEvent : public CEvent{
 
 public:
-    LedEvent(int gpio, string msg);
+    static LedEvent* getInstance(){ 
+        return &ins;
+    };
+    LedEvent(string msg);
     ~LedEvent();
-
+    void setMsg(string msg);
     void ledOn();
     void ledOff();
-
-    int getGPIO() const {return gpio_;};
-
     string getMsg() const {return this->content_;};
-
 private:
-
-    int gpio_;
+    static LedEvent ins;
 
 };
+
+#define ledEv LedEvent::getInstance()
 
 /*----------------------------------------------------------------------
   |       SoundEvent
@@ -59,7 +59,7 @@ class SoundEvent : public CEvent{
 public:
     SoundEvent(int gpio, string msg);
     ~SoundEvent();
-
+    
     bool detectSound();
 
     int getGPIO() const {return gpio_;};
@@ -110,6 +110,30 @@ public:
 private:
     
 };
+
+
+/*----------------------------------------------------------------------
+  |       Sg90MotorEvent
+  +---------------------------------------------------------------------*/
+class Sg90MotorEvent : public CEvent
+{
+
+public:
+    static Sg90MotorEvent* getInstance(){ 
+        return &ins;
+    };
+    string getMsg() const {return this->content_;};
+    void setMsg(string msg);
+    void motorOn();
+    void motorOff();
+    Sg90MotorEvent(string msg);
+    ~Sg90MotorEvent();
+
+private:
+    static Sg90MotorEvent ins;
+};
+
+#define sg90MotorEv Sg90MotorEvent::getInstance()
 
 
 #endif

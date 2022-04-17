@@ -12,6 +12,7 @@
 #include "ledEventHandler.h"
 #include "ws2811EventHandler.h"
 #include "cameraEventHandler.h"
+#include "sg90EventHandler.h"
 using namespace std;
 using namespace cv;
 
@@ -26,9 +27,9 @@ int main(int argc, char* argv[]){
       }
     
     //start the LED light
-    //LedEventCallback ledCallback;
-    //ledCallback.start();
-    //start the LED strip
+    LedEventCallback ledCallback;
+    ledCallback.start();
+    //start the LED strip (ws2811)
     Ws2811EventCallback ws2811Callback;
     ws2811Callback.start();
     //star the sound sensor
@@ -37,6 +38,9 @@ int main(int argc, char* argv[]){
     //start the camera
     CameraEventCallback camCallback;
     camCallback.start();
+    //start the motor
+    Sg90EventCallback sg90Callback;
+    sg90Callback.start();
 
     for(;;){
       

@@ -344,6 +344,33 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/sg90EventHandler.o: src/sg90EventHandler.cpp.o
+
+.PHONY : src/sg90EventHandler.o
+
+# target to build an object file
+src/sg90EventHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/sg90EventHandler.cpp.o
+.PHONY : src/sg90EventHandler.cpp.o
+
+src/sg90EventHandler.i: src/sg90EventHandler.cpp.i
+
+.PHONY : src/sg90EventHandler.i
+
+# target to preprocess a source file
+src/sg90EventHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/sg90EventHandler.cpp.i
+.PHONY : src/sg90EventHandler.cpp.i
+
+src/sg90EventHandler.s: src/sg90EventHandler.cpp.s
+
+.PHONY : src/sg90EventHandler.s
+
+# target to generate assembly for a file
+src/sg90EventHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/sg90EventHandler.cpp.s
+.PHONY : src/sg90EventHandler.cpp.s
+
 src/soundEventHandler.o: src/soundEventHandler.cpp.o
 
 .PHONY : src/soundEventHandler.o
@@ -429,6 +456,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/sg90EventHandler.o"
+	@echo "... src/sg90EventHandler.i"
+	@echo "... src/sg90EventHandler.s"
 	@echo "... src/soundEventHandler.o"
 	@echo "... src/soundEventHandler.i"
 	@echo "... src/soundEventHandler.s"

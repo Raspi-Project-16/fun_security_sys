@@ -54,12 +54,14 @@ bool Ws2811EventCallback::callback(const CEvent* ev){
         // check the mode, if the current mode is accessing mode
         if(req->getMsg() == ACCESSING_COLOR){
             // rotate the motor 
-            softPwmWrite(PWM_PIN, 15);
+            //softPwmWrite(PWM_PIN, 15);
+            sg90MotorEv->setMsg(MOTOR_ON);
         }
         // check the mode, if the current mode is warning mode or the initial mode
         if(req->getMsg() == WARNING_COLOR || req->getMsg() == RAINBOW_COLOR){
             //reset the motor
-            softPwmWrite(PWM_PIN, 5);
+            //softPwmWrite(PWM_PIN, 5);
+            sg90MotorEv->setMsg(MOTOR_OFF);
         }
         // render the color matrix
         execute(req->getMsg());

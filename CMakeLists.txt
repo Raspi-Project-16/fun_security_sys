@@ -38,6 +38,7 @@ add_executable(run
     src/soundEventHandler.cpp
     src/ws2811EventHandler.cpp
     src/cameraEventHandler.cpp
+    src/sg90EventHandler.cpp
     )
 
 add_executable(train 
