@@ -49,7 +49,7 @@
 ### 1. Download
 
 ```py
-$ git clone https://github.com/Raspi-Project-16/fun_security_sys-opencv-ws2812.git
+$ git clone https://github.com/Raspi-Project-16/fun_security_sys.git
 ```
 ### 2. Compile
 
