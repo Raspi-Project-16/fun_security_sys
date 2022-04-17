@@ -2,10 +2,10 @@
 ![OS: Linux](https://img.shields.io/badge/OS-Linux-e06c75?style=flat&logo=linux)
 ![Version: v1.0](https://img.shields.io/badge/Version-1.0-blue.svg)
 ![Stars](https://img.shields.io/github/stars/Robotics-TDP-Team2/Nao-Soccer-Simulator.svg?style=flat&label=Star&maxAge=86400)
-[![Github open issues](https://img.shields.io/github/issues-raw/Raspi-Project-16/fun_security_sys-opencv-ws2812.svg)](https://github.com/Raspi-Project-16/fun_security_sys-opencv-ws2812/issues)
-![](https://img.shields.io/github/repo-size/Raspi-Project-16/fun_security_sys-opencv-ws2812.svg)
-![Contributors](https://img.shields.io/github/contributors/Raspi-Project-16/fun_security_sys-opencv-ws2812.svg?style=flat&label=Contributors&maxAge=86400)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/6241f4ff80194b638973949a48af328a)](https://www.codacy.com/gh/Raspi-Project-16/fun_security_sys-opencv-ws2812/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Raspi-Project-16/fun_security_sys-opencv-ws2812&amp;utm_campaign=Badge_Grade)
+[![Github open issues](https://img.shields.io/github/issues-raw/Raspi-Project-16/fun_security_sys.svg)](https://github.com/Raspi-Project-16/fun_security_sys/issues)
+![](https://img.shields.io/github/repo-size/Raspi-Project-16/fun_security_sys.svg)
+![Contributors](https://img.shields.io/github/contributors/Raspi-Project-16/fun_security_sys.svg?style=flat&label=Contributors&maxAge=86400)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/6241f4ff80194b638973949a48af328a)](https://www.codacy.com/gh/Raspi-Project-16/fun_security_sys/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Raspi-Project-16/fun_security_sys&amp;utm_campaign=Badge_Grade)
 
 # Contents
 * [Social Media](#social-media)
@@ -84,7 +84,7 @@ $ sudo ./run
 ```
 ## [Project Wiki](#Raspi-Project-16)
 
-Thank you for your interest in our project. We strongly encourage reading the wiki page of our project. You can find it [here](https://github.com/Raspi-Project-16/fun_security_sys-opencv-ws2812/wiki).
+Thank you for your interest in our project. We strongly encourage reading the wiki page of our project. You can find it [here](https://github.com/Raspi-Project-16/fun_security_sys/wiki).
 
 ## [Credits](#Raspi-Project-16)
 
