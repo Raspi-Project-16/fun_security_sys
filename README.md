@@ -26,8 +26,8 @@
 <a href="https://www.instagram.com/tv/CcdU-LDFxKG/?utm_source=ig_web_copy_link">
 <img align="left" alt="Mitul's LinkedIN" width= "40px" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" />
 </a>
-<a href="https://twitter.com/lucasliu2926/status/1515288695972282370?s=21&t=oh7aflXQyq7_vTI_Y5S0fw">
-<img align="left" alt="Mitul | Twitter" width="40px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/twitter.svg" />
+<a href="https://www.linkedin.com/posts/lucas2926_welcome-to-give-your-precious-advice-thanks-activity-6921519999136280576-KC4A?utm_source=linkedin_share&utm_medium=member_desktop_web">
+<img align="left" alt="Mitul | Linkedin" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" />
 </a><br><br>
 
 ## [Handware](#Raspi-Project-16)
