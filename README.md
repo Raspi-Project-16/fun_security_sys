@@ -12,7 +12,7 @@
 * [Handware](#handware)
 * [Wiring](#wiring)
 * [Installation](#installation)
-* [Milestones](#milestones)
+* [Project Wiki](#wiki)
 * [Contribution Guidelines](#contribution-guidelines)
 * [Credits](#credits)
 * [Directory Tree](#directory-tree)
@@ -76,7 +76,9 @@ $ sudo ./train
 ```py
 $ sudo ./run
 ```
+## [Project Wiki](#Raspi-Project-16)
 
+Thank you for your interest in our project. We strongly encourage reading the wiki page of our project. You can find it [here](https://github.com/Raspi-Project-16/fun_security_sys-opencv-ws2812/wiki).
 
 ## [Credits](#Raspi-Project-16)
 
