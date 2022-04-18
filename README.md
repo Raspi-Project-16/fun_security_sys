@@ -88,7 +88,7 @@ Thank you for your interest in our project. We strongly encourage reading the wi
 
 ## [Flow Chart](#Raspi-Project-16)
 
-![flow chart](https://user-images.githubusercontent.com/85005419/163775096-323c979d-7589-4dfa-9b7e-f85b5cb1095c.png)
+![embedded programming - Algorithm flowchart example](https://user-images.githubusercontent.com/85005419/163775346-640d5d37-2f10-4e5b-9500-8a59920698bb.png)
 
 ## [Credits](#Raspi-Project-16)
 
