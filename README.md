@@ -91,7 +91,7 @@ Thank you for your interest in our project. We strongly encourage reading the wi
 ![embedded programming - Algorithm flowchart example](https://user-images.githubusercontent.com/85005419/163776367-5cb74ce6-44ae-4ff0-9148-ee04ed21d933.png)
 
 ## [Report](#Raspi-Project-16)
-Our report can be found in [here](https://github.com/Raspi-Project-16/project_report/blob/main/Embadded%20programming%20report.docx).
+Our report can be found in [here](https://github.com/Raspi-Project-16/project_report/blob/main/RealTime_Report.pdf).
 ## [Credits](#Raspi-Project-16)
 
 `fun_security_sys` is maintained by the RTEP-Project-Team16. Team members include:
