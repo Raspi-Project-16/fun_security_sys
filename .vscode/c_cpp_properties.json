@@ -6,16 +6,15 @@
                 "${workspaceFolder}/**",
                 "/usr/local/include/opencv4",
                 "/usr/local/include/ws2811",
-                "/usr/local/include/glog",
-                "/usr/local/include/sys",
-                "/usr/local/include/log4cpp",
+                "/usr/",
                 "${workspaceFolder}/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu17",
             "cppStandard": "gnu++14",
-            "intelliSenseMode": "linux-gcc-arm"
+            "intelliSenseMode": "linux-gcc-arm",
+            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4

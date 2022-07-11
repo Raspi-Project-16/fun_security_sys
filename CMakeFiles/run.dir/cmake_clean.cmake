@@ -1,8 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/run.dir/src/cameraEventHandler.cpp.o"
-  "CMakeFiles/run.dir/src/dispatchEventService.cpp.o"
-  "CMakeFiles/run.dir/src/event.cpp.o"
-  "CMakeFiles/run.dir/src/events_def.cpp.o"
   "CMakeFiles/run.dir/src/ledEventHandler.cpp.o"
   "CMakeFiles/run.dir/src/main.cpp.o"
   "CMakeFiles/run.dir/src/sg90EventHandler.cpp.o"

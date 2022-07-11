@@ -63,16 +63,15 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/raspi_project_16
+CMAKE_SOURCE_DIR = /home/pi/fun_security_sys
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/raspi_project_16
+CMAKE_BINARY_DIR = /home/pi/fun_security_sys
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/train.dir/all
 all: CMakeFiles/run.dir/all
 
 .PHONY : all
@@ -83,37 +82,9 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/train.dir/clean
 clean: CMakeFiles/run.dir/clean
 
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/train.dir
-
-# All Build rule for target.
-CMakeFiles/train.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=11,12 "Built target train"
-.PHONY : CMakeFiles/train.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/train.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/raspi_project_16/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/train.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/raspi_project_16/CMakeFiles 0
-.PHONY : CMakeFiles/train.dir/rule
-
-# Convenience name for target.
-train: CMakeFiles/train.dir/rule
-
-.PHONY : train
-
-# clean rule for target.
-CMakeFiles/train.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/clean
-.PHONY : CMakeFiles/train.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/run.dir
@@ -122,14 +93,14 @@ CMakeFiles/train.dir/clean:
 CMakeFiles/run.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/raspi_project_16/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target run"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/fun_security_sys/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target run"
 .PHONY : CMakeFiles/run.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/raspi_project_16/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/fun_security_sys/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/run.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/raspi_project_16/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/fun_security_sys/CMakeFiles 0
 .PHONY : CMakeFiles/run.dir/rule
 
 # Convenience name for target.

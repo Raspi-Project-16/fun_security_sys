@@ -2,129 +2,138 @@
 
 
 /*----------------------------------------------------------------------
-  |       Ws2811EventCallback::Ws2811EventCallback
+  |       WS2811Driver::WS2811Driver
   +---------------------------------------------------------------------*/
 
-Ws2811EventCallback::Ws2811EventCallback(){
+WS2811Driver::WS2811Driver(WS2811settings settings){
+    // initialise the settings
+    ws2811settings = settings;
     // initialise the led matrix for the LED strip
-    matrix = (ws2811_led_t *)malloc(sizeof(ws2811_led_t) * WIDTH * HEIGHT);
-    // initialise the motor
-    pinMode(PWM_PIN, OUTPUT);
-    softPwmCreate(PWM_PIN, 0, 200);
-    softPwmWrite(PWM_PIN, 5);
+    matrix = (ws2811_led_t *)malloc(sizeof(ws2811_led_t) * ws2811settings.width * ws2811settings.height);
 }
 
 /*----------------------------------------------------------------------
-  |       Ws2811EventCallback::~Ws2811EventCallback
+  |       WS2811Driver::~WS2811Driver
   +---------------------------------------------------------------------*/
 
-Ws2811EventCallback::~Ws2811EventCallback(){
-    // initalise the strip
-    ws2811_fini(&ledstring);
+WS2811Driver::~WS2811Driver(){
+  stop();
+  if (nullptr != matrix) {
+  	free(matrix);
+	  matrix = nullptr;
+  }
 }
 
 /*----------------------------------------------------------------------
-  |       Ws2811EventCallback::start
+  |       WS2811Driver::start
   +---------------------------------------------------------------------*/
 
-void Ws2811EventCallback::start(){
-    // register the callback
-    des->subscribe(EEVENTID_WS2811_REQ, this);
-    ws2811Ev->setMsg(RAINBOW_COLOR);
-    des->publish(ws2811Ev);
+void WS2811Driver::start(){
+  if (nullptr != ws2811Thread) {
+		// already running
+		return;
+	}
+  ws2811Thread = new thread(execute,this);
 }
 
 /*----------------------------------------------------------------------
-  |       Ws2811EventCallback::stop
+  |       WS2811Driver::stop
   +---------------------------------------------------------------------*/
 
-void Ws2811EventCallback::stop(){
-    // unregister the callback
-    des->unsubscribe(EEVENTID_WS2811_REQ, this);
+void WS2811Driver::stop(){
+  running = 0;
+	if (nullptr != ws2811Thread) {
+		ws2811Thread->join();
+		delete ws2811Thread;
+		ws2811Thread = nullptr;
+  }
+  matrix_clear();
+	matrix_render();
+	ws2811_render(&ws2811settings.ledstring);
 }
 
 /*----------------------------------------------------------------------
-  |       Ws2811EventCallback::callback
+  |       WS2811Driver::registerCallback
   +---------------------------------------------------------------------*/
 
-bool Ws2811EventCallback::callback(const CEvent* ev){
-    if(EEVENTID_WS2811_REQ == ev->getEid()){
-        Ws2811Event* req = (Ws2811Event*) ev;
-        //cout << "get:" << req->getMsg() << endl;
-        // check the mode, if the current mode is accessing mode
-        if(req->getMsg() == ACCESSING_COLOR){
-            // rotate the motor 
-            //softPwmWrite(PWM_PIN, 15);
-            sg90MotorEv->setMsg(MOTOR_ON);
-        }
-        // check the mode, if the current mode is warning mode or the initial mode
-        if(req->getMsg() == WARNING_COLOR || req->getMsg() == RAINBOW_COLOR){
-            //reset the motor
-            //softPwmWrite(PWM_PIN, 5);
-            sg90MotorEv->setMsg(MOTOR_OFF);
-        }
-        // render the color matrix
-        execute(req->getMsg());
-        des->publish(req);   
-    }else{
-        
-    }
-
-    return true;
+void WS2811Driver::registerCallback(WS2811callback* cb) {
+	ws2811callback = cb;
 }
 
 /*----------------------------------------------------------------------
-  |       Ws2811EventCallback::execute
+  |       WS2811Driver::unRegisterCallback
   +---------------------------------------------------------------------*/
 
-void Ws2811EventCallback::execute(string msg){
+void WS2811Driver::unRegisterCallback() {
+	ws2811callback = nullptr;
+}
+
+/*----------------------------------------------------------------------
+  |       WS2811Driver::run
+  +---------------------------------------------------------------------*/
+
+void WS2811Driver::run(){
     ws2811_return_t ret;
     //initalise the LED strip
-    if ((ret = ws2811_init(&ledstring)) != WS2811_SUCCESS)
+    if ((ret = ws2811_init(&ws2811settings.ledstring)) != WS2811_SUCCESS)
     {
         cout << stderr << "ws2811_init failed:" << ws2811_get_return_t_str(ret) << endl;
         exit(1);
     }
-    //set all the leds to null first
-    matrix_clear();
-    //change the color of each led
-    matrix_bottom(msg);
-    //render the matrix
-    matrix_render();
-    if ((ret = ws2811_render(&ledstring)) != WS2811_SUCCESS)
-    {
-        fprintf(stderr, "ws2811_render failed: %s\n", ws2811_get_return_t_str(ret));
-        exit(1);
+
+    while(running){
+        //set all the leds to null first
+        matrix_clear();
+        //change the color of each led
+        matrix_bottom();
+        //render the matrix
+        matrix_render();
+        if ((ret = ws2811_render(&ws2811settings.ledstring)) != WS2811_SUCCESS)
+        {
+            fprintf(stderr, "ws2811_render failed: %s\n", ws2811_get_return_t_str(ret));
+            exit(1);
+        }
+        usleep(1000000 / 35);
     }
     
 }
 
 /*----------------------------------------------------------------------
-  |       Ws2811EventCallback::matrix_render
+  |       WS2811Driver::callback()
   +---------------------------------------------------------------------*/
 
-void Ws2811EventCallback::matrix_render(){
+
+void WS2811Driver::callback(Color color){
+    if(nullptr != ws2811callback){
+      ws2811callback->hasSignal(this, color);
+    }
+}
+
+/*----------------------------------------------------------------------
+  |       WS2811Driver::matrix_render
+  +---------------------------------------------------------------------*/
+
+void WS2811Driver::matrix_render(){
 
     int x,y;
 
-    for (x = 0; x < WIDTH; x++)
+    for (x = 0; x < ws2811settings.width; x++)
     {
-        for (y = 0; y < HEIGHT; y++)
+        for (y = 0; y < ws2811settings.height; y++)
         {
-            ledstring.channel[0].leds[(y * WIDTH) + x] = matrix[y * WIDTH + x];
+            ws2811settings.ledstring.channel[0].leds[(y * ws2811settings.width) + x] = matrix[y * ws2811settings.width + x];
         }
     }
 }
 
 /*----------------------------------------------------------------------
-  |       Ws2811EventCallback::matrix_clear
+  |       WS2811Driver::matrix_clear
   +---------------------------------------------------------------------*/
 
-void Ws2811EventCallback::matrix_clear(){
+void WS2811Driver::matrix_clear(){
+
     int x;
-
-
-    for (x = 0; x < WIDTH; x++)
+    for (x = 0; x < ws2811settings.width; x++)
     {
         matrix[x] = 0;
     }
@@ -132,28 +141,28 @@ void Ws2811EventCallback::matrix_clear(){
 }
 
 /*----------------------------------------------------------------------
-  |       Ws2811EventCallback::matrix_bottom
+  |       WS2811Driver::matrix_bottom
   +---------------------------------------------------------------------*/
 
-void Ws2811EventCallback::matrix_bottom(string mode)
+void WS2811Driver::matrix_bottom()
 {
     int i;
 
-    for (i = 0; i < (int)(ARRAY_SIZE(dotspos)); i++)
+    for (i = 0; i < (int)(ARRAY_SIZE(ws2811settings.color_spots)); i++)
     {
         
-        dotspos[i]++;
-        if (dotspos[i] > (WIDTH - 1))
+        ws2811settings.color_spots[i]++;
+        if (ws2811settings.color_spots[i] > (ws2811settings.width - 1))
         {
-            dotspos[i] = 0;
+            ws2811settings.color_spots[i] = 0;
         }
         //set colors for different mode
-        if(mode == WARNING_COLOR){
-            matrix[dotspos[i] + (HEIGHT - 1) * WIDTH] = dotcolors_red[i];
-        }else if(mode == ACCESSING_COLOR){
-            matrix[dotspos[i] + (HEIGHT - 1) * WIDTH] = dotcolors_green[i];
-        }else if(mode == RAINBOW_COLOR){
-            matrix[dotspos[i] + (HEIGHT - 1) * WIDTH] = dotcolors[i];
+        if(ws2811settings.color == RED){
+            matrix[ws2811settings.color_spots[i] + (ws2811settings.height - 1) * ws2811settings.width] = ws2811settings.red_spots[i];
+        }else if(ws2811settings.color == GREEN){
+            matrix[ws2811settings.color_spots[i] + (ws2811settings.height - 1) * ws2811settings.width] = ws2811settings.green_spots[i];
+        }else if(ws2811settings.color == RAINBOW){
+            matrix[ws2811settings.color_spots[i] + (ws2811settings.height - 1) * ws2811settings.width] = ws2811settings.rainbow_spots[i];
         }
         
     }
@@ -161,11 +170,10 @@ void Ws2811EventCallback::matrix_bottom(string mode)
 }
 
 /*----------------------------------------------------------------------
-  |       Ws2811EventCallback::shutdown
+  |       WS2811Driver::setColor
   +---------------------------------------------------------------------*/
 
-void Ws2811EventCallback::shutdown(){
-    matrix_clear();
-	matrix_render();
-	ws2811_render(&ledstring);
+
+void WS2811Driver::setColor(Color color){
+    this->ws2811settings.color = color;
 }

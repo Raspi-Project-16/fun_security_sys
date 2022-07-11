@@ -67,10 +67,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pi/raspi_project_16
+CMAKE_SOURCE_DIR = /home/pi/fun_security_sys
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pi/raspi_project_16
+CMAKE_BINARY_DIR = /home/pi/fun_security_sys
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/raspi_project_16/CMakeFiles /home/pi/raspi_project_16//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/fun_security_sys/CMakeFiles /home/pi/fun_security_sys//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/raspi_project_16/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/fun_security_sys/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,19 +128,6 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named train
-
-# Build rule for target.
-train: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 train
-.PHONY : train
-
-# fast build rule for target.
-train/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/build
-.PHONY : train/fast
 
 #=============================================================================
 # Target rules for targets named run
@@ -181,114 +168,6 @@ src/cameraEventHandler.s: src/cameraEventHandler.cpp.s
 src/cameraEventHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/cameraEventHandler.cpp.s
 .PHONY : src/cameraEventHandler.cpp.s
-
-src/dispatchEventService.o: src/dispatchEventService.cpp.o
-
-.PHONY : src/dispatchEventService.o
-
-# target to build an object file
-src/dispatchEventService.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/dispatchEventService.cpp.o
-.PHONY : src/dispatchEventService.cpp.o
-
-src/dispatchEventService.i: src/dispatchEventService.cpp.i
-
-.PHONY : src/dispatchEventService.i
-
-# target to preprocess a source file
-src/dispatchEventService.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/dispatchEventService.cpp.i
-.PHONY : src/dispatchEventService.cpp.i
-
-src/dispatchEventService.s: src/dispatchEventService.cpp.s
-
-.PHONY : src/dispatchEventService.s
-
-# target to generate assembly for a file
-src/dispatchEventService.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/dispatchEventService.cpp.s
-.PHONY : src/dispatchEventService.cpp.s
-
-src/event.o: src/event.cpp.o
-
-.PHONY : src/event.o
-
-# target to build an object file
-src/event.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/event.cpp.o
-.PHONY : src/event.cpp.o
-
-src/event.i: src/event.cpp.i
-
-.PHONY : src/event.i
-
-# target to preprocess a source file
-src/event.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/event.cpp.i
-.PHONY : src/event.cpp.i
-
-src/event.s: src/event.cpp.s
-
-.PHONY : src/event.s
-
-# target to generate assembly for a file
-src/event.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/event.cpp.s
-.PHONY : src/event.cpp.s
-
-src/events_def.o: src/events_def.cpp.o
-
-.PHONY : src/events_def.o
-
-# target to build an object file
-src/events_def.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/events_def.cpp.o
-.PHONY : src/events_def.cpp.o
-
-src/events_def.i: src/events_def.cpp.i
-
-.PHONY : src/events_def.i
-
-# target to preprocess a source file
-src/events_def.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/events_def.cpp.i
-.PHONY : src/events_def.cpp.i
-
-src/events_def.s: src/events_def.cpp.s
-
-.PHONY : src/events_def.s
-
-# target to generate assembly for a file
-src/events_def.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/events_def.cpp.s
-.PHONY : src/events_def.cpp.s
-
-src/faceRecogitionTraining.o: src/faceRecogitionTraining.cpp.o
-
-.PHONY : src/faceRecogitionTraining.o
-
-# target to build an object file
-src/faceRecogitionTraining.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/src/faceRecogitionTraining.cpp.o
-.PHONY : src/faceRecogitionTraining.cpp.o
-
-src/faceRecogitionTraining.i: src/faceRecogitionTraining.cpp.i
-
-.PHONY : src/faceRecogitionTraining.i
-
-# target to preprocess a source file
-src/faceRecogitionTraining.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/src/faceRecogitionTraining.cpp.i
-.PHONY : src/faceRecogitionTraining.cpp.i
-
-src/faceRecogitionTraining.s: src/faceRecogitionTraining.cpp.s
-
-.PHONY : src/faceRecogitionTraining.s
-
-# target to generate assembly for a file
-src/faceRecogitionTraining.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/src/faceRecogitionTraining.cpp.s
-.PHONY : src/faceRecogitionTraining.cpp.s
 
 src/ledEventHandler.o: src/ledEventHandler.cpp.o
 
@@ -434,22 +313,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... run"
-	@echo "... train"
 	@echo "... src/cameraEventHandler.o"
 	@echo "... src/cameraEventHandler.i"
 	@echo "... src/cameraEventHandler.s"
-	@echo "... src/dispatchEventService.o"
-	@echo "... src/dispatchEventService.i"
-	@echo "... src/dispatchEventService.s"
-	@echo "... src/event.o"
-	@echo "... src/event.i"
-	@echo "... src/event.s"
-	@echo "... src/events_def.o"
-	@echo "... src/events_def.i"
-	@echo "... src/events_def.s"
-	@echo "... src/faceRecogitionTraining.o"
-	@echo "... src/faceRecogitionTraining.i"
-	@echo "... src/faceRecogitionTraining.s"
 	@echo "... src/ledEventHandler.o"
 	@echo "... src/ledEventHandler.i"
 	@echo "... src/ledEventHandler.s"

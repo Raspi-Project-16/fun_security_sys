@@ -1,71 +1,101 @@
 #include "soundEventHandler.h"
 
-
 /*----------------------------------------------------------------------
-  |       SoundEventCallback::SoundEventCallback
+  |       SoundSensorDriver::SoundSensorDriver
   +---------------------------------------------------------------------*/
 
-SoundEventCallback::SoundEventCallback(){
-    
+SoundSensorDriver::SoundSensorDriver(SoundSensorSettings settings){
+    // initialise the settings
+    ssSettings = settings;
 }
 
 /*----------------------------------------------------------------------
-  |       SoundEventCallback::~SoundEventCallback
+  |       SoundSensorDriver::~SoundSensorDriver
   +---------------------------------------------------------------------*/
-SoundEventCallback::~SoundEventCallback(){
-    
+
+SoundSensorDriver::~SoundSensorDriver(){
+    stop();
+
 }
 
 /*----------------------------------------------------------------------
-  |       SoundEventCallback::start
+  |       SoundSensorDriver::start
   +---------------------------------------------------------------------*/
-void SoundEventCallback::start(){
-    // register the callback
-    des->subscribe(EEVENTID_SOUND_REQ, this);
-    // initialse the gpio pins
-    pinMode(LED_PIN, OUTPUT);
-    pinMode(SOUND_PIN, INPUT);
-    // initialise a sound event
-    soundEv = new SoundEvent(SOUND_PIN, NumtoString(LED_PIN));
-    des->publish(soundEv);
+
+void SoundSensorDriver::start(){
+  if (nullptr != ssThread) {
+		// already running
+		return;
+	}
+  if(wiringPiSetup () < 0) 
+  {
+    return;
+  }
+  // gpio library doesn't work properly in my case, the LED strip wouldn not display correctly if it is used.
+  
+  // gpioSetMode(ssSettings.led_GPIO, PI_OUTPUT);
+  // gpioSetMode(ssSettings.led_GPIO, PI_INPUT);
+  //gpioSetISRFuncEx(ssSettings.ss_GPIO, RISING_EDGE, ssSettings.ISR_TIMEOUT, gpioISR, (void*)this);
+  // gpioSetISRFuncEx(ssSettings.ss_GPIO, FALLING_EDGE, 1, gpioISR, (void*)this);
+  pinMode(ssSettings.ss_GPIO, INPUT);
+  ssThread = new thread(execute,this);
 }
 
 /*----------------------------------------------------------------------
-  |       SoundEventCallback::stop
+  |       SoundSensorDriver::stop
   +---------------------------------------------------------------------*/
 
-void SoundEventCallback::stop(){
-    // unregister the callback
-    des->unsubscribe(EEVENTID_SOUND_REQ, this);
-}
-
-/*----------------------------------------------------------------------
-  |       SoundEventCallback::callback
-  +---------------------------------------------------------------------*/
-
-bool SoundEventCallback::callback(const CEvent* ev){
-    if(EEVENTID_SOUND_REQ == ev->getEid()){
-        
-        SoundEvent* req = (SoundEvent*) ev;
-        //if the sound sensor has received an signal, start the timing
-        if(req->detectSound() && this->count == 0){
-            this->count = 100;
-        }
-        // if the timing is not done, keep the light on
-        if(this->count > 0){
-            this->count--;
-            ledEv->setMsg(LED_ON);
-            //digitalWrite(stringToNum<int>(req->getMsg()), HIGH);
-            
-        }else{
-            //digitalWrite(stringToNum<int>(req->getMsg()), LOW);
-            ledEv->setMsg(LED_OFF);
-        }
-        
-        des->publish(req);
-    }else{
-        cout << "unsubscribed events!" << endl;
+void SoundSensorDriver::stop(){
+  running = 0;
+	if (nullptr != ssThread) {
+		ssThread->join();
+		delete ssThread;
+		ssThread = nullptr;
     }
+}
 
-    return true;
+/*----------------------------------------------------------------------
+  |       SoundSensorDriver::registerCallback
+  +---------------------------------------------------------------------*/
+
+void SoundSensorDriver::registerCallback(SoundSensorCallback* cb) {
+	ssCallback = cb;
+}
+
+/*----------------------------------------------------------------------
+  |       SoundSensorDriver::unRegisterCallback
+  +---------------------------------------------------------------------*/
+
+void SoundSensorDriver::unRegisterCallback() {
+	ssCallback = nullptr;
+}
+
+/*----------------------------------------------------------------------
+  |       SoundSensorDriver::run
+  +---------------------------------------------------------------------*/
+
+void SoundSensorDriver::run(){
+  bool flag = false;
+  int signal = 0;
+  time_t begin, end;
+  while(running){
+    signal = digitalRead(ssSettings.ss_GPIO);
+    //cout << "sound detected : " << signal << endl;
+    if(signal == ssSettings.RISING && flag == false){
+      flag = true;
+      begin = clock();
+    }
+    if(flag){
+      end = clock();
+      //cout << end - begin << endl;
+      if(double(end - begin) / CLOCKS_PER_SEC * 1000 > ssSettings.INTERVAL)flag=false;
+      signal = ssSettings.RISING;
+    }else{
+      signal = ssSettings.FALLING;
+    }
+    
+    if(nullptr != ssCallback){
+        ssCallback->hasSignal(signal);
+    }
+  }
 }

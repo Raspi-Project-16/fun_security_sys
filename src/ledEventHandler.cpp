@@ -1,58 +1,102 @@
 #include "ledEventHandler.h"
 
 /*----------------------------------------------------------------------
-  |       LedEventCallback::LedEventCallback
+  |       LEDdriver::LEDdriver
   +---------------------------------------------------------------------*/
 
-LedEventCallback::LedEventCallback(){
-    
+LEDdriver::LEDdriver(LEDsettings settings){
+    // initialise the settings
+    ledSettings = settings;
 }
 
 /*----------------------------------------------------------------------
-  |       LedEventCallback::~LedEventCallback
+  |       LEDdriver::~LEDdriver
   +---------------------------------------------------------------------*/
 
-LedEventCallback::~LedEventCallback(){
-    
+LEDdriver::~LEDdriver(){
+    stop();
+
 }
 
 /*----------------------------------------------------------------------
-  |       LedEventCallback::start
+  |       LEDdriver::start
   +---------------------------------------------------------------------*/
 
-void LedEventCallback::start(){
-    // register the event
-    des->subscribe(EEVENTID_LED_REQ, this);
-    des->publish(ledEv);
+void LEDdriver::start(){
+  if (nullptr != ledThread) {
+		// already running
+		return;
+	}
+  if(wiringPiSetup () < 0) 
+  {
+    return;
+  }
+  //gpioSetMode(ledSettings.led_GPIO, PI_OUTPUT);
+
+  pinMode(ledSettings.led_GPIO, OUTPUT);
 }
 
 /*----------------------------------------------------------------------
-  |       LedEventCallback::stop
+  |       LEDdriver::stop
   +---------------------------------------------------------------------*/
 
-void LedEventCallback::stop(){
-    //unregister the event
-    des->unsubscribe(EEVENTID_LED_REQ, this);
-}
-
-/*----------------------------------------------------------------------
-  |       LedEventCallback::callback
-  +---------------------------------------------------------------------*/
-bool LedEventCallback::callback(const CEvent* ev){
-    
-    if(EEVENTID_LED_REQ == ev->getEid()){
-        LedEvent* req = (LedEvent*) ev;
-        // turn on the light
-        if(req->getMsg() == LED_ON){
-            req->ledOn();
-        // turn off the light
-        }else{
-            req->ledOff();
-        }
-        des->publish(req);
-    }else{
-        
+void LEDdriver::stop(){
+	if (nullptr != ledThread) {
+		ledThread->join();
+		delete ledThread;
+		ledThread = nullptr;
     }
+}
 
-    return true;
+/*----------------------------------------------------------------------
+  |       LEDdriver::registerCallback
+  +---------------------------------------------------------------------*/
+
+void LEDdriver::registerCallback(LEDcallback* cb) {
+	ledCallback = cb;
+}
+
+/*----------------------------------------------------------------------
+  |       LEDdriver::unRegisterCallback
+  +---------------------------------------------------------------------*/
+
+void LEDdriver::unRegisterCallback() {
+	ledCallback = nullptr;
+}
+
+/*----------------------------------------------------------------------
+  |       LEDdriver::run
+  +---------------------------------------------------------------------*/
+
+void LEDdriver::run(){
+
+}
+
+/*----------------------------------------------------------------------
+  |       LEDdriver::callback
+  +---------------------------------------------------------------------*/
+
+void LEDdriver::callback(int signal){
+  if(nullptr != ledCallback){
+      ledCallback->hasSignal(this, signal);
+  }
+}
+
+
+/*----------------------------------------------------------------------
+  |       LEDdriver::ledSwitch
+  +---------------------------------------------------------------------*/
+
+void LEDdriver::ledSwitch(int signal){
+
+  #ifdef DEBUG
+			cout << "sound detected : " << signal << endl;
+  #endif
+  
+  if(signal==ledSettings.LED_ON && digitalRead(ledSettings.led_GPIO) != ledSettings.LED_ON){
+    digitalWrite(ledSettings.led_GPIO, signal);
+  }
+  if(signal==ledSettings.LED_OFF && digitalRead(ledSettings.led_GPIO) == ledSettings.LED_ON){
+    digitalWrite(ledSettings.led_GPIO, signal);
+  }
 }
