@@ -1,0 +1,4 @@
+/home/pi/fss_T16/CMakeFiles/rebuild_cache.dir
+/home/pi/fss_T16/CMakeFiles/edit_cache.dir
+/home/pi/fss_T16/CMakeFiles/fss_T16.dir
+/home/pi/fss_T16/CMakeFiles/fss_T16_autogen.dir
