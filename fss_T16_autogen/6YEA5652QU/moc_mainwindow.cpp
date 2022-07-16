@@ -135,8 +135,8 @@ void RPIImageSampleCallback::imageSample(Mat _t1)
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[16];
-    char stringdata0[191];
+    QByteArrayData data[19];
+    char stringdata0[242];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -152,23 +152,27 @@ QT_MOC_LITERAL(3, 22, 11), // "motorSignal"
 QT_MOC_LITERAL(4, 34, 11), // "stripSignal"
 QT_MOC_LITERAL(5, 46, 11), // "startSignal"
 QT_MOC_LITERAL(6, 58, 10), // "stopSignal"
-QT_MOC_LITERAL(7, 69, 16), // "ledSwitchPressed"
-QT_MOC_LITERAL(8, 86, 19), // "motorDegreeSelected"
-QT_MOC_LITERAL(9, 106, 18), // "stripColorSelected"
-QT_MOC_LITERAL(10, 125, 5), // "index"
-QT_MOC_LITERAL(11, 131, 12), // "displayImage"
-QT_MOC_LITERAL(12, 144, 3), // "Mat"
-QT_MOC_LITERAL(13, 148, 5), // "image"
-QT_MOC_LITERAL(14, 154, 18), // "startButtonPressed"
-QT_MOC_LITERAL(15, 173, 17) // "stopButtonPressed"
+QT_MOC_LITERAL(7, 69, 11), // "trainSignal"
+QT_MOC_LITERAL(8, 81, 16), // "ledSwitchPressed"
+QT_MOC_LITERAL(9, 98, 19), // "motorDegreeSelected"
+QT_MOC_LITERAL(10, 118, 18), // "stripColorSelected"
+QT_MOC_LITERAL(11, 137, 5), // "index"
+QT_MOC_LITERAL(12, 143, 12), // "displayImage"
+QT_MOC_LITERAL(13, 156, 3), // "Mat"
+QT_MOC_LITERAL(14, 160, 5), // "image"
+QT_MOC_LITERAL(15, 166, 18), // "startButtonPressed"
+QT_MOC_LITERAL(16, 185, 17), // "stopButtonPressed"
+QT_MOC_LITERAL(17, 203, 19), // "takePicturesPressed"
+QT_MOC_LITERAL(18, 223, 18) // "trainButtonPressed"
 
     },
     "MainWindow\0ledSignal\0\0motorSignal\0"
     "stripSignal\0startSignal\0stopSignal\0"
-    "ledSwitchPressed\0motorDegreeSelected\0"
-    "stripColorSelected\0index\0displayImage\0"
-    "Mat\0image\0startButtonPressed\0"
-    "stopButtonPressed"
+    "trainSignal\0ledSwitchPressed\0"
+    "motorDegreeSelected\0stripColorSelected\0"
+    "index\0displayImage\0Mat\0image\0"
+    "startButtonPressed\0stopButtonPressed\0"
+    "takePicturesPressed\0trainButtonPressed"
 };
 #undef QT_MOC_LITERAL
 
@@ -178,27 +182,30 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+      14,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       5,       // signalCount
+       6,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   69,    2, 0x06 /* Public */,
-       3,    1,   72,    2, 0x06 /* Public */,
-       4,    1,   75,    2, 0x06 /* Public */,
-       5,    0,   78,    2, 0x06 /* Public */,
-       6,    0,   79,    2, 0x06 /* Public */,
+       1,    1,   84,    2, 0x06 /* Public */,
+       3,    1,   87,    2, 0x06 /* Public */,
+       4,    1,   90,    2, 0x06 /* Public */,
+       5,    0,   93,    2, 0x06 /* Public */,
+       6,    0,   94,    2, 0x06 /* Public */,
+       7,    0,   95,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       7,    0,   80,    2, 0x08 /* Private */,
-       8,    0,   81,    2, 0x08 /* Private */,
-       9,    1,   82,    2, 0x08 /* Private */,
-      11,    1,   85,    2, 0x08 /* Private */,
-      14,    0,   88,    2, 0x08 /* Private */,
-      15,    0,   89,    2, 0x08 /* Private */,
+       8,    0,   96,    2, 0x08 /* Private */,
+       9,    0,   97,    2, 0x08 /* Private */,
+      10,    1,   98,    2, 0x08 /* Private */,
+      12,    1,  101,    2, 0x08 /* Private */,
+      15,    0,  104,    2, 0x08 /* Private */,
+      16,    0,  105,    2, 0x08 /* Private */,
+      17,    0,  106,    2, 0x08 /* Private */,
+      18,    0,  107,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int,    2,
@@ -206,12 +213,15 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, QMetaType::Int,    2,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   10,
-    QMetaType::Void, 0x80000000 | 12,   13,
+    QMetaType::Void, QMetaType::Int,   11,
+    QMetaType::Void, 0x80000000 | 13,   14,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -229,12 +239,15 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 2: _t->stripSignal((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 3: _t->startSignal(); break;
         case 4: _t->stopSignal(); break;
-        case 5: _t->ledSwitchPressed(); break;
-        case 6: _t->motorDegreeSelected(); break;
-        case 7: _t->stripColorSelected((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 8: _t->displayImage((*reinterpret_cast< Mat(*)>(_a[1]))); break;
-        case 9: _t->startButtonPressed(); break;
-        case 10: _t->stopButtonPressed(); break;
+        case 5: _t->trainSignal(); break;
+        case 6: _t->ledSwitchPressed(); break;
+        case 7: _t->motorDegreeSelected(); break;
+        case 8: _t->stripColorSelected((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 9: _t->displayImage((*reinterpret_cast< Mat(*)>(_a[1]))); break;
+        case 10: _t->startButtonPressed(); break;
+        case 11: _t->stopButtonPressed(); break;
+        case 12: _t->takePicturesPressed(); break;
+        case 13: _t->trainButtonPressed(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -274,6 +287,13 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
                 return;
             }
         }
+        {
+            using _t = void (MainWindow::*)();
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&MainWindow::trainSignal)) {
+                *result = 5;
+                return;
+            }
+        }
     }
 }
 
@@ -306,13 +326,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 11)
+        if (_id < 14)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 14;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 11)
+        if (_id < 14)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 11;
+        _id -= 14;
     }
     return _id;
 }
@@ -348,6 +368,12 @@ void MainWindow::startSignal()
 void MainWindow::stopSignal()
 {
     QMetaObject::activate(this, &staticMetaObject, 4, nullptr);
+}
+
+// SIGNAL 5
+void MainWindow::trainSignal()
+{
+    QMetaObject::activate(this, &staticMetaObject, 5, nullptr);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

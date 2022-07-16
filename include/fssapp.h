@@ -16,7 +16,9 @@
 #include "rpicameradriver.h"
 #include "sg90driver.h"
 #include "mainwindow.h"
+#include "facetraining.h"
 #include <string>
+#include <QThread>
 using namespace std;
 
 class WS2811SignalCallback : public WS2811callback{
@@ -102,6 +104,7 @@ private slots:
     void stripSignalReceived(int index);
     void startSignalReceived();
     void stopSignalReceived();
+    void trainSignalReceived();
 
 private:
     //setters
@@ -124,7 +127,8 @@ private:
     LEDSignalCallback ledSignalCallback;
     //window
     MainWindow* window;
-
+    //face trainer
+    FaceTraining * face_trainer;
 };
 
 #endif // FSSAPP_H

@@ -27,7 +27,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 74,
+				"line" : 76,
 				"parent" : 0
 			},
 			{
@@ -39,7 +39,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 80,
+				"line" : 82,
 				"parent" : 0
 			},
 			{
@@ -163,7 +163,8 @@
 				5,
 				6,
 				7,
-				8
+				8,
+				9
 			]
 		}
 	],
@@ -524,20 +525,22 @@
 				5,
 				6,
 				7,
-				8
+				8,
+				9
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				9,
 				10,
 				11,
 				12,
 				13,
 				14,
-				15
+				15,
+				16,
+				17
 			]
 		}
 	],
@@ -548,6 +551,12 @@
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "fss_T16_autogen/mocs_compilation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/facetraining.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -597,6 +606,11 @@
 			"compileGroupIndex" : 0,
 			"path" : "src/fssapp.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/facetraining.h",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,

@@ -89,9 +89,22 @@ CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/fss_T16/fss_T16_autogen/mocs_compilation.cpp -o CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.s
 
+CMakeFiles/fss_T16.dir/src/facetraining.cpp.o: CMakeFiles/fss_T16.dir/flags.make
+CMakeFiles/fss_T16.dir/src/facetraining.cpp.o: src/facetraining.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fss_T16.dir/src/facetraining.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fss_T16.dir/src/facetraining.cpp.o -c /home/pi/fss_T16/src/facetraining.cpp
+
+CMakeFiles/fss_T16.dir/src/facetraining.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/fss_T16.dir/src/facetraining.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/fss_T16/src/facetraining.cpp > CMakeFiles/fss_T16.dir/src/facetraining.cpp.i
+
+CMakeFiles/fss_T16.dir/src/facetraining.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/fss_T16.dir/src/facetraining.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/fss_T16/src/facetraining.cpp -o CMakeFiles/fss_T16.dir/src/facetraining.cpp.s
+
 CMakeFiles/fss_T16.dir/src/main.cpp.o: CMakeFiles/fss_T16.dir/flags.make
 CMakeFiles/fss_T16.dir/src/main.cpp.o: src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fss_T16.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fss_T16.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fss_T16.dir/src/main.cpp.o -c /home/pi/fss_T16/src/main.cpp
 
 CMakeFiles/fss_T16.dir/src/main.cpp.i: cmake_force
@@ -104,7 +117,7 @@ CMakeFiles/fss_T16.dir/src/main.cpp.s: cmake_force
 
 CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o: CMakeFiles/fss_T16.dir/flags.make
 CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o: src/mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o -c /home/pi/fss_T16/src/mainwindow.cpp
 
 CMakeFiles/fss_T16.dir/src/mainwindow.cpp.i: cmake_force
@@ -117,7 +130,7 @@ CMakeFiles/fss_T16.dir/src/mainwindow.cpp.s: cmake_force
 
 CMakeFiles/fss_T16.dir/src/leddriver.cpp.o: CMakeFiles/fss_T16.dir/flags.make
 CMakeFiles/fss_T16.dir/src/leddriver.cpp.o: src/leddriver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fss_T16.dir/src/leddriver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fss_T16.dir/src/leddriver.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fss_T16.dir/src/leddriver.cpp.o -c /home/pi/fss_T16/src/leddriver.cpp
 
 CMakeFiles/fss_T16.dir/src/leddriver.cpp.i: cmake_force
@@ -130,7 +143,7 @@ CMakeFiles/fss_T16.dir/src/leddriver.cpp.s: cmake_force
 
 CMakeFiles/fss_T16.dir/src/soundsensordriver.cpp.o: CMakeFiles/fss_T16.dir/flags.make
 CMakeFiles/fss_T16.dir/src/soundsensordriver.cpp.o: src/soundsensordriver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fss_T16.dir/src/soundsensordriver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/fss_T16.dir/src/soundsensordriver.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fss_T16.dir/src/soundsensordriver.cpp.o -c /home/pi/fss_T16/src/soundsensordriver.cpp
 
 CMakeFiles/fss_T16.dir/src/soundsensordriver.cpp.i: cmake_force
@@ -143,7 +156,7 @@ CMakeFiles/fss_T16.dir/src/soundsensordriver.cpp.s: cmake_force
 
 CMakeFiles/fss_T16.dir/src/ws2811driver.cpp.o: CMakeFiles/fss_T16.dir/flags.make
 CMakeFiles/fss_T16.dir/src/ws2811driver.cpp.o: src/ws2811driver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/fss_T16.dir/src/ws2811driver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/fss_T16.dir/src/ws2811driver.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fss_T16.dir/src/ws2811driver.cpp.o -c /home/pi/fss_T16/src/ws2811driver.cpp
 
 CMakeFiles/fss_T16.dir/src/ws2811driver.cpp.i: cmake_force
@@ -156,7 +169,7 @@ CMakeFiles/fss_T16.dir/src/ws2811driver.cpp.s: cmake_force
 
 CMakeFiles/fss_T16.dir/src/rpicameradriver.cpp.o: CMakeFiles/fss_T16.dir/flags.make
 CMakeFiles/fss_T16.dir/src/rpicameradriver.cpp.o: src/rpicameradriver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/fss_T16.dir/src/rpicameradriver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/fss_T16.dir/src/rpicameradriver.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fss_T16.dir/src/rpicameradriver.cpp.o -c /home/pi/fss_T16/src/rpicameradriver.cpp
 
 CMakeFiles/fss_T16.dir/src/rpicameradriver.cpp.i: cmake_force
@@ -169,7 +182,7 @@ CMakeFiles/fss_T16.dir/src/rpicameradriver.cpp.s: cmake_force
 
 CMakeFiles/fss_T16.dir/src/sg90driver.cpp.o: CMakeFiles/fss_T16.dir/flags.make
 CMakeFiles/fss_T16.dir/src/sg90driver.cpp.o: src/sg90driver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/fss_T16.dir/src/sg90driver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/fss_T16.dir/src/sg90driver.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fss_T16.dir/src/sg90driver.cpp.o -c /home/pi/fss_T16/src/sg90driver.cpp
 
 CMakeFiles/fss_T16.dir/src/sg90driver.cpp.i: cmake_force
@@ -182,7 +195,7 @@ CMakeFiles/fss_T16.dir/src/sg90driver.cpp.s: cmake_force
 
 CMakeFiles/fss_T16.dir/src/fssapp.cpp.o: CMakeFiles/fss_T16.dir/flags.make
 CMakeFiles/fss_T16.dir/src/fssapp.cpp.o: src/fssapp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/fss_T16.dir/src/fssapp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/fss_T16.dir/src/fssapp.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/fss_T16.dir/src/fssapp.cpp.o -c /home/pi/fss_T16/src/fssapp.cpp
 
 CMakeFiles/fss_T16.dir/src/fssapp.cpp.i: cmake_force
@@ -196,6 +209,7 @@ CMakeFiles/fss_T16.dir/src/fssapp.cpp.s: cmake_force
 # Object files for target fss_T16
 fss_T16_OBJECTS = \
 "CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o" \
+"CMakeFiles/fss_T16.dir/src/facetraining.cpp.o" \
 "CMakeFiles/fss_T16.dir/src/main.cpp.o" \
 "CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o" \
 "CMakeFiles/fss_T16.dir/src/leddriver.cpp.o" \
@@ -209,6 +223,7 @@ fss_T16_OBJECTS = \
 fss_T16_EXTERNAL_OBJECTS =
 
 fss_T16: CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o
+fss_T16: CMakeFiles/fss_T16.dir/src/facetraining.cpp.o
 fss_T16: CMakeFiles/fss_T16.dir/src/main.cpp.o
 fss_T16: CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o
 fss_T16: CMakeFiles/fss_T16.dir/src/leddriver.cpp.o
@@ -281,7 +296,7 @@ fss_T16: /usr/local/lib/arm-linux-gnueabihf/libopencv_photo.so.4.6.0
 fss_T16: /usr/local/lib/arm-linux-gnueabihf/libopencv_imgproc.so.4.6.0
 fss_T16: /usr/local/lib/arm-linux-gnueabihf/libopencv_core.so.4.6.0
 fss_T16: CMakeFiles/fss_T16.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable fss_T16"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/fss_T16/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable fss_T16"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fss_T16.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

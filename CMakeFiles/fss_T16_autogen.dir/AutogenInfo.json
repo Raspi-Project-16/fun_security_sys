@@ -80,6 +80,11 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/pi/fss_T16/include/facetraining.h",
+			"MU",
+			"6YEA5652QU/moc_facetraining.cpp"
+		],
+		[
 			"/home/pi/fss_T16/include/fssapp.h",
 			"MU",
 			"6YEA5652QU/moc_fssapp.cpp"
@@ -170,6 +175,7 @@
 	"SETTINGS_FILE" : "/home/pi/fss_T16/CMakeFiles/fss_T16_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/home/pi/fss_T16/src/facetraining.cpp", "MU" ],
 		[ "/home/pi/fss_T16/src/fssapp.cpp", "MU" ],
 		[ "/home/pi/fss_T16/src/leddriver.cpp", "MU" ],
 		[ "/home/pi/fss_T16/src/main.cpp", "MU" ],

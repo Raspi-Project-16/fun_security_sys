@@ -182,6 +182,33 @@ fss_T16_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fss_T16.dir/build.make CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.s
 .PHONY : fss_T16_autogen/mocs_compilation.cpp.s
 
+src/facetraining.o: src/facetraining.cpp.o
+
+.PHONY : src/facetraining.o
+
+# target to build an object file
+src/facetraining.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fss_T16.dir/build.make CMakeFiles/fss_T16.dir/src/facetraining.cpp.o
+.PHONY : src/facetraining.cpp.o
+
+src/facetraining.i: src/facetraining.cpp.i
+
+.PHONY : src/facetraining.i
+
+# target to preprocess a source file
+src/facetraining.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fss_T16.dir/build.make CMakeFiles/fss_T16.dir/src/facetraining.cpp.i
+.PHONY : src/facetraining.cpp.i
+
+src/facetraining.s: src/facetraining.cpp.s
+
+.PHONY : src/facetraining.s
+
+# target to generate assembly for a file
+src/facetraining.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fss_T16.dir/build.make CMakeFiles/fss_T16.dir/src/facetraining.cpp.s
+.PHONY : src/facetraining.cpp.s
+
 src/fssapp.o: src/fssapp.cpp.o
 
 .PHONY : src/fssapp.o
@@ -411,6 +438,9 @@ help:
 	@echo "... fss_T16_autogen/mocs_compilation.o"
 	@echo "... fss_T16_autogen/mocs_compilation.i"
 	@echo "... fss_T16_autogen/mocs_compilation.s"
+	@echo "... src/facetraining.o"
+	@echo "... src/facetraining.i"
+	@echo "... src/facetraining.s"
 	@echo "... src/fssapp.o"
 	@echo "... src/fssapp.i"
 	@echo "... src/fssapp.s"

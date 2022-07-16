@@ -1,5 +1,6 @@
 /home/pi/fss_T16/fss_T16_autogen/6YEA5652QU/moc_fssapp.cpp: /home/pi/fss_T16/include/fssapp.h \
   /home/pi/fss_T16/fss_T16_autogen/moc_predefs.h \
+  /home/pi/fss_T16/include/facetraining.h \
   /home/pi/fss_T16/include/leddriver.h \
   /home/pi/fss_T16/include/mainwindow.h \
   /home/pi/fss_T16/include/rpicameradriver.h \
@@ -11,6 +12,8 @@
   /usr/include/arm-linux-gnueabihf/bits/byteswap.h \
   /usr/include/arm-linux-gnueabihf/bits/confname.h \
   /usr/include/arm-linux-gnueabihf/bits/cpu-set.h \
+  /usr/include/arm-linux-gnueabihf/bits/dirent.h \
+  /usr/include/arm-linux-gnueabihf/bits/dirent_ext.h \
   /usr/include/arm-linux-gnueabihf/bits/endian.h \
   /usr/include/arm-linux-gnueabihf/bits/endianness.h \
   /usr/include/arm-linux-gnueabihf/bits/environments.h \
@@ -22,12 +25,14 @@
   /usr/include/arm-linux-gnueabihf/bits/getopt_core.h \
   /usr/include/arm-linux-gnueabihf/bits/getopt_posix.h \
   /usr/include/arm-linux-gnueabihf/bits/libc-header-start.h \
+  /usr/include/arm-linux-gnueabihf/bits/local_lim.h \
   /usr/include/arm-linux-gnueabihf/bits/locale.h \
   /usr/include/arm-linux-gnueabihf/bits/long-double.h \
   /usr/include/arm-linux-gnueabihf/bits/mman-linux.h \
   /usr/include/arm-linux-gnueabihf/bits/mman-map-flags-generic.h \
   /usr/include/arm-linux-gnueabihf/bits/mman-shared.h \
   /usr/include/arm-linux-gnueabihf/bits/mman.h \
+  /usr/include/arm-linux-gnueabihf/bits/posix1_lim.h \
   /usr/include/arm-linux-gnueabihf/bits/posix_opt.h \
   /usr/include/arm-linux-gnueabihf/bits/pthreadtypes-arch.h \
   /usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h \
@@ -115,7 +120,10 @@
   /usr/include/arm-linux-gnueabihf/c++/10/bits/time_members.h \
   /usr/include/arm-linux-gnueabihf/gnu/stubs-hard.h \
   /usr/include/arm-linux-gnueabihf/gnu/stubs.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/QDir \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/QSize \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/QString \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/QThread \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qabstractitemmodel.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qalgorithms.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qarraydata.h \
@@ -130,6 +138,12 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcontainerfwd.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcontainertools_impl.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdatastream.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdeadlinetimer.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdir.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qelapsedtimer.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfile.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfiledevice.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfileinfo.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qflags.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qgenericatomic.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qglobal.h \
@@ -172,6 +186,7 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qsysinfo.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qsystemdetection.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtcore-config.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qthread.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtypeinfo.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qvariant.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qvarlengtharray.h \
@@ -192,12 +207,16 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qmatrix.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpaintdevice.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpalette.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpen.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpixelformat.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpixmap.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpolygon.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qregion.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qrgb.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qrgba64.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextcursor.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextformat.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextoption.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtgui-config.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtguiglobal.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtransform.h \
@@ -208,6 +227,7 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QGridLayout \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QHBoxLayout \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QLabel \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QLineEdit \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QMenu \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QPushButton \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QRadioButton \
@@ -226,6 +246,7 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlabel.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlayout.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlayoutitem.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlineedit.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qmenu.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qpushbutton.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qradiobutton.h \
@@ -383,6 +404,7 @@
   /usr/include/c++/10/ext/type_traits.h \
   /usr/include/c++/10/fstream \
   /usr/include/c++/10/functional \
+  /usr/include/c++/10/future \
   /usr/include/c++/10/initializer_list \
   /usr/include/c++/10/iomanip \
   /usr/include/c++/10/ios \
@@ -434,6 +456,7 @@
   /usr/include/c++/10/utility \
   /usr/include/c++/10/vector \
   /usr/include/ctype.h \
+  /usr/include/dirent.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
   /usr/include/fcntl.h \
@@ -441,6 +464,7 @@
   /usr/include/libintl.h \
   /usr/include/linux/errno.h \
   /usr/include/linux/falloc.h \
+  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
   /usr/include/sched.h \
@@ -467,6 +491,7 @@
   /usr/local/include/opencv4/opencv2/core/bufferpool.hpp \
   /usr/local/include/opencv4/opencv2/core/check.hpp \
   /usr/local/include/opencv4/opencv2/core/core.hpp \
+  /usr/local/include/opencv4/opencv2/core/core_c.h \
   /usr/local/include/opencv4/opencv2/core/cuda.hpp \
   /usr/local/include/opencv4/opencv2/core/cuda.inl.hpp \
   /usr/local/include/opencv4/opencv2/core/cuda_types.hpp \
@@ -488,6 +513,7 @@
   /usr/local/include/opencv4/opencv2/core/saturate.hpp \
   /usr/local/include/opencv4/opencv2/core/traits.hpp \
   /usr/local/include/opencv4/opencv2/core/types.hpp \
+  /usr/local/include/opencv4/opencv2/core/types_c.h \
   /usr/local/include/opencv4/opencv2/core/utility.hpp \
   /usr/local/include/opencv4/opencv2/core/version.hpp \
   /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp \
@@ -545,6 +571,7 @@
   /usr/local/include/opencv4/opencv2/imgcodecs.hpp \
   /usr/local/include/opencv4/opencv2/imgproc.hpp \
   /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp \
+  /usr/local/include/opencv4/opencv2/imgproc/types_c.h \
   /usr/local/include/opencv4/opencv2/ml.hpp \
   /usr/local/include/opencv4/opencv2/ml/ml.inl.hpp \
   /usr/local/include/opencv4/opencv2/objdetect.hpp \

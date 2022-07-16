@@ -44,6 +44,7 @@ link_directories(${PROJECT_SOURCE_DIR}/lib)
 
 
 set(PROJECT_SOURCES
+        src/facetraining.cpp
         src/main.cpp
         src/mainwindow.cpp
         src/leddriver.cpp
@@ -52,6 +53,7 @@ set(PROJECT_SOURCES
         src/rpicameradriver.cpp
         src/sg90driver.cpp
         src/fssapp.cpp
+        include/facetraining.h
         include/leddriver.h
         include/soundsensordriver.h
         include/ws2811driver.h

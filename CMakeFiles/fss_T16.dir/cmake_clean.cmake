@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/fss_T16_autogen.dir/ParseCache.txt"
   "fss_T16_autogen"
   "CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o"
+  "CMakeFiles/fss_T16.dir/src/facetraining.cpp.o"
   "CMakeFiles/fss_T16.dir/src/fssapp.cpp.o"
   "CMakeFiles/fss_T16.dir/src/leddriver.cpp.o"
   "CMakeFiles/fss_T16.dir/src/main.cpp.o"

@@ -51,6 +51,7 @@ void RPICameraDriver::start(){
                   // already running
                   return;
           }
+    running = 1;
     //set the camera display frame
     Camera.set(CAP_PROP_FRAME_WIDTH, 640);
     Camera.set(CAP_PROP_FRAME_HEIGHT,480);
@@ -76,11 +77,18 @@ void RPICameraDriver::start(){
   +---------------------------------------------------------------------*/
 void RPICameraDriver::stop(){
     running = 0;
-          if (nullptr != rpiCameraThread) {
+    if (nullptr != rpiCameraThread) {
       rpiCameraThread->join();
       delete rpiCameraThread;
-                  rpiCameraThread = nullptr;
+      rpiCameraThread = nullptr;
     }
+}
+
+/*----------------------------------------------------------------------
+  |       RPICameraDriver::takePictrues
+  +---------------------------------------------------------------------*/
+Mat RPICameraDriver::takePictures(){
+    return frame;
 }
 
 /*----------------------------------------------------------------------
@@ -131,6 +139,5 @@ void RPICameraDriver::run(){
 
     }
     Camera.release();
-    destroyAllWindows();
 }
 

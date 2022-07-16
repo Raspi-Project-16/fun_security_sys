@@ -77,6 +77,7 @@ public:
     void unRegisterCallback();
     void start();
     void stop();
+    Mat takePictures();
 
 private:
     Mat frame;

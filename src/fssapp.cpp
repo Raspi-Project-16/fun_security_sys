@@ -6,14 +6,18 @@ FssApp::FssApp()
 {
     this->resize(1000, 800);
     this->move(450, 150);
+    this->setWindowIcon(QIcon("/home/pi/fss_T16/images/home-insurance.png"));
+    this->setWindowTitle("FSS-console");
     window = new MainWindow(this, &rpiCameraDriver);
     window->setParent(this);
+    face_trainer = new FaceTraining();
     //connect signals
     connect(window, SIGNAL(ledSignal(int)), this, SLOT(ledSignalReceived(int)));
     connect(window, SIGNAL(motorSignal(int)), this, SLOT(degreeSignalReceived(int)));
     connect(window, SIGNAL(stripSignal(int)), this, SLOT(stripSignalReceived(int)));
     connect(window, SIGNAL(startSignal()), this, SLOT(startSignalReceived()));
     connect(window, SIGNAL(stopSignal()), this, SLOT(stopSignalReceived()));
+    connect(window, SIGNAL(trainSignal()), this, SLOT(trainSignalReceived()));
     //register callbacks
     ledDriver.registerCallback(&ledSignalCallback);
     sg90Driver.registerCallback(&sg90SignalCallback);
@@ -86,4 +90,10 @@ void FssApp::startSignalReceived(){
 void FssApp::stopSignalReceived(){
     ssDriver.unRegisterCallback();
     rpiCameraDriver.unRegisterCallback();
+}
+
+void FssApp::trainSignalReceived(){
+    rpiCameraDriver.stop();
+    face_trainer->train();
+    rpiCameraDriver.start();
 }

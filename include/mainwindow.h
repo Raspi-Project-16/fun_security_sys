@@ -16,6 +16,9 @@
 #include <QRadioButton>
 #include <QComboBox>
 #include <string>
+#include <QLineEdit>
+#include <QDir>
+#include <QString>
 #include "rpicameradriver.h"
 
 QT_BEGIN_NAMESPACE
@@ -54,6 +57,8 @@ private slots:
     void displayImage(Mat image);
     void startButtonPressed();
     void stopButtonPressed();
+    void takePicturesPressed();
+    void trainButtonPressed();
 
 signals:
     void ledSignal(int);
@@ -61,6 +66,7 @@ signals:
     void stripSignal(int);
     void startSignal();
     void stopSignal();
+    void trainSignal();
 
 private:
     RPICameraDriver* camera;
@@ -79,6 +85,8 @@ private:
     QLabel* motor_logo;
     QLabel* strip_logo;
     QLabel* strip_label;
+
+    QLineEdit* input_name;
 
     QPushButton* take_pictures;
     QPushButton* do_training;

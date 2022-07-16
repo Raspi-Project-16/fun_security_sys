@@ -66,7 +66,9 @@
   /usr/include/arm-linux-gnueabihf/c++/10/bits/time_members.h \
   /usr/include/arm-linux-gnueabihf/gnu/stubs-hard.h \
   /usr/include/arm-linux-gnueabihf/gnu/stubs.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/QDir \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/QSize \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/QString \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qabstractitemmodel.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qalgorithms.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qarraydata.h \
@@ -81,6 +83,10 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcontainerfwd.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcontainertools_impl.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdatastream.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdir.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfile.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfiledevice.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfileinfo.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qflags.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qgenericatomic.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qglobal.h \
@@ -143,12 +149,16 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qmatrix.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpaintdevice.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpalette.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpen.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpixelformat.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpixmap.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpolygon.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qregion.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qrgb.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qrgba64.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextcursor.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextformat.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextoption.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtgui-config.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtguiglobal.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtransform.h \
@@ -159,6 +169,7 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QGridLayout \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QHBoxLayout \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QLabel \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QLineEdit \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QMenu \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QPushButton \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QRadioButton \
@@ -177,6 +188,7 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlabel.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlayout.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlayoutitem.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlineedit.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qmenu.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qpushbutton.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qradiobutton.h \

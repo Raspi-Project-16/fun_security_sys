@@ -5,6 +5,7 @@ CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o
  /home/pi/fss_T16/fss_T16_autogen/6YEA5652QU/moc_fssapp.cpp
  /home/pi/fss_T16/fss_T16_autogen/6YEA5652QU/moc_mainwindow.cpp
  /home/pi/fss_T16/fss_T16_autogen/mocs_compilation.cpp
+ /home/pi/fss_T16/include/facetraining.h
  /home/pi/fss_T16/include/fssapp.h
  /home/pi/fss_T16/include/leddriver.h
  /home/pi/fss_T16/include/mainwindow.h
@@ -12,7 +13,10 @@ CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o
  /home/pi/fss_T16/include/sg90driver.h
  /home/pi/fss_T16/include/soundsensordriver.h
  /home/pi/fss_T16/include/ws2811driver.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/QDir
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/QSize
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/QString
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/QThread
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qabstractitemmodel.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qalgorithms.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qarraydata.h
@@ -32,9 +36,13 @@ CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcontiguouscache.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcoreevent.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdatastream.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdeadlinetimer.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdebug.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdir.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qelapsedtimer.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfile.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfiledevice.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfileinfo.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qflags.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qgenericatomic.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qglobal.h
@@ -81,6 +89,7 @@ CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qsystemdetection.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtcore-config.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtextstream.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qthread.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtypeinfo.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qurl.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qurlquery.h
@@ -104,12 +113,16 @@ CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qmatrix.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpaintdevice.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpalette.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpen.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpixelformat.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpixmap.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpolygon.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qregion.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qrgb.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qrgba64.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextcursor.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextformat.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextoption.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtgui-config.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtguiglobal.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtouchdevice.h
@@ -123,6 +136,7 @@ CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QGridLayout
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QHBoxLayout
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QLabel
+ /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QLineEdit
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QMenu
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QPushButton
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QRadioButton
@@ -141,6 +155,7 @@ CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlabel.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlayout.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlayoutitem.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlineedit.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qmenu.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qpushbutton.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qradiobutton.h
@@ -161,6 +176,7 @@ CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o
  /usr/local/include/opencv4/opencv2/core/base.hpp
  /usr/local/include/opencv4/opencv2/core/bufferpool.hpp
  /usr/local/include/opencv4/opencv2/core/check.hpp
+ /usr/local/include/opencv4/opencv2/core/core_c.h
  /usr/local/include/opencv4/opencv2/core/cuda.hpp
  /usr/local/include/opencv4/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv4/opencv2/core/cuda_types.hpp
@@ -184,6 +200,7 @@ CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o
  /usr/local/include/opencv4/opencv2/core/saturate.hpp
  /usr/local/include/opencv4/opencv2/core/traits.hpp
  /usr/local/include/opencv4/opencv2/core/types.hpp
+ /usr/local/include/opencv4/opencv2/core/types_c.h
  /usr/local/include/opencv4/opencv2/core/utility.hpp
  /usr/local/include/opencv4/opencv2/core/utils/instrumentation.hpp
  /usr/local/include/opencv4/opencv2/core/utils/tls.hpp
@@ -242,6 +259,7 @@ CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o
  /usr/local/include/opencv4/opencv2/imgcodecs.hpp
  /usr/local/include/opencv4/opencv2/imgproc.hpp
  /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp
+ /usr/local/include/opencv4/opencv2/imgproc/types_c.h
  /usr/local/include/opencv4/opencv2/ml.hpp
  /usr/local/include/opencv4/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv4/opencv2/objdetect.hpp
@@ -272,9 +290,130 @@ CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o
  /usr/local/include/ws2811/pwm.h
  /usr/local/include/ws2811/rpihw.h
  /usr/local/include/ws2811/ws2811.h
+CMakeFiles/fss_T16.dir/src/facetraining.cpp.o
+ /home/pi/fss_T16/src/facetraining.cpp
+ /usr/local/include/opencv4/opencv2/calib3d.hpp
+ /usr/local/include/opencv4/opencv2/core.hpp
+ /usr/local/include/opencv4/opencv2/core/affine.hpp
+ /usr/local/include/opencv4/opencv2/core/async.hpp
+ /usr/local/include/opencv4/opencv2/core/base.hpp
+ /usr/local/include/opencv4/opencv2/core/bufferpool.hpp
+ /usr/local/include/opencv4/opencv2/core/check.hpp
+ /usr/local/include/opencv4/opencv2/core/core_c.h
+ /usr/local/include/opencv4/opencv2/core/cuda.hpp
+ /usr/local/include/opencv4/opencv2/core/cuda.inl.hpp
+ /usr/local/include/opencv4/opencv2/core/cuda_types.hpp
+ /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h
+ /usr/local/include/opencv4/opencv2/core/cv_cpu_helper.h
+ /usr/local/include/opencv4/opencv2/core/cvdef.h
+ /usr/local/include/opencv4/opencv2/core/cvstd.hpp
+ /usr/local/include/opencv4/opencv2/core/cvstd.inl.hpp
+ /usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp
+ /usr/local/include/opencv4/opencv2/core/fast_math.hpp
+ /usr/local/include/opencv4/opencv2/core/hal/interface.h
+ /usr/local/include/opencv4/opencv2/core/hal/msa_macros.h
+ /usr/local/include/opencv4/opencv2/core/mat.hpp
+ /usr/local/include/opencv4/opencv2/core/mat.inl.hpp
+ /usr/local/include/opencv4/opencv2/core/matx.hpp
+ /usr/local/include/opencv4/opencv2/core/neon_utils.hpp
+ /usr/local/include/opencv4/opencv2/core/operations.hpp
+ /usr/local/include/opencv4/opencv2/core/optim.hpp
+ /usr/local/include/opencv4/opencv2/core/ovx.hpp
+ /usr/local/include/opencv4/opencv2/core/persistence.hpp
+ /usr/local/include/opencv4/opencv2/core/saturate.hpp
+ /usr/local/include/opencv4/opencv2/core/traits.hpp
+ /usr/local/include/opencv4/opencv2/core/types.hpp
+ /usr/local/include/opencv4/opencv2/core/types_c.h
+ /usr/local/include/opencv4/opencv2/core/utility.hpp
+ /usr/local/include/opencv4/opencv2/core/utils/instrumentation.hpp
+ /usr/local/include/opencv4/opencv2/core/utils/tls.hpp
+ /usr/local/include/opencv4/opencv2/core/version.hpp
+ /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp
+ /usr/local/include/opencv4/opencv2/dnn.hpp
+ /usr/local/include/opencv4/opencv2/dnn/dict.hpp
+ /usr/local/include/opencv4/opencv2/dnn/dnn.hpp
+ /usr/local/include/opencv4/opencv2/dnn/dnn.inl.hpp
+ /usr/local/include/opencv4/opencv2/dnn/layer.hpp
+ /usr/local/include/opencv4/opencv2/dnn/utils/inference_engine.hpp
+ /usr/local/include/opencv4/opencv2/dnn/version.hpp
+ /usr/local/include/opencv4/opencv2/face.hpp
+ /usr/local/include/opencv4/opencv2/face/face_alignment.hpp
+ /usr/local/include/opencv4/opencv2/face/facemark.hpp
+ /usr/local/include/opencv4/opencv2/face/facemarkAAM.hpp
+ /usr/local/include/opencv4/opencv2/face/facemarkLBF.hpp
+ /usr/local/include/opencv4/opencv2/face/facemark_train.hpp
+ /usr/local/include/opencv4/opencv2/face/facerec.hpp
+ /usr/local/include/opencv4/opencv2/face/mace.hpp
+ /usr/local/include/opencv4/opencv2/face/predict_collector.hpp
+ /usr/local/include/opencv4/opencv2/features2d.hpp
+ /usr/local/include/opencv4/opencv2/flann.hpp
+ /usr/local/include/opencv4/opencv2/flann/all_indices.h
+ /usr/local/include/opencv4/opencv2/flann/allocator.h
+ /usr/local/include/opencv4/opencv2/flann/any.h
+ /usr/local/include/opencv4/opencv2/flann/autotuned_index.h
+ /usr/local/include/opencv4/opencv2/flann/composite_index.h
+ /usr/local/include/opencv4/opencv2/flann/config.h
+ /usr/local/include/opencv4/opencv2/flann/defines.h
+ /usr/local/include/opencv4/opencv2/flann/dist.h
+ /usr/local/include/opencv4/opencv2/flann/dynamic_bitset.h
+ /usr/local/include/opencv4/opencv2/flann/flann_base.hpp
+ /usr/local/include/opencv4/opencv2/flann/general.h
+ /usr/local/include/opencv4/opencv2/flann/ground_truth.h
+ /usr/local/include/opencv4/opencv2/flann/heap.h
+ /usr/local/include/opencv4/opencv2/flann/hierarchical_clustering_index.h
+ /usr/local/include/opencv4/opencv2/flann/index_testing.h
+ /usr/local/include/opencv4/opencv2/flann/kdtree_index.h
+ /usr/local/include/opencv4/opencv2/flann/kdtree_single_index.h
+ /usr/local/include/opencv4/opencv2/flann/kmeans_index.h
+ /usr/local/include/opencv4/opencv2/flann/linear_index.h
+ /usr/local/include/opencv4/opencv2/flann/logger.h
+ /usr/local/include/opencv4/opencv2/flann/lsh_index.h
+ /usr/local/include/opencv4/opencv2/flann/lsh_table.h
+ /usr/local/include/opencv4/opencv2/flann/matrix.h
+ /usr/local/include/opencv4/opencv2/flann/miniflann.hpp
+ /usr/local/include/opencv4/opencv2/flann/nn_index.h
+ /usr/local/include/opencv4/opencv2/flann/params.h
+ /usr/local/include/opencv4/opencv2/flann/random.h
+ /usr/local/include/opencv4/opencv2/flann/result_set.h
+ /usr/local/include/opencv4/opencv2/flann/sampling.h
+ /usr/local/include/opencv4/opencv2/flann/saving.h
+ /usr/local/include/opencv4/opencv2/flann/timer.h
+ /usr/local/include/opencv4/opencv2/highgui.hpp
+ /usr/local/include/opencv4/opencv2/imgcodecs.hpp
+ /usr/local/include/opencv4/opencv2/imgproc.hpp
+ /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp
+ /usr/local/include/opencv4/opencv2/imgproc/types_c.h
+ /usr/local/include/opencv4/opencv2/ml.hpp
+ /usr/local/include/opencv4/opencv2/ml/ml.inl.hpp
+ /usr/local/include/opencv4/opencv2/objdetect.hpp
+ /usr/local/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp
+ /usr/local/include/opencv4/opencv2/objdetect/face.hpp
+ /usr/local/include/opencv4/opencv2/opencv.hpp
+ /usr/local/include/opencv4/opencv2/opencv_modules.hpp
+ /usr/local/include/opencv4/opencv2/photo.hpp
+ /usr/local/include/opencv4/opencv2/stitching.hpp
+ /usr/local/include/opencv4/opencv2/stitching/detail/blenders.hpp
+ /usr/local/include/opencv4/opencv2/stitching/detail/camera.hpp
+ /usr/local/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp
+ /usr/local/include/opencv4/opencv2/stitching/detail/matchers.hpp
+ /usr/local/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp
+ /usr/local/include/opencv4/opencv2/stitching/detail/seam_finders.hpp
+ /usr/local/include/opencv4/opencv2/stitching/detail/util.hpp
+ /usr/local/include/opencv4/opencv2/stitching/detail/util_inl.hpp
+ /usr/local/include/opencv4/opencv2/stitching/detail/warpers.hpp
+ /usr/local/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp
+ /usr/local/include/opencv4/opencv2/stitching/warpers.hpp
+ /usr/local/include/opencv4/opencv2/video.hpp
+ /usr/local/include/opencv4/opencv2/video/background_segm.hpp
+ /usr/local/include/opencv4/opencv2/video/tracking.hpp
+ /usr/local/include/opencv4/opencv2/videoio.hpp
+ include/facetraining.h
 CMakeFiles/fss_T16.dir/src/fssapp.cpp.o
  /home/pi/fss_T16/src/fssapp.cpp
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/QDir
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/QSize
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/QString
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/QThread
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qabstractitemmodel.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qalgorithms.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qarraydata.h
@@ -294,9 +433,13 @@ CMakeFiles/fss_T16.dir/src/fssapp.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcontiguouscache.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcoreevent.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdatastream.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdeadlinetimer.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdebug.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdir.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qelapsedtimer.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfile.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfiledevice.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfileinfo.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qflags.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qgenericatomic.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qglobal.h
@@ -343,6 +486,7 @@ CMakeFiles/fss_T16.dir/src/fssapp.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qsystemdetection.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtcore-config.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtextstream.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qthread.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtypeinfo.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qurl.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qurlquery.h
@@ -366,12 +510,16 @@ CMakeFiles/fss_T16.dir/src/fssapp.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qmatrix.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpaintdevice.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpalette.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpen.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpixelformat.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpixmap.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpolygon.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qregion.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qrgb.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qrgba64.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextcursor.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextformat.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextoption.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtgui-config.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtguiglobal.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtouchdevice.h
@@ -385,6 +533,7 @@ CMakeFiles/fss_T16.dir/src/fssapp.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QGridLayout
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QHBoxLayout
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QLabel
+ /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QLineEdit
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QMenu
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QPushButton
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QRadioButton
@@ -403,6 +552,7 @@ CMakeFiles/fss_T16.dir/src/fssapp.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlabel.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlayout.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlayoutitem.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlineedit.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qmenu.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qpushbutton.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qradiobutton.h
@@ -423,6 +573,7 @@ CMakeFiles/fss_T16.dir/src/fssapp.cpp.o
  /usr/local/include/opencv4/opencv2/core/base.hpp
  /usr/local/include/opencv4/opencv2/core/bufferpool.hpp
  /usr/local/include/opencv4/opencv2/core/check.hpp
+ /usr/local/include/opencv4/opencv2/core/core_c.h
  /usr/local/include/opencv4/opencv2/core/cuda.hpp
  /usr/local/include/opencv4/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv4/opencv2/core/cuda_types.hpp
@@ -446,6 +597,7 @@ CMakeFiles/fss_T16.dir/src/fssapp.cpp.o
  /usr/local/include/opencv4/opencv2/core/saturate.hpp
  /usr/local/include/opencv4/opencv2/core/traits.hpp
  /usr/local/include/opencv4/opencv2/core/types.hpp
+ /usr/local/include/opencv4/opencv2/core/types_c.h
  /usr/local/include/opencv4/opencv2/core/utility.hpp
  /usr/local/include/opencv4/opencv2/core/utils/instrumentation.hpp
  /usr/local/include/opencv4/opencv2/core/utils/tls.hpp
@@ -504,6 +656,7 @@ CMakeFiles/fss_T16.dir/src/fssapp.cpp.o
  /usr/local/include/opencv4/opencv2/imgcodecs.hpp
  /usr/local/include/opencv4/opencv2/imgproc.hpp
  /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp
+ /usr/local/include/opencv4/opencv2/imgproc/types_c.h
  /usr/local/include/opencv4/opencv2/ml.hpp
  /usr/local/include/opencv4/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv4/opencv2/objdetect.hpp
@@ -534,6 +687,7 @@ CMakeFiles/fss_T16.dir/src/fssapp.cpp.o
  /usr/local/include/ws2811/pwm.h
  /usr/local/include/ws2811/rpihw.h
  /usr/local/include/ws2811/ws2811.h
+ include/facetraining.h
  include/fssapp.h
  include/leddriver.h
  include/mainwindow.h
@@ -546,7 +700,10 @@ CMakeFiles/fss_T16.dir/src/leddriver.cpp.o
  include/leddriver.h
 CMakeFiles/fss_T16.dir/src/main.cpp.o
  /home/pi/fss_T16/src/main.cpp
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/QDir
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/QSize
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/QString
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/QThread
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qabstractitemmodel.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qalgorithms.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qarraydata.h
@@ -567,10 +724,14 @@ CMakeFiles/fss_T16.dir/src/main.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcoreapplication.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcoreevent.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdatastream.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdeadlinetimer.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdebug.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdir.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qelapsedtimer.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qeventloop.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfile.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfiledevice.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfileinfo.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qflags.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qgenericatomic.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qglobal.h
@@ -617,6 +778,7 @@ CMakeFiles/fss_T16.dir/src/main.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qsystemdetection.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtcore-config.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtextstream.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qthread.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtypeinfo.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qurl.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qurlquery.h
@@ -642,12 +804,16 @@ CMakeFiles/fss_T16.dir/src/main.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qmatrix.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpaintdevice.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpalette.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpen.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpixelformat.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpixmap.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpolygon.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qregion.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qrgb.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qrgba64.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextcursor.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextformat.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextoption.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtgui-config.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtguiglobal.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtouchdevice.h
@@ -662,6 +828,7 @@ CMakeFiles/fss_T16.dir/src/main.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QGridLayout
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QHBoxLayout
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QLabel
+ /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QLineEdit
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QMenu
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QPushButton
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QRadioButton
@@ -682,6 +849,7 @@ CMakeFiles/fss_T16.dir/src/main.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlabel.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlayout.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlayoutitem.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlineedit.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qmenu.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qpushbutton.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qradiobutton.h
@@ -702,6 +870,7 @@ CMakeFiles/fss_T16.dir/src/main.cpp.o
  /usr/local/include/opencv4/opencv2/core/base.hpp
  /usr/local/include/opencv4/opencv2/core/bufferpool.hpp
  /usr/local/include/opencv4/opencv2/core/check.hpp
+ /usr/local/include/opencv4/opencv2/core/core_c.h
  /usr/local/include/opencv4/opencv2/core/cuda.hpp
  /usr/local/include/opencv4/opencv2/core/cuda.inl.hpp
  /usr/local/include/opencv4/opencv2/core/cuda_types.hpp
@@ -725,6 +894,7 @@ CMakeFiles/fss_T16.dir/src/main.cpp.o
  /usr/local/include/opencv4/opencv2/core/saturate.hpp
  /usr/local/include/opencv4/opencv2/core/traits.hpp
  /usr/local/include/opencv4/opencv2/core/types.hpp
+ /usr/local/include/opencv4/opencv2/core/types_c.h
  /usr/local/include/opencv4/opencv2/core/utility.hpp
  /usr/local/include/opencv4/opencv2/core/utils/instrumentation.hpp
  /usr/local/include/opencv4/opencv2/core/utils/tls.hpp
@@ -783,6 +953,7 @@ CMakeFiles/fss_T16.dir/src/main.cpp.o
  /usr/local/include/opencv4/opencv2/imgcodecs.hpp
  /usr/local/include/opencv4/opencv2/imgproc.hpp
  /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp
+ /usr/local/include/opencv4/opencv2/imgproc/types_c.h
  /usr/local/include/opencv4/opencv2/ml.hpp
  /usr/local/include/opencv4/opencv2/ml/ml.inl.hpp
  /usr/local/include/opencv4/opencv2/objdetect.hpp
@@ -813,6 +984,7 @@ CMakeFiles/fss_T16.dir/src/main.cpp.o
  /usr/local/include/ws2811/pwm.h
  /usr/local/include/ws2811/rpihw.h
  /usr/local/include/ws2811/ws2811.h
+ include/facetraining.h
  include/fssapp.h
  include/leddriver.h
  include/mainwindow.h
@@ -822,7 +994,9 @@ CMakeFiles/fss_T16.dir/src/main.cpp.o
  include/ws2811driver.h
 CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o
  /home/pi/fss_T16/src/mainwindow.cpp
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/QDir
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/QSize
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/QString
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qabstractitemmodel.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qalgorithms.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qarraydata.h
@@ -843,8 +1017,10 @@ CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcoreevent.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdatastream.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdebug.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdir.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfile.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfiledevice.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfileinfo.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qflags.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qgenericatomic.h
  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qglobal.h
@@ -914,12 +1090,16 @@ CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qmatrix.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpaintdevice.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpalette.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpen.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpixelformat.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpixmap.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpolygon.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qregion.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qrgb.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qrgba64.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextcursor.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextformat.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtextoption.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtgui-config.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtguiglobal.h
  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qtouchdevice.h
@@ -933,6 +1113,7 @@ CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QGridLayout
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QHBoxLayout
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QLabel
+ /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QLineEdit
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QMenu
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QPushButton
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/QRadioButton
@@ -951,6 +1132,7 @@ CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlabel.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlayout.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlayoutitem.h
+ /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qlineedit.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qmenu.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qpushbutton.h
  /usr/include/arm-linux-gnueabihf/qt5/QtWidgets/qradiobutton.h

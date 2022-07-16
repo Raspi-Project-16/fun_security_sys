@@ -18,9 +18,11 @@ MainWindow::MainWindow(QWidget *parent, RPICameraDriver* camera)
     rpi_bl = new QHBoxLayout();
     rpi_bl_l = new QVBoxLayout();
 
+    input_name = new QLineEdit();
+
     take_pictures = new QPushButton();
     do_training = new QPushButton();
-    do_recognition = new QPushButton();
+    //do_recognition = new QPushButton();
 
     rpi_camera = new QLabel();
     rpi_cam_logo = new QLabel();
@@ -114,7 +116,7 @@ void MainWindow::displayImage(Mat image){
 void MainWindow::startButtonPressed(){
     take_pictures->setDisabled(true);
     do_training->setDisabled(true);
-    do_recognition->setDisabled(true);
+    input_name->setDisabled(true);
     led_switch->setDisabled(true);
     led_on->setDisabled(true);
     led_off->setDisabled(true);
@@ -131,7 +133,7 @@ void MainWindow::startButtonPressed(){
 void MainWindow::stopButtonPressed(){
     take_pictures->setDisabled(false);
     do_training->setDisabled(false);
-    do_recognition->setDisabled(false);
+    input_name->setDisabled(true);
     led_switch->setDisabled(false);
     led_on->setDisabled(false);
     led_off->setDisabled(false);
@@ -145,11 +147,40 @@ void MainWindow::stopButtonPressed(){
     emit stopSignal();
 }
 
+void MainWindow::takePicturesPressed(){
+    if(input_name->text() == ""){
+        input_name->setStyleSheet("border: 1px solid red;");
+        input_name->setFocus();
+    }else{
+        input_name->setStyleSheet("border: 1px solid #b2bec5;");
+        QDir dir;
+        QString currentPath = QDir::currentPath();
+        QString dataFile = currentPath + "/dataset/" + input_name->text();
+        cout << dataFile.toStdString() << endl;
+        if(!dir.exists(dataFile)){
+            dir.mkdir(dataFile);
+        }
+        Mat frame;
+        for(int i=0; i<5; i++){
+
+            frame = camera->takePictures();
+            //cout << frame << endl;
+            //string path = ("bin.jpg").toStdString();
+            //cout << path << endl;
+            imwrite(dataFile.toStdString() + "/bin" + "_" + to_string(i) + ".jpg",frame);
+        }
+    }
+}
+
+void MainWindow::trainButtonPressed(){
+    emit trainSignal();
+}
+
 void MainWindow::setup_ui(){
 
     this->resize(1000, 800);
-    this->setWindowTitle("FSS-console");
-    this->setWindowIcon(QIcon("/home/pi/fss_T16/images/home-insurance.png"));
+    //this->setWindowTitle("FSS-console");
+    //this->setWindowIcon(QIcon("/home/pi/fss_T16/images/home-insurance.png"));
     this->setLayout(v_bl);
 
     this->setStyleSheet("\
@@ -322,6 +353,17 @@ void MainWindow::setup_ui(){
         height: 30px;\
         image: url(/home/pi/fss_T16/images/down-arrow.png);\
     }\
+    QLineEdit\
+    {\
+        width: 60px;\
+        height: 45px;\
+        color: #404042;\
+        font-size: 20px;\
+        font-weight: 700;\
+        border-radius: 5px;\
+        border: 1px solid #b2bec5;\
+        padding-left: 10px;\
+    }\
     ");
 
     v_bl->addWidget(rpi_box);
@@ -353,9 +395,10 @@ void MainWindow::setup_ui(){
 
     rpi_bl_l->addWidget(rpi_cam_logo);
     rpi_bl_l->addSpacing(10);
+    rpi_bl_l->addWidget(input_name);
     rpi_bl_l->addWidget(take_pictures);
     rpi_bl_l->addWidget(do_training);
-    rpi_bl_l->addWidget(do_recognition);
+    //rpi_bl_l->addWidget(do_recognition);
     rpi_bl_l->setAlignment(Qt::AlignCenter);
     rpi_bl_l->setSpacing(20);
     rpi_bl_l->setAlignment(rpi_cam_logo, Qt::AlignLeft);
@@ -366,17 +409,21 @@ void MainWindow::setup_ui(){
     QPixmap cam_logo = QPixmap("/home/pi/fss_T16/images/camera-s.png");
     rpi_cam_logo->setScaledContents(true);
     rpi_cam_logo->setPixmap(cam_logo);
+    input_name->setPlaceholderText("Please input your name");
+    input_name->resize(60, 80);
     take_pictures->setText("Take Photos");
     take_pictures->resize(60, 80);
     take_pictures->setCursor(Qt::PointingHandCursor);
     do_training->setText("Train");
     do_training->resize(60, 80);
     do_training->setCursor(Qt::PointingHandCursor);
-    do_recognition->setText("Face Recognition");
-    do_recognition->resize(60, 80);
-    do_recognition->setCursor(Qt::PointingHandCursor);
+    //do_recognition->setText("Face Recognition");
+    //do_recognition->resize(60, 80);
+    //do_recognition->setCursor(Qt::PointingHandCursor);
     qRegisterMetaType< Mat >("Mat");
     connect(&imageCallback, SIGNAL(imageSample(Mat)), this, SLOT(displayImage(Mat)));
+    connect(take_pictures, SIGNAL(clicked()), this, SLOT(takePicturesPressed()));
+    connect(do_training, SIGNAL(clicked()), this, SLOT(trainButtonPressed()));
 
     led_box->setLayout(led_bl);
     led_bl->addWidget(led_logo_box);
