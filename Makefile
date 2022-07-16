@@ -130,6 +130,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named train
+
+# Build rule for target.
+train: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 train
+.PHONY : train
+
+# fast build rule for target.
+train/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/build
+.PHONY : train/fast
+
+#=============================================================================
 # Target rules for targets named run
 
 # Build rule for target.
@@ -168,6 +181,33 @@ src/cameraEventHandler.s: src/cameraEventHandler.cpp.s
 src/cameraEventHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/cameraEventHandler.cpp.s
 .PHONY : src/cameraEventHandler.cpp.s
+
+src/faceRecogitionTraining.o: src/faceRecogitionTraining.cpp.o
+
+.PHONY : src/faceRecogitionTraining.o
+
+# target to build an object file
+src/faceRecogitionTraining.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/src/faceRecogitionTraining.cpp.o
+.PHONY : src/faceRecogitionTraining.cpp.o
+
+src/faceRecogitionTraining.i: src/faceRecogitionTraining.cpp.i
+
+.PHONY : src/faceRecogitionTraining.i
+
+# target to preprocess a source file
+src/faceRecogitionTraining.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/src/faceRecogitionTraining.cpp.i
+.PHONY : src/faceRecogitionTraining.cpp.i
+
+src/faceRecogitionTraining.s: src/faceRecogitionTraining.cpp.s
+
+.PHONY : src/faceRecogitionTraining.s
+
+# target to generate assembly for a file
+src/faceRecogitionTraining.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/src/faceRecogitionTraining.cpp.s
+.PHONY : src/faceRecogitionTraining.cpp.s
 
 src/ledEventHandler.o: src/ledEventHandler.cpp.o
 
@@ -313,9 +353,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... run"
+	@echo "... train"
 	@echo "... src/cameraEventHandler.o"
 	@echo "... src/cameraEventHandler.i"
 	@echo "... src/cameraEventHandler.s"
+	@echo "... src/faceRecogitionTraining.o"
+	@echo "... src/faceRecogitionTraining.i"
+	@echo "... src/faceRecogitionTraining.s"
 	@echo "... src/ledEventHandler.o"
 	@echo "... src/ledEventHandler.i"
 	@echo "... src/ledEventHandler.s"

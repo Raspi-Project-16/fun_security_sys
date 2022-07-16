@@ -72,6 +72,7 @@ CMAKE_BINARY_DIR = /home/pi/fun_security_sys
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/train.dir/all
 all: CMakeFiles/run.dir/all
 
 .PHONY : all
@@ -82,9 +83,37 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/train.dir/clean
 clean: CMakeFiles/run.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/train.dir
+
+# All Build rule for target.
+CMakeFiles/train.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/fun_security_sys/CMakeFiles --progress-num=8,9 "Built target train"
+.PHONY : CMakeFiles/train.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/train.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/fun_security_sys/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/train.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/fun_security_sys/CMakeFiles 0
+.PHONY : CMakeFiles/train.dir/rule
+
+# Convenience name for target.
+train: CMakeFiles/train.dir/rule
+
+.PHONY : train
+
+# clean rule for target.
+CMakeFiles/train.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/train.dir/build.make CMakeFiles/train.dir/clean
+.PHONY : CMakeFiles/train.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/run.dir

@@ -38,9 +38,9 @@ add_executable(run
     src/sg90EventHandler.cpp
     )
 
-#add_executable(train 
-    #src/faceRecogitionTraining.cpp 
-#)
+add_executable(train 
+    src/faceRecogitionTraining.cpp 
+)
 
 target_link_libraries(run ${OpenCV_LIBRARIES})
 target_link_libraries(run ${WIRINGPI_LIBRARIES})
@@ -54,7 +54,7 @@ target_link_libraries(run ${PTHREAD_LIBRARIES})
 target_link_libraries(run ${RASPICAM_LIBRARIES})
 target_link_libraries(run ${RASPICAM_CV_LIBRARIES})
 
-#target_link_libraries(train ${OpenCV_LIBRARIES})
-#target_link_libraries(train ${RASPICAM_LIBRARIES})
-#target_link_libraries(train ${RASPICAM_CV_LIBRARIES})
+target_link_libraries(train ${OpenCV_LIBRARIES})
+target_link_libraries(train ${RASPICAM_LIBRARIES})
+target_link_libraries(train ${RASPICAM_CV_LIBRARIES})
 #target_link_libraries(train ${Boost_LIBRARIES})

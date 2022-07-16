@@ -20,41 +20,41 @@ using namespace cv::face;
 
 int getdir (string dir, vector<string> &files)
 {
-    DIR *dp;
-    struct dirent *dirp;
-    if((dp  = opendir(dir.c_str())) == NULL) {
+    DIR *df;
+    struct dirent *dirf;
+    // open the input directory
+    // check if there are pictures in the directory
+    if((df  = opendir(dir.c_str())) == NULL) {
         cerr << errno << endl;
         return errno;
     }
-
-    while ((dirp = readdir(dp)) != NULL) {
-        if(to_string('.').compare(string(dirp->d_name)) < 0
-		|| to_string('.').compare(string(dirp->d_name)) < 0) {
-		files.push_back(string(dirp->d_name));
+    //take the file name as a factor of in the string vector
+    while ((dirf = readdir(df)) != NULL) {
+        if(to_string('.').compare(string(dirf->d_name)) < 0
+		|| to_string('.').compare(string(dirf->d_name)) < 0) {
+		files.push_back(string(dirf->d_name));
 	}
     }
-    closedir(dp);
+    closedir(df);
     return 0;
 }
 
 int main(){
-
-  string filename = string("/home/pi/raspi_project_16/dataset");
+  
+  
+  Mat picture;
+  Mat frame;
+  string filename = string("/home/pi/fun_security_sys/dataset");
   vector<string> dirs = vector<string>();
   getdir(filename, dirs);
-  Mat picture;
   vector<Mat> Images;
   vector<int> Labels;
-  Mat frame;
   namedWindow("edges", 1);
-
   Ptr<LBPHFaceRecognizer> recognizer = LBPHFaceRecognizer::create(2, 2, 7, 7);
-
   CascadeClassifier classifier;
-  classifier.load("/home/pi/raspi_project_16/cascades/haarcascade_frontalface_default.xml");
+  classifier.load("/home/pi/fun_security_sys/cascades/haarcascade_frontalface_default.xml");
   ofstream labels;
-  labels.open("/home/pi/raspi_project_16/recognizer/labels.txt");
-  cout << "[INFO] Loading classifier" << endl;
+  labels.open("/home/pi/fun_security_sys/recognizer/labels.txt");
 
   for(unsigned int i = 0; i < dirs.size(); i++) {
 	labels << i << " " << dirs[i] << endl;
@@ -80,7 +80,7 @@ int main(){
   cout << "[INFO] Extracting embeddings" << endl;
   recognizer->train(Images, Labels);
   cout << "[INFO] Saving embeddings" << endl;
-  recognizer->save("/home/pi/raspi_project_16/recognizer/embeddings.xml");
+  recognizer->save("/home/pi/fun_security_sys/recognizer/embeddings.xml");
 
   return 0;
 }
