@@ -21,6 +21,8 @@
 #include <QThread>
 using namespace std;
 
+// inherit WS2811callback to rewrite the virtual function
+// received a signal to change the color
 class WS2811SignalCallback : public WS2811callback{
 
 public:
@@ -29,6 +31,8 @@ public:
     }
 };
 
+// inherit RPICameraCallback to rewrite the virtual function
+// received a signal from the result whether the face recognition was successful or not
 class RPISignalCallback : public RPICameraCallback{
 
 public:
@@ -38,6 +42,8 @@ public:
     }
     ~RPISignalCallback(){
     }
+    // if the face recognition is a success, change the color of the led strip to green, rotate the motor
+    // otherwise change the color to red, no rotation for the motor
     virtual void hasSignal(int isRecgnized){
         if(isRecgnized == SUCCEED){
             Color color = GREEN;
@@ -57,6 +63,8 @@ private:
     SG90Driver* sg90Driver = nullptr;
 };
 
+// inherit SG90callback to rewrite the virtual function
+// received a signal to rotate the motor
 class SG90SignalCallback : public SG90callback{
 public:
     virtual void hasSignal(SG90Driver* sg90Driver, int degree){
@@ -64,6 +72,8 @@ public:
     }
 };
 
+// inherit LEDcallback to rewrite the virtual function
+// received a signal to turn on/off the led bulb
 class LEDSignalCallback : public LEDcallback{
 public:
 
@@ -72,6 +82,8 @@ public:
     }
 };
 
+// inherit SoundSensorCallback to rewrite the virtual function
+// received a signal whether a sound is detected
 class SSSignalCallback : public SoundSensorCallback
 {
 public:
@@ -80,7 +92,6 @@ public:
     }
     ~SSSignalCallback(){
     }
-
     virtual void hasSignal(int signal){
         ledDriver->callback(signal);
     }
