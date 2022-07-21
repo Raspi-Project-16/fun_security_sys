@@ -35,7 +35,7 @@ void SoundSensorDriver::start(){
 
   // gpioSetMode(ssSettings.led_GPIO, PI_OUTPUT);
   // gpioSetMode(ssSettings.led_GPIO, PI_INPUT);
-  //gpioSetISRFuncEx(ssSettings.ss_GPIO, RISING_EDGE, ssSettings.ISR_TIMEOUT, gpioISR, (void*)this);
+  // gpioSetISRFuncEx(ssSettings.ss_GPIO, RISING_EDGE, ssSettings.ISR_TIMEOUT, gpioISR, (void*)this);
   // gpioSetISRFuncEx(ssSettings.ss_GPIO, FALLING_EDGE, 1, gpioISR, (void*)this);
   pinMode(ssSettings.ss_GPIO, INPUT);
   ssThread = new thread(execute,this);
@@ -83,11 +83,16 @@ void SoundSensorDriver::run(){
     //cout << "sound detected : " << signal << endl;
     if(signal == ssSettings.RISING && flag == false){
       flag = true;
+      // start timing
       begin = clock();
     }
     if(flag){
+      // stop timings
       end = clock();
       //cout << end - begin << endl;
+
+      //calculate the time after led was turned on
+      //if the interval time has reached the threshold, send a signal to turn the led off
       if(double(end - begin) / CLOCKS_PER_SEC * 1000 > ssSettings.INTERVAL)flag=false;
       signal = ssSettings.RISING;
     }else{

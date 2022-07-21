@@ -98,10 +98,10 @@ void RPICameraDriver::run(){
 
     while(running){
     int isRecgnized = NO_SAMPLES;
-    //display the camera
+    //capture images from the camera
     Camera.grab();
     Camera.retrieve(frame);
-    //set parameters for the camera
+    //convert the image to gray image
     cvtColor(frame, windowFrame, COLOR_BGR2GRAY);
     //face recogition
     classifier.detectMultiScale(frame, faces, 1.2, 5);
@@ -126,6 +126,8 @@ void RPICameraDriver::run(){
         //display the info
         //cout << "ID: " << predicted << " | Confidence: " << confidence << endl;
     }
+
+    // display the image on the GUI
     //imshow("window", frame);
     //waitKey(30);
 

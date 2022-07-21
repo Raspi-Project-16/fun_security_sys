@@ -32,7 +32,8 @@ void LEDdriver::start(){
   {
     return;
   }
-  //gpioSetMode(ledSettings.led_GPIO, PI_OUTPUT);
+  // using pigpio library would give unexpected effects to the led strip, but not the wiringPi
+  // gpioSetMode(ledSettings.led_GPIO, PI_OUTPUT);
 
   pinMode(ledSettings.led_GPIO, OUTPUT);
 }
@@ -81,11 +82,13 @@ void LEDdriver::callback(int signal){
     #ifdef DEBUG
     cout << signal << endl;
     #endif
+
     if(nullptr != ledCallback){
+
         #ifdef DEBUG
         cout << signal << endl;
         #endif
-
+    // callback signal is from other devices
         ledCallback->hasSignal(this, signal);
   }
 }
@@ -101,6 +104,7 @@ void LEDdriver::ledSwitch(int signal){
     cout << "sound detected : " << signal << endl;
   #endif
 
+  // if the signal is LED_ON and the led bulb is not on, turn it on
   if(signal==ledSettings.LED_ON && digitalRead(ledSettings.led_GPIO) != ledSettings.LED_ON){
     digitalWrite(ledSettings.led_GPIO, signal);
   }
