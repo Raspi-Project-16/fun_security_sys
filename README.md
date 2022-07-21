@@ -69,18 +69,12 @@ $ make
 #### 3.2 Train the dataset
 
 ```py
-$ cd bin
-```
-```py
 $ sudo ./train
 ```
 #### 3.3 Run the system
 
 ```py
-$ cd bin
-```
-```py
-$ sudo ./run
+$ sudo ./fss_T16
 ```
 ## [Project Wiki](#Raspi-Project-16)
 
