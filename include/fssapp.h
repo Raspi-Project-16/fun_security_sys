@@ -124,20 +124,24 @@ private:
     SG90settings sg90Settings;
     SoundSensorSettings ssSettings;
     LEDsettings ledSettings;
+
     //drivers
     WS2811Driver ws2811Driver= WS2811Driver(ws2811settings);
     RPICameraDriver rpiCameraDriver = RPICameraDriver(rpiCameraSettings);
     SG90Driver sg90Driver = SG90Driver(sg90Settings);
     SoundSensorDriver ssDriver= SoundSensorDriver(ssSettings);
     LEDdriver ledDriver= LEDdriver(ledSettings);
+
     //callbacks
     RPISignalCallback rpiSignalCallback= RPISignalCallback(&ws2811Driver, &sg90Driver);
     WS2811SignalCallback ws2811SignalCallback;
     SG90SignalCallback sg90SignalCallback;
     SSSignalCallback ssSignalCallback = SSSignalCallback(&ledDriver);
     LEDSignalCallback ledSignalCallback;
+
     //window
     MainWindow* window;
+
     //face trainer
     FaceTraining * face_trainer;
 };

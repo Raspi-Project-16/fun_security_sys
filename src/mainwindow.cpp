@@ -22,7 +22,6 @@ MainWindow::MainWindow(QWidget *parent, RPICameraDriver* camera)
 
     take_pictures = new QPushButton();
     do_training = new QPushButton();
-    //do_recognition = new QPushButton();
 
     rpi_camera = new QLabel();
     rpi_cam_logo = new QLabel();
@@ -133,7 +132,7 @@ void MainWindow::startButtonPressed(){
 void MainWindow::stopButtonPressed(){
     take_pictures->setDisabled(false);
     do_training->setDisabled(false);
-    input_name->setDisabled(true);
+    input_name->setDisabled(false);
     led_switch->setDisabled(false);
     led_on->setDisabled(false);
     led_off->setDisabled(false);
@@ -162,11 +161,8 @@ void MainWindow::takePicturesPressed(){
         }
         Mat frame;
         for(int i=0; i<5; i++){
-
+            // save the image to the taget folder
             frame = camera->takePictures();
-            //cout << frame << endl;
-            //string path = ("bin.jpg").toStdString();
-            //cout << path << endl;
             imwrite(dataFile.toStdString() + "/bin" + "_" + to_string(i) + ".jpg",frame);
         }
     }
@@ -179,8 +175,6 @@ void MainWindow::trainButtonPressed(){
 void MainWindow::setup_ui(){
 
     this->resize(1000, 800);
-    //this->setWindowTitle("FSS-console");
-    //this->setWindowIcon(QIcon("/home/pi/fss_T16/images/home-insurance.png"));
     this->setLayout(v_bl);
 
     this->setStyleSheet("\
@@ -230,7 +224,7 @@ void MainWindow::setup_ui(){
         border-radius: 8px;\
         color: #ffffff;\
         width: 130px;\
-        height: 40px;\
+        height: 50px;\
         font-size: 17px;\
         font-weight: 700;\
         border: 3px solid #B1c1c2;\
@@ -398,7 +392,6 @@ void MainWindow::setup_ui(){
     rpi_bl_l->addWidget(input_name);
     rpi_bl_l->addWidget(take_pictures);
     rpi_bl_l->addWidget(do_training);
-    //rpi_bl_l->addWidget(do_recognition);
     rpi_bl_l->setAlignment(Qt::AlignCenter);
     rpi_bl_l->setSpacing(20);
     rpi_bl_l->setAlignment(rpi_cam_logo, Qt::AlignLeft);
@@ -417,12 +410,15 @@ void MainWindow::setup_ui(){
     do_training->setText("Train");
     do_training->resize(60, 80);
     do_training->setCursor(Qt::PointingHandCursor);
-    //do_recognition->setText("Face Recognition");
-    //do_recognition->resize(60, 80);
-    //do_recognition->setCursor(Qt::PointingHandCursor);
     qRegisterMetaType< Mat >("Mat");
+
+    // when image data is reveied from the camera, display the image
     connect(&imageCallback, SIGNAL(imageSample(Mat)), this, SLOT(displayImage(Mat)));
+
+    // when the take pictures button is clicked
     connect(take_pictures, SIGNAL(clicked()), this, SLOT(takePicturesPressed()));
+
+    // when the train button is clicked
     connect(do_training, SIGNAL(clicked()), this, SLOT(trainButtonPressed()));
 
     led_box->setLayout(led_bl);
@@ -457,6 +453,8 @@ void MainWindow::setup_ui(){
 
     led_switch->setCursor(Qt::PointingHandCursor);
     led_switch->setObjectName("led_switch");
+
+    // when the led switch is pressed
     connect(led_switch, SIGNAL(released()), this, SLOT(ledSwitchPressed()));
 
     sg90_box->setLayout(motor_bl);
@@ -498,6 +496,8 @@ void MainWindow::setup_ui(){
     motor_degree_90->setText("90°");
     motor_degree_135->setText("135°");
     motor_degree_180->setText("180°");
+
+    // when the degree buttons are selected
     connect(motor_degree_0, SIGNAL(clicked()), this, SLOT(motorDegreeSelected()), Qt::UniqueConnection);
     connect(motor_degree_45, SIGNAL(clicked()), this, SLOT(motorDegreeSelected()), Qt::UniqueConnection);
     connect(motor_degree_90, SIGNAL(clicked()), this, SLOT(motorDegreeSelected()), Qt::UniqueConnection);
@@ -534,6 +534,8 @@ void MainWindow::setup_ui(){
     color_options->setCursor(Qt::PointingHandCursor);
     color_options->setObjectName("color_options");
     color_options->addItems({"Rainbow", "Purple", "Yellow", "Pink", "Blue"});
+
+    // when the color of led strip is choosed
     connect(color_options, SIGNAL(activated(int)), this, SLOT(stripColorSelected(int)));
 
     start_box->setLayout(start_bl);
@@ -544,10 +546,14 @@ void MainWindow::setup_ui(){
     start_button->setObjectName("start_button");
     start_button->setText("Start");
     start_button->setCursor(Qt::PointingHandCursor);
+
+    // when the start button is clicked
     connect(start_button, SIGNAL(clicked()), this, SLOT(startButtonPressed()));
     stop_button->setObjectName("stop_button");
     stop_button->setText("Stop");
     stop_button->setCursor(Qt::PointingHandCursor);
+
+    // when the stop button is clicked
     connect(stop_button, SIGNAL(clicked()), this, SLOT(stopButtonPressed()));
 }
 

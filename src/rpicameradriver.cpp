@@ -124,7 +124,7 @@ void RPICameraDriver::run(){
             isRecgnized = SUCCEED;
         }
         //display the info
-        cout << "ID: " << predicted << " | Confidence: " << confidence << endl;
+        //cout << "ID: " << predicted << " | Confidence: " << confidence << endl;
     }
     //imshow("window", frame);
     //waitKey(30);
