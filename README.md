@@ -69,18 +69,12 @@ $ make
 #### 3.2 Train the dataset
 
 ```py
-$ cd bin
-```
-```py
 $ sudo ./train
 ```
 #### 3.3 Run the system
 
 ```py
-$ cd bin
-```
-```py
-$ sudo ./run
+$ sudo ./fss_T16
 ```
 ## [Project Wiki](#Raspi-Project-16)
 
@@ -105,32 +99,26 @@ Our report can be found in [here](https://github.com/Raspi-Project-16/project_re
 
     |–– CMakeFiles
     |–– include
-    | |–– event.h
-    | |–– eventId.h
-    | |—— glo_def.h
-    | |–– logger.h
-    | |–– events_def.h
-    | |–– sg90EventHandler.h
-    | |–– soundEventHandler.h
-    | |–– ws2811EventHandler.h
-    | |–– cameraEventHandler.h
-    | |–– dispatchEventService.h
-    | |–– ledEventHandler.h
-    | |–– iEventHandler.h
-    | |–– eventQueue.h
+    | |–– facetraining.h
+    | |–– fssapp.h
+    | |—— leddriver.h
+    | |–– mainwindow.h
+    | |–– rpicameradriver.h
+    | |–– sg90driver.h
+    | |–– soundsensordriver.h
+    | |–– ws2811driver.h
     |–– src
     | |–– main.cpp
-    | |–– event.cpp
-    | |–– logger.cpp
-    | |–– events_def.cpp
-    | |–– sg90EventHandler.cpp
-    | |–– soundEventHandler.cpp
-    | |–– ws2811EventHandler.cpp
-    | |–– cameraEventHandler.cpp
-    | |–– dispatchEventService.cpp
-    | |–– ledEventHandler.cpp
-    |–– bin
-    |—— lib
+    | |–– facetrining.cpp
+    | |–– fssapp.cpp
+    | |–– leddriver.cpp
+    | |–– sg90driver.cpp
+    | |–– soundsensordriver.cpp
+    | |–– ws2811driver.cpp
+    | |–– mainwindow.cpp
+    | |–– rpicameradriver.cpp
+    |–– images
+    |—— fss_T16_autogen
     |—— cascades
     | |–– haarcascade_frontalcatface.xml
     | |–– haarcascade_frontalface_default.xml
