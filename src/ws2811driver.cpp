@@ -100,7 +100,7 @@ void WS2811Driver::run(){
             fprintf(stderr, "ws2811_render failed: %s\n", ws2811_get_return_t_str(ret));
             exit(1);
         }
-        usleep(1000000 / 35);
+        // usleep(1000000 / 35);
     }
 
 }

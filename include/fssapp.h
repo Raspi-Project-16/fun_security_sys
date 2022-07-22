@@ -144,6 +144,7 @@ private:
 
     //face trainer
     FaceTraining * face_trainer;
+
 };
 
 #endif // FSSAPP_H

@@ -63,7 +63,7 @@ void RPICameraDriver::start(){
     while (infile >> a >> b){
         labels[a] = b;
     }
-    //check the camera
+    //check the camera if it works fine
     if (!Camera.open()) {cerr<<"Error opening the camera"<<endl;}
     //load the classifier
     classifier.load(rpiCamerasettings.classiferPath);
@@ -128,8 +128,8 @@ void RPICameraDriver::run(){
     }
 
     // display the image on the GUI
-    //imshow("window", frame);
-    //waitKey(30);
+    // imshow("window", frame);
+    // waitKey(30);
 
     if(nullptr != rpiCameraCallback){
       rpiCameraCallback->hasSignal(isRecgnized);

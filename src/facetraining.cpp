@@ -6,6 +6,7 @@ FaceTraining::FaceTraining()
     classifier.load("/home/pi/fss_T16/cascades/haarcascade_frontalface_default.xml");
     labels.open("/home/pi/fss_T16/recognizer/labels.txt");
     cout << "[LOG_INFO] Loading classifier" << endl;
+
 }
 
 FaceTraining::~FaceTraining(){
