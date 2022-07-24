@@ -1,6 +1,6 @@
 #include "facetraining.h"
 
-FaceTraining::FaceTraining()
+FaceTraining::FaceTraining(QObject *parent): QThread(parent)
 {
     getDir(fileName, dirs);
     classifier.load("/home/pi/fss_T16/cascades/haarcascade_frontalface_default.xml");
@@ -62,3 +62,5 @@ void FaceTraining::train(){
       cout << "[LOG_INFO] Saving embeddings" << endl;
       recognizer->save("/home/pi/fss_T16/recognizer/embeddings.xml");
 }
+
+

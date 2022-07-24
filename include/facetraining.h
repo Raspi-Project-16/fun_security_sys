@@ -15,18 +15,29 @@
 #include "opencv2/core.hpp"
 #include "opencv2/objdetect.hpp"
 #include "opencv2/face.hpp"
+#include <QThread>
 
 using namespace std;
 using namespace cv;
 using namespace cv::face;
 
-class FaceTraining
+class FaceTraining : public QThread
 {
+     Q_OBJECT
 public:
-    FaceTraining();
+    explicit FaceTraining(QObject *parent = nullptr);
     ~FaceTraining();
     int getDir(string dir, vector<string> &files);
     void train();
+
+protected:
+    void run() override{
+        this->train();
+        emit finishedSignal();
+    };
+
+signals:
+    void finishedSignal();
 
 private:
     Mat frame;

@@ -77,13 +77,22 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qbasicatomic.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qbytearray.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qbytearraylist.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcborcommon.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcborvalue.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qchar.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcompilerdetection.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qconfig.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcontainerfwd.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcontainertools_impl.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcontiguouscache.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcoreapplication.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qcoreevent.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdatastream.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdatetime.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdebug.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qdir.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qeventloop.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfactoryinterface.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfile.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfiledevice.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qfileinfo.h \
@@ -95,6 +104,8 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qhashfunctions.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qiodevice.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qiterator.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qjsonobject.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qjsonvalue.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qline.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qlist.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qlocale.h \
@@ -109,13 +120,16 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qobjectdefs.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qobjectdefs_impl.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qpair.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qplugin.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qpoint.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qpointer.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qprocessordetection.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qrect.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qrefcount.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qregexp.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qregularexpression.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qscopedpointer.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qset.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qshareddata.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qsharedpointer.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qsharedpointer_impl.h \
@@ -129,13 +143,17 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qsysinfo.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qsystemdetection.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtcore-config.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtextstream.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qtypeinfo.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/qurl.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/quuid.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qvariant.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qvarlengtharray.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qvector.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/qversiontagging.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/QColor \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/QIcon \
+  /usr/include/arm-linux-gnueabihf/qt5/QtGui/QMovie \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/QPalette \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qbrush.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qcolor.h \
@@ -145,8 +163,11 @@
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qfontmetrics.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qicon.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qimage.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qimageiohandler.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qimagereader.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qkeysequence.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qmatrix.h \
+  /usr/include/arm-linux-gnueabihf/qt5/QtGui/qmovie.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpaintdevice.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpalette.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtGui/qpen.h \

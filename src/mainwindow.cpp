@@ -23,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent, RPICameraDriver* camera)
     take_pictures = new QPushButton();
     do_training = new QPushButton();
 
+    loading_mov = new QMovie("/home/pi/fss_T16/images/loading.gif");
     rpi_camera = new QLabel();
     rpi_cam_logo = new QLabel();
 
@@ -256,6 +257,10 @@ void MainWindow::setup_ui(){
     {\
         color: #899299\
     }\
+    QLabel#camera_box\
+    {\
+        border-radius: 5px;\
+    }\
     QWidget#rpi_box, #led_box, #sg90_box, #ws2811_box, #start_box\
     {\
         border-bottom: 2px solid #e8e9e8;\
@@ -386,6 +391,13 @@ void MainWindow::setup_ui(){
     rpi_bl->setStretch(0, 1);
     rpi_bl->setStretch(1,2);
     rpi_bl->setAlignment(rpi_camera, Qt::AlignCenter);
+
+    rpi_camera->setObjectName("camera_box");
+    rpi_camera->setMaximumSize(600, 350);
+    rpi_camera->setScaledContents(true);
+    rpi_camera->setMovie(loading_mov);
+    loading_mov->setSpeed(300);
+    loading_mov->start();
 
     rpi_bl_l->addWidget(rpi_cam_logo);
     rpi_bl_l->addSpacing(10);
@@ -535,8 +547,8 @@ void MainWindow::setup_ui(){
     color_options->setObjectName("color_options");
     color_options->addItems({"Rainbow", "Purple", "Yellow", "Pink", "Blue"});
 
-    // when the color of led strip is choosed
-    connect(color_options, SIGNAL(activated(int)), this, SLOT(stripColorSelected(int)));
+    // when the color of led strip is chosen
+    connect(color_options, SIGNAL(currentIndexChanged(int)), this, SLOT(stripColorSelected(int)));
 
     start_box->setLayout(start_bl);
     start_bl->addWidget(start_button);

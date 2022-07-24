@@ -19,6 +19,7 @@
 #include <QLineEdit>
 #include <QDir>
 #include <QString>
+#include <QMovie>
 #include "rpicameradriver.h"
 
 QT_BEGIN_NAMESPACE
@@ -87,6 +88,8 @@ private:
     QLabel* strip_label;
 
     QLineEdit* input_name;
+
+    QMovie* loading_mov;
 
     QPushButton* take_pictures;
     QPushButton* do_training;

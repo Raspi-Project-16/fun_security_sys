@@ -123,8 +123,6 @@ void RPICameraDriver::run(){
             putText(frame, labels[predicted], Point(faces[i].x ,faces[i].y - 5), FONT_HERSHEY_DUPLEX, 1, Scalar(0,255,0), 1);
             isRecgnized = SUCCEED;
         }
-        //display the info
-        //cout << "ID: " << predicted << " | Confidence: " << confidence << endl;
     }
 
     // display the image on the GUI

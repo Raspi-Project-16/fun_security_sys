@@ -10,8 +10,9 @@ FssApp::FssApp()
     this->setWindowTitle("FSS-console");
     window = new MainWindow(this, &rpiCameraDriver);
     window->setParent(this);
-    face_trainer = new FaceTraining();
+    face_trainer = new FaceTraining(this);
     //connect signals
+    connect(face_trainer, SIGNAL(finishedSignal()), this, SLOT(trainingFinished()));
     connect(window, SIGNAL(ledSignal(int)), this, SLOT(ledSignalReceived(int)));
     connect(window, SIGNAL(motorSignal(int)), this, SLOT(degreeSignalReceived(int)));
     connect(window, SIGNAL(stripSignal(int)), this, SLOT(stripSignalReceived(int)));
@@ -94,6 +95,9 @@ void FssApp::stopSignalReceived(){
 
 void FssApp::trainSignalReceived(){
     rpiCameraDriver.stop();
-    face_trainer->train();
+    face_trainer->start();
+}
+
+void FssApp::trainingFinished(){
     rpiCameraDriver.start();
 }

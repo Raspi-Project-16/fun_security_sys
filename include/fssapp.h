@@ -116,6 +116,7 @@ private slots:
     void startSignalReceived();
     void stopSignalReceived();
     void trainSignalReceived();
+    void trainingFinished();
 
 private:
     //setters
