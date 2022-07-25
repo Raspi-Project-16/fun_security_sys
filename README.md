@@ -54,7 +54,7 @@ $ git clone https://github.com/Raspi-Project-16/fun_security_sys.git
 ### 2. Compile
 
 ```py
-$ cd fss_T16
+$ cd fun_security_sys
 ```
 ```py
 $ cmake .
