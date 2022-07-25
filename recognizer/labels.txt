@@ -1,7 +1,0 @@
-0 David
-1 Bruce
-2 Lucas
-3 Jackie
-4 Benedict
-5 Cam
-6 Vlada

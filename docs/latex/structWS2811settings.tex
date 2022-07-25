@@ -1,0 +1,186 @@
+\hypertarget{structWS2811settings}{}\doxysection{WS2811settings Struct Reference}
+\label{structWS2811settings}\index{WS2811settings@{WS2811settings}}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structWS2811settings_a2f41491b47ef86a5d0b7cc9625ae783c}\label{structWS2811settings_a2f41491b47ef86a5d0b7cc9625ae783c}} 
+Color {\bfseries color} = RAINBOW
+\item 
+\mbox{\Hypertarget{structWS2811settings_ab767b781ae76dcafa037424ef42f2393}\label{structWS2811settings_ab767b781ae76dcafa037424ef42f2393}} 
+int {\bfseries width} = 150
+\item 
+\mbox{\Hypertarget{structWS2811settings_ae244dd6e1de9a7a5ad74988c0918d00c}\label{structWS2811settings_ae244dd6e1de9a7a5ad74988c0918d00c}} 
+int {\bfseries height} = 1
+\item 
+\mbox{\Hypertarget{structWS2811settings_a55f8d22955d1d095cb427a2bd4f13730}\label{structWS2811settings_a55f8d22955d1d095cb427a2bd4f13730}} 
+int {\bfseries ws2811\+\_\+\+GPIO} = 21
+\item 
+\mbox{\Hypertarget{structWS2811settings_af00326f8b236e20af6f638222878ecc1}\label{structWS2811settings_af00326f8b236e20af6f638222878ecc1}} 
+int {\bfseries ws2811\+\_\+\+DMA} = 10
+\item 
+\mbox{\Hypertarget{structWS2811settings_a6bfdc2808ed134f027464f1c8f413839}\label{structWS2811settings_a6bfdc2808ed134f027464f1c8f413839}} 
+int {\bfseries led\+\_\+count} = width $\ast$ height
+\item 
+ws2811\+\_\+t {\bfseries ledstring}
+\item 
+\mbox{\Hypertarget{structWS2811settings_a24f675570013c5dd84bd31c4bbf192e8}\label{structWS2811settings_a24f675570013c5dd84bd31c4bbf192e8}} 
+int {\bfseries color\+\_\+spots} \mbox{[}24\mbox{]} = \{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23\}
+\item 
+ws2811\+\_\+led\+\_\+t {\bfseries rainbow\+\_\+spots} \mbox{[}24\mbox{]}
+\item 
+ws2811\+\_\+led\+\_\+t {\bfseries red\+\_\+spots} \mbox{[}24\mbox{]}
+\item 
+ws2811\+\_\+led\+\_\+t {\bfseries green\+\_\+spots} \mbox{[}24\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structWS2811settings_a9109e44da26a00ff689b5c2c6cdb3230}\label{structWS2811settings_a9109e44da26a00ff689b5c2c6cdb3230}} 
+\index{WS2811settings@{WS2811settings}!green\_spots@{green\_spots}}
+\index{green\_spots@{green\_spots}!WS2811settings@{WS2811settings}}
+\doxysubsubsection{\texorpdfstring{green\_spots}{green\_spots}}
+{\footnotesize\ttfamily ws2811\+\_\+led\+\_\+t WS2811settings\+::green\+\_\+spots\mbox{[}24\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structWS2811settings_a56f1ef9437726d8049a5fcbf73af8fe3}\label{structWS2811settings_a56f1ef9437726d8049a5fcbf73af8fe3}} 
+\index{WS2811settings@{WS2811settings}!ledstring@{ledstring}}
+\index{ledstring@{ledstring}!WS2811settings@{WS2811settings}}
+\doxysubsubsection{\texorpdfstring{ledstring}{ledstring}}
+{\footnotesize\ttfamily ws2811\+\_\+t WS2811settings\+::ledstring}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        .freq = TARGET\_FREQ,}
+\DoxyCodeLine{        .dmanum = ws2811\_DMA,}
+\DoxyCodeLine{        .channel =}
+\DoxyCodeLine{        \{}
+\DoxyCodeLine{            [0] =}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                .gpionum = ws2811\_GPIO,}
+\DoxyCodeLine{                .invert = 0,}
+\DoxyCodeLine{                .count = led\_count,}
+\DoxyCodeLine{                .strip\_type = STRIP\_TYPE,}
+\DoxyCodeLine{                .brightness = 255,}
+\DoxyCodeLine{            \},}
+\DoxyCodeLine{            [1] =}
+\DoxyCodeLine{            \{}
+\DoxyCodeLine{                .gpionum = 0,}
+\DoxyCodeLine{                .invert = 0,}
+\DoxyCodeLine{                .count = 0,}
+\DoxyCodeLine{                .brightness = 0,}
+\DoxyCodeLine{            \},}
+\DoxyCodeLine{        \},}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structWS2811settings_a650bccbc6f5d4b94380a7c3a07ba181f}\label{structWS2811settings_a650bccbc6f5d4b94380a7c3a07ba181f}} 
+\index{WS2811settings@{WS2811settings}!rainbow\_spots@{rainbow\_spots}}
+\index{rainbow\_spots@{rainbow\_spots}!WS2811settings@{WS2811settings}}
+\doxysubsubsection{\texorpdfstring{rainbow\_spots}{rainbow\_spots}}
+{\footnotesize\ttfamily ws2811\+\_\+led\+\_\+t WS2811settings\+::rainbow\+\_\+spots\mbox{[}24\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        0x00200000,  }
+\DoxyCodeLine{        0x00200000,  }
+\DoxyCodeLine{        0x00200000,  }
+\DoxyCodeLine{        0x00202000,  }
+\DoxyCodeLine{        0x00202000,  }
+\DoxyCodeLine{        0x00202000,  }
+\DoxyCodeLine{        0x00002000,  }
+\DoxyCodeLine{        0x00002000,  }
+\DoxyCodeLine{        0x00002000,  }
+\DoxyCodeLine{        0x00002020,  }
+\DoxyCodeLine{        0x00002020,  }
+\DoxyCodeLine{        0x00002020,  }
+\DoxyCodeLine{        0x00200010,  }
+\DoxyCodeLine{        0x00200010,  }
+\DoxyCodeLine{        0x00200010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00100010,  }
+\DoxyCodeLine{        0x00000120,  }
+\DoxyCodeLine{        0x00000120,  }
+\DoxyCodeLine{        0x00000120,  }
+\DoxyCodeLine{        0x00000020,  }
+\DoxyCodeLine{        0x00000020,  }
+\DoxyCodeLine{        0x00000020,  }
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{structWS2811settings_a6727e04b96e204eb91e9f9de2d4f8203}\label{structWS2811settings_a6727e04b96e204eb91e9f9de2d4f8203}} 
+\index{WS2811settings@{WS2811settings}!red\_spots@{red\_spots}}
+\index{red\_spots@{red\_spots}!WS2811settings@{WS2811settings}}
+\doxysubsubsection{\texorpdfstring{red\_spots}{red\_spots}}
+{\footnotesize\ttfamily ws2811\+\_\+led\+\_\+t WS2811settings\+::red\+\_\+spots\mbox{[}24\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{        0x00211100,  }
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ws2811\+Event\+Handler.\+h\end{DoxyCompactItemize}
