@@ -25,7 +25,8 @@ FssApp::FssApp()
     ws2811Driver.registerCallback(&ws2811SignalCallback);
 
     //start with GUI control
-    rpiCameraDriver.start();
+    //rpiCameraDriver.start();
+    face_trainer->start();
     sg90Driver.start();
     ws2811Driver.start();
     ssDriver.start();
