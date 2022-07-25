@@ -88,7 +88,8 @@ Thank you for your interest in our project. We strongly encourage reading the wi
 
 ## [Flow Chart](#Raspi-Project-16)
 
-![embedded programming - Algorithm flowchart example](https://user-images.githubusercontent.com/85005419/163776367-5cb74ce6-44ae-4ff0-9148-ee04ed21d933.png)
+<img width="1677" alt="automatic_mode" src="https://user-images.githubusercontent.com/85005419/180747477-4ba45cc7-3704-4b19-b59b-e8fcc53be376.png">
+
 
 ## [Report](#Raspi-Project-16)
 Our report can be found in [here](https://github.com/Raspi-Project-16/project_report/blob/main/RealTime_Report.pdf).
@@ -105,32 +106,26 @@ Our report can be found in [here](https://github.com/Raspi-Project-16/project_re
 
     |–– CMakeFiles
     |–– include
-    | |–– event.h
-    | |–– eventId.h
-    | |—— glo_def.h
-    | |–– logger.h
-    | |–– events_def.h
-    | |–– sg90EventHandler.h
-    | |–– soundEventHandler.h
-    | |–– ws2811EventHandler.h
-    | |–– cameraEventHandler.h
-    | |–– dispatchEventService.h
-    | |–– ledEventHandler.h
-    | |–– iEventHandler.h
-    | |–– eventQueue.h
+    | |–– facetraining.h
+    | |–– fssapp.h
+    | |—— leddriver.h
+    | |–– mainwindow.h
+    | |–– rpicameradriver.h
+    | |–– sg90driver.h
+    | |–– soundsensordriver.h
+    | |–– ws2811driver.h
     |–– src
     | |–– main.cpp
-    | |–– event.cpp
-    | |–– logger.cpp
-    | |–– events_def.cpp
-    | |–– sg90EventHandler.cpp
-    | |–– soundEventHandler.cpp
-    | |–– ws2811EventHandler.cpp
-    | |–– cameraEventHandler.cpp
-    | |–– dispatchEventService.cpp
-    | |–– ledEventHandler.cpp
-    |–– bin
-    |—— lib
+    | |–– facetrining.cpp
+    | |–– fssapp.cpp
+    | |–– leddriver.cpp
+    | |–– sg90driver.cpp
+    | |–– soundsensordriver.cpp
+    | |–– ws2811driver.cpp
+    | |–– mainwindow.cpp
+    | |–– rpicameradriver.cpp
+    |–– images
+    |—— fss_T16_autogen
     |—— cascades
     | |–– haarcascade_frontalcatface.xml
     | |–– haarcascade_frontalface_default.xml
