@@ -54,7 +54,7 @@ $ git clone https://github.com/Raspi-Project-16/fun_security_sys.git
 ### 2. Compile
 
 ```py
-$ cd fun_security_sys
+$ cd fss_T16
 ```
 ```py
 $ cmake .
@@ -63,15 +63,6 @@ $ cmake .
 $ make
 ```
 ### 3. Run
-
-#### 3.1 Save your photos into the dataset folder
-
-#### 3.2 Train the dataset
-
-```py
-$ sudo ./train
-```
-#### 3.3 Run the system
 
 ```py
 $ sudo ./fss_T16
