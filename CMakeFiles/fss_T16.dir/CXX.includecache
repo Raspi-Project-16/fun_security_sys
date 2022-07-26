@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/pi/fss_T16/src/facetraining.cpp
+facetraining.h
+/home/pi/fss_T16/src/facetraining.h
+
 /home/pi/fss_T16/src/fssapp.cpp
 fssapp.h
 /home/pi/fss_T16/src/fssapp.h

@@ -17,13 +17,12 @@ int FaceTraining::getDir(string dir, vector<string> &files){
     DIR *df;
     struct dirent *dirf;
     // open the input directory
-    // check if there are pictures in the directory
     if((df  = opendir(dir.c_str())) == NULL) {
         cerr << errno << endl;
         return errno;
     }
     //take the file name as a factor of in the string vector
-    while ((dirf = readdir(df)) != NULL) {
+    while ((dirf = readdir(df)) != nullptr) {
         if(to_string('.').compare(string(dirf->d_name)) < 0
             || to_string('.').compare(string(dirf->d_name)) < 0) {
 
@@ -41,6 +40,7 @@ void FaceTraining::train(){
         string new_path = fileName + "/" + dirs[i];
         vector<string> photos = vector<string>();
         getDir(new_path, photos);
+        // read and save photos
         for (unsigned int photo = 0; photo < photos.size(); photo++){
            string photo_path = new_path + "/" + photos[photo];
            cout << "[LOG_INFO] Reading photo " << photo_path << endl;
@@ -57,10 +57,16 @@ void FaceTraining::train(){
         }
      }
       labels.close();
-      cout << "[LOG_INFO] Extracting embeddings" << endl;
-      recognizer->train(Images, Labels);
+      try {
+          cout << "[LOG_INFO] Extracting embeddings" << endl;
+          recognizer->train(Images, Labels);
+      }  catch (Exception e) {
+          cout << "[LOG_WARNING]"<< e.err << endl;
+      }
       cout << "[LOG_INFO] Saving embeddings" << endl;
       recognizer->save("/home/pi/fss_T16/recognizer/embeddings.xml");
+
+
 }
 
 
