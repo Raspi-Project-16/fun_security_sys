@@ -64,15 +64,6 @@ $ make
 ```
 ### 3. Run
 
-#### 3.1 Save your photos into the dataset folder
-
-#### 3.2 Train the dataset
-
-```py
-$ sudo ./train
-```
-#### 3.3 Run the system
-
 ```py
 $ sudo ./fss_T16
 ```
@@ -82,7 +73,8 @@ Thank you for your interest in our project. We strongly encourage reading the wi
 
 ## [Flow Chart](#Raspi-Project-16)
 
-![embedded programming - Algorithm flowchart example](https://user-images.githubusercontent.com/85005419/163776367-5cb74ce6-44ae-4ff0-9148-ee04ed21d933.png)
+<img width="1677" alt="automatic_mode" src="https://user-images.githubusercontent.com/85005419/180754190-d0bedb21-255f-4e1d-926d-4f02e5bfffb1.png">
+
 
 ## [Report](#Raspi-Project-16)
 Our report can be found in [here](https://github.com/Raspi-Project-16/project_report/blob/main/RealTime_Report.pdf).
