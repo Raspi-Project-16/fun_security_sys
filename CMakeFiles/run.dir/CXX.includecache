@@ -10,10 +10,13 @@
 cameraEventHandler.h
 -
 
+<<<<<<< HEAD
 /home/pi/fun_security_sys/src/ledEventHandler.cpp
 ledEventHandler.h
 /home/pi/fun_security_sys/src/ledEventHandler.h
 
+=======
+>>>>>>> 0f99fa498056d66c1598a3567428c9a14eeb6f7d
 /home/pi/fun_security_sys/src/main.cpp
 iostream
 -
@@ -46,6 +49,7 @@ cameraEventHandler.h
 sg90EventHandler.h
 /home/pi/fun_security_sys/src/sg90EventHandler.h
 
+<<<<<<< HEAD
 /home/pi/fun_security_sys/src/sg90EventHandler.cpp
 sg90EventHandler.h
 /home/pi/fun_security_sys/src/sg90EventHandler.h
@@ -58,6 +62,8 @@ soundEventHandler.h
 ws2811EventHandler.h
 /home/pi/fun_security_sys/src/ws2811EventHandler.h
 
+=======
+>>>>>>> 0f99fa498056d66c1598a3567428c9a14eeb6f7d
 /usr/local/include/opencv4/opencv2/calib3d.hpp
 opencv2/core.hpp
 /usr/local/include/opencv4/opencv2/opencv2/core.hpp

@@ -99,7 +99,10 @@ struct WS2811settings{
 
     ws2811_led_t red_spots[24] =
     {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0f99fa498056d66c1598a3567428c9a14eeb6f7d
         0x00211100,  // red
         0x00211100,  // red
         0x00211100,  // red
