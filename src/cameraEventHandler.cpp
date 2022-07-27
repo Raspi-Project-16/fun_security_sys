@@ -44,18 +44,9 @@ void RPICameraDriver::start(){
 		  return;
 	  }
     //set the camera display frame
-<<<<<<< HEAD
-<<<<<<< HEAD
     Camera.set(CAP_PROP_FRAME_WIDTH, 640);
     Camera.set(CAP_PROP_FRAME_HEIGHT, 480);
-=======
-    Camera.set(CAP_PROP_FRAME_WIDTH, 320);
-    Camera.set(CAP_PROP_FRAME_HEIGHT, 240);
->>>>>>> 0f99fa498056d66c1598a3567428c9a14eeb6f7d
-=======
-    Camera.set(CAP_PROP_FRAME_WIDTH, 320);
-    Camera.set(CAP_PROP_FRAME_HEIGHT, 240);
->>>>>>> 0f99fa498056d66c1598a3567428c9a14eeb6f7d
+    
     //load the objects of face recognition
     ifstream infile(rpiCamerasettings.faceLabelPath);
     int a;
