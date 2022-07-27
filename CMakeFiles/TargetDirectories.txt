@@ -1,0 +1,4 @@
+/home/pi/fun_security_sys/CMakeFiles/rebuild_cache.dir
+/home/pi/fun_security_sys/CMakeFiles/edit_cache.dir
+/home/pi/fun_security_sys/CMakeFiles/train.dir
+/home/pi/fun_security_sys/CMakeFiles/run.dir
