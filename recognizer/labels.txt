@@ -1,4 +1,0 @@
-0 Bruce
-1 Lucas
-2 Jackie
-3 Benedict

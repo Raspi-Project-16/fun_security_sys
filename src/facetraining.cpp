@@ -2,7 +2,6 @@
 
 FaceTraining::FaceTraining(QObject *parent): QThread(parent)
 {
-    getDir(fileName, dirs);
     classifier.load("/home/pi/fss_T16/cascades/haarcascade_frontalface_default.xml");
     labels.open("/home/pi/fss_T16/recognizer/labels.txt");
     cout << "[LOG_INFO] Loading classifier" << endl;
@@ -34,7 +33,8 @@ int FaceTraining::getDir(string dir, vector<string> &files){
 }
 
 void FaceTraining::train(){
-
+    dirs.clear();
+    getDir(fileName, dirs);
     for(unsigned int i = 0; i < dirs.size(); i++){
         labels << i << " " << dirs[i] << endl;
         string new_path = fileName + "/" + dirs[i];
@@ -45,7 +45,7 @@ void FaceTraining::train(){
            string photo_path = new_path + "/" + photos[photo];
            cout << "[LOG_INFO] Reading photo " << photo_path << endl;
            picture = imread(photo_path);
-           cvtColor(picture, frame, CV_BGR2GRAY);
+           cvtColor(picture, frame, COLOR_BGR2GRAY);
            vector<Rect> faces;
            classifier.detectMultiScale(frame, faces, 1.2, 5);
 

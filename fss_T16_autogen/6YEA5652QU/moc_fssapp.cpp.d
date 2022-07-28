@@ -121,6 +121,7 @@
   /usr/include/arm-linux-gnueabihf/gnu/stubs-hard.h \
   /usr/include/arm-linux-gnueabihf/gnu/stubs.h \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/QDir \
+  /usr/include/arm-linux-gnueabihf/qt5/QtCore/QFileInfoList \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/QSize \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/QString \
   /usr/include/arm-linux-gnueabihf/qt5/QtCore/QThread \

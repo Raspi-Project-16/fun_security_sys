@@ -14,6 +14,7 @@ CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o: include/sg90drive
 CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o: include/soundsensordriver.h
 CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o: include/ws2811driver.h
 CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QDir
+CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QFileInfoList
 CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QSize
 CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QString
 CMakeFiles/fss_T16.dir/fss_T16_autogen/mocs_compilation.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QThread
@@ -482,6 +483,7 @@ CMakeFiles/fss_T16.dir/src/facetraining.cpp.o: include/facetraining.h
 
 CMakeFiles/fss_T16.dir/src/fssapp.cpp.o: src/fssapp.cpp
 CMakeFiles/fss_T16.dir/src/fssapp.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QDir
+CMakeFiles/fss_T16.dir/src/fssapp.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QFileInfoList
 CMakeFiles/fss_T16.dir/src/fssapp.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QSize
 CMakeFiles/fss_T16.dir/src/fssapp.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QString
 CMakeFiles/fss_T16.dir/src/fssapp.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QThread
@@ -787,6 +789,7 @@ CMakeFiles/fss_T16.dir/src/leddriver.cpp.o: include/leddriver.h
 
 CMakeFiles/fss_T16.dir/src/main.cpp.o: src/main.cpp
 CMakeFiles/fss_T16.dir/src/main.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QDir
+CMakeFiles/fss_T16.dir/src/main.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QFileInfoList
 CMakeFiles/fss_T16.dir/src/main.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QSize
 CMakeFiles/fss_T16.dir/src/main.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QString
 CMakeFiles/fss_T16.dir/src/main.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QThread
@@ -1094,6 +1097,7 @@ CMakeFiles/fss_T16.dir/src/main.cpp.o: include/ws2811driver.h
 
 CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o: src/mainwindow.cpp
 CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QDir
+CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QFileInfoList
 CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QSize
 CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/QString
 CMakeFiles/fss_T16.dir/src/mainwindow.cpp.o: /usr/include/arm-linux-gnueabihf/qt5/QtCore/qabstractitemmodel.h

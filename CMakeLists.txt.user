@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.14.1, 2022-07-26T08:39:42. -->
+<!-- Written by QtCreator 4.14.1, 2022-07-28T00:16:20. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
-  <value type="QByteArray">{70a394c7-75eb-4413-8b17-e6dd23d55706}</value>
+  <value type="QByteArray">{416d23e3-731f-43c4-bf08-0ea4cb4f4cd4}</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -88,7 +88,7 @@
    <value type="QString" key="DeviceType">Desktop</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Imported Kit</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Imported Kit</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{7042c870-b440-4957-b818-03c0c9738b59}</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{bd05fe15-c37c-46a2-95ed-808c26df1d21}</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>

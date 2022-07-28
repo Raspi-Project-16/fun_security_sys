@@ -18,6 +18,7 @@
 #include <string>
 #include <QLineEdit>
 #include <QDir>
+#include <QFileInfoList>
 #include <QString>
 #include <QMovie>
 #include "rpicameradriver.h"

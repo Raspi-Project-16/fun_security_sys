@@ -156,7 +156,6 @@ void MainWindow::takePicturesPressed(){
         QDir dir;
         QString currentPath = QDir::currentPath();
         QString dataFile = currentPath + "/dataset/" + input_name->text();
-        cout << dataFile.toStdString() << endl;
         if(!dir.exists(dataFile)){
             dir.mkdir(dataFile);
         }
@@ -164,8 +163,19 @@ void MainWindow::takePicturesPressed(){
         for(int i=0; i<5; i++){
             // save the image to the taget folder
             frame = camera->takePictures();
-            imwrite(dataFile.toStdString() + "/bin" + "_" + to_string(i) + ".jpg",frame);
+            imwrite(dataFile.toStdString() + "/" + input_name->text().toStdString() + "_" + to_string(i) + ".jpg",frame);
         }
+
+        QString labelFile = currentPath + "/recognizer/";
+        QDir label_dir(labelFile);
+        label_dir.setFilter(QDir::AllEntries | QDir::NoDotAndDotDot);
+        QFileInfoList fileList = label_dir.entryInfoList();
+        foreach (QFileInfo file, fileList){
+                if (file.isFile()){
+                    file.dir().remove(file.fileName());
+                }
+        }
+        cout << "file deleted" << endl;
     }
 }
 
@@ -568,4 +578,3 @@ void MainWindow::setup_ui(){
     // when the stop button is clicked
     connect(stop_button, SIGNAL(clicked()), this, SLOT(stopButtonPressed()));
 }
-
