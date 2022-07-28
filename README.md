@@ -115,6 +115,9 @@ $ make
 
 #### 3.1 Train the dataset
 ```py
+$ cd bin
+```
+```py
 $ sudo ./train
 ```
 #### 3.2 Run the system
