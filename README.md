@@ -47,7 +47,56 @@
 ## [Installation](#Raspi-Project-16)
 
 ### 1. Download
-
+* wiringpi
+https://github.com/WiringPi/WiringPi
+```py
+$ git clone https://github.com/WiringPi/WiringPi.git
+$ sudo ./build
+```
+* pigpio
+https://abyz.me.uk/rpi/pigpio/download.html
+```py
+$ wget https://github.com/joan2937/pigpio/archive/master.zip
+$ unzip master.zip
+$ cd pigpio-master
+$ make
+$ sudo make install
+```
+* opencv4.x
+https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html
+```py
+$ wget -O opencv.zip https://github.com/opencv/opencv/archive/4.x.zip
+$ wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.x.zip
+$ unzip opencv.zip
+$ unzip opencv_contrib.zip
+$ mkdir -p build && cd build
+$ cmake -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib-4.x/modules ../opencv-4.x
+$ cmake --build .
+$ sudo make install
+```
+* raspicam
+https://github.com/cedricve/raspicam
+```py
+$ git clone https://github.com/cedricve/raspicam.git
+$ cd raspicam
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+$ sudo make install
+$ sudo ldconfig
+```
+* ws2811
+https://github.com/jgarff/rpi_ws281x
+```py
+$ git clone https://github.com/jgarff/rpi_ws281x.git
+$ mkdir build
+$ cd build
+$ cmake -D BUILD_SHARED=OFF -D BUILD_TEST=ON ..
+$ cmake --build .
+$ sudo make install
+```
+* fun_security_sys
 ```py
 $ git clone https://github.com/Raspi-Project-16/fun_security_sys.git
 ```
@@ -64,18 +113,11 @@ $ make
 ```
 ### 3. Run
 
-#### 3.1 Save your photos into the dataset folder
-
-#### 3.2 Train the dataset
-
-```py
-$ cd bin
-```
+#### 3.1 Train the dataset
 ```py
 $ sudo ./train
 ```
-#### 3.3 Run the system
-
+#### 3.2 Run the system
 ```py
 $ cd bin
 ```
