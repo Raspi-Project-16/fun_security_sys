@@ -23,12 +23,7 @@
 <a href="https://www.tiktok.com/@ohmygoal_bliu/video/7087603266430799110?is_from_webapp=1&sender_device=pc&web_id=7087134852688889350">
 <img align="left" alt="Mitul | Twitter" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/TikTok_Icon_Black.svg" />
 </a>
-<a href="https://www.instagram.com/tv/CcdU-LDFxKG/?utm_source=ig_web_copy_link">
-<img align="left" alt="Mitul's LinkedIN" width= "40px" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" />
-</a>
-<a href="https://www.linkedin.com/posts/lucas2926_welcome-to-give-your-precious-advice-thanks-activity-6921519999136280576-KC4A?utm_source=linkedin_share&utm_medium=member_desktop_web">
-<img align="left" alt="Mitul | Linkedin" width="40px" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" />
-</a><br><br>
+
 
 ## [Handware](#Raspi-Project-16)
 <br>
