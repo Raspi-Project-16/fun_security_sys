@@ -175,7 +175,7 @@ void MainWindow::takePicturesPressed(){
                     file.dir().remove(file.fileName());
                 }
         }
-        cout << "file deleted" << endl;
+        cout << "[LOG_INFO] Updating recognizer" << endl;
     }
 }
 
