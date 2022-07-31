@@ -91,6 +91,9 @@ void FssApp::startSignalReceived(){
 void FssApp::stopSignalReceived(){
     ssDriver.unRegisterCallback();
     rpiCameraDriver.unRegisterCallback();
+    // reset the led strip and the motor when the stop button is pressed
+    ws2811Driver.callback(RAINBOW);
+    sg90Driver.callback(0);
 }
 
 void FssApp::trainSignalReceived(){
