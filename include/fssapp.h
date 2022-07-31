@@ -48,19 +48,19 @@ public:
         if(isRecgnized == SUCCEED){
             Color color = GREEN;
             ws2811Driver->callback(color);
-            int degree = 0;
+            int degree = 90;
             sg90Driver->callback(degree);
         }
         if(isRecgnized == FAILED){
             Color color = RED;
             ws2811Driver->callback(color);
-            int degree = 90;
+            int degree = 0;
             sg90Driver->callback(degree);
         }
         if(isRecgnized == NO_SAMPLES){
             Color color = RAINBOW;
             ws2811Driver->callback(color);
-            int degree = 90;
+            int degree = 0;
             sg90Driver->callback(degree);
         }
     }
