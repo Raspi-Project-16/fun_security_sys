@@ -57,6 +57,12 @@ public:
             int degree = 90;
             sg90Driver->callback(degree);
         }
+        if(isRecgnized == NO_SAMPLES){
+            Color color = RAINBOW;
+            ws2811Driver->callback(color);
+            int degree = 90;
+            sg90Driver->callback(degree);
+        }
     }
 private:
     WS2811Driver* ws2811Driver = nullptr;
