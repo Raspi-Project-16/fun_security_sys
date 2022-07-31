@@ -110,7 +110,7 @@ void MainWindow::displayImage(Mat image){
     rpi_camera->setMaximumSize(600, 350);
     rpi_camera->setScaledContents(true);
     rpi_camera->setPixmap(img);
-
+    start_button->setEnabled(true);
 }
 
 void MainWindow::startButtonPressed(){
@@ -180,6 +180,8 @@ void MainWindow::takePicturesPressed(){
 }
 
 void MainWindow::trainButtonPressed(){
+    // the start_button should not be pressed when it's training
+    start_button->setEnabled(false);
     emit trainSignal();
 }
 
@@ -568,6 +570,7 @@ void MainWindow::setup_ui(){
     start_button->setObjectName("start_button");
     start_button->setText("Start");
     start_button->setCursor(Qt::PointingHandCursor);
+    start_button->setEnabled(false);
 
     // when the start button is clicked
     connect(start_button, SIGNAL(clicked()), this, SLOT(startButtonPressed()));
